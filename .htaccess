@@ -54,5 +54,10 @@ AddDefaultCharset UTF-8
   Deny from all
 </FilesMatch>
 
+# Block access to source/dev files
+<IfModule mod_rewrite.c>
+  RewriteRule ^_source/ - [F,L]
+</IfModule>
+
 # Custom error pages
 ErrorDocument 404 /index.php
