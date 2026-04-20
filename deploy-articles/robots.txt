@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://articles.engaginguxdesign.com/sitemap.xml
+
+# articles.engaginguxdesign.com
+# Subdomain of engaginguxdesign.com

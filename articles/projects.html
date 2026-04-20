@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Project Showcases · Engaging UX Design</title>
+  <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;600;700;800;900&family=Gabarito:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --cream:      #FDF6EE;
+      --brown-dark: #2b1206;
+      --brown-text: #2e1a0e;
+      --brown-mid:  #6b3820;
+      --brown-muted:#AA918C;
+      --orange:     #c0471a;
+      --gold:       #d4952a;
+      --gold-hover: #e8a832;
+      --border:     rgba(46,26,14,.1);
+      --card:       #fff9f3;
+      --raised:     #f5ede2;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { -webkit-font-smoothing: antialiased; }
+
+    body {
+      background: var(--cream);
+      color: var(--brown-text);
+      font-family: 'Gabarito', sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    /* ── BACK BANNER ── */
+    .back-banner {
+      background: var(--brown-dark);
+      padding: .65rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .back-banner p { font-size: .75rem; color: rgba(255,255,255,.55); letter-spacing: .04em; }
+    .back-banner p strong { color: rgba(255,255,255,.85); font-weight: 600; }
+    .back-banner a {
+      font-size: .72rem; font-weight: 700; color: var(--brown-dark); background: var(--gold);
+      padding: .4rem 1.1rem; border-radius: 999px; text-decoration: none; white-space: nowrap;
+      letter-spacing: -.01em; transition: background .2s; flex-shrink: 0;
+    }
+    .back-banner a:hover { background: var(--gold-hover); }
+
+    /* ── NAV ── */
+    nav {
+      background: var(--brown-dark);
+      border-bottom: 1px solid rgba(255,255,255,.06);
+      padding: 0 2rem; height: 64px;
+      display: flex; align-items: center; justify-content: space-between;
+      position: sticky; top: 0; z-index: 100;
+    }
+    .nav-brand { display: flex; flex-direction: column; line-height: 1.1; text-decoration: none; }
+    .nav-brand .site-parent { font-size: .62rem; letter-spacing: .14em; text-transform: uppercase; color: rgba(255,255,255,.38); font-weight: 600; }
+    .nav-brand .site-name { font-family: 'Alexandria', sans-serif; font-size: 1rem; font-weight: 800; color: #fff; letter-spacing: -.02em; }
+    .nav-brand .site-name span { color: var(--orange); }
+    .nav-links { display: flex; align-items: center; gap: 1.8rem; list-style: none; }
+    .nav-links a {
+      font-size: .72rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase;
+      color: rgba(255,255,255,.65); text-decoration: none; transition: color .2s;
+    }
+    .nav-links a:hover, .nav-links a.active { color: #fff; }
+    .nav-links a.active { color: var(--gold); }
+
+    /* ── HERO ── */
+    .hero {
+      background: var(--brown-dark);
+      padding: 5rem 2rem 4.5rem;
+      text-align: center;
+      position: relative; overflow: hidden;
+    }
+    .hero::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 60% 0%, rgba(192,71,26,.18) 0%, transparent 65%),
+                  radial-gradient(ellipse at 20% 100%, rgba(212,149,42,.1) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .hero-label {
+      display: inline-block; font-size: .65rem; font-weight: 700; letter-spacing: .2em;
+      text-transform: uppercase; color: var(--gold); border: 1px solid rgba(212,149,42,.35);
+      padding: .28rem .85rem; border-radius: 999px; margin-bottom: 1.6rem;
+    }
+    .hero h1 {
+      font-family: 'Alexandria', sans-serif; font-size: clamp(2.2rem, 5vw, 3.6rem); font-weight: 900;
+      color: #fff; letter-spacing: -.03em; line-height: 1.08; margin-bottom: 1.2rem;
+      max-width: 680px; margin-left: auto; margin-right: auto;
+    }
+    .hero h1 em { font-style: normal; color: var(--gold); }
+    .hero p { font-size: 1rem; color: rgba(255,255,255,.55); max-width: 480px; margin: 0 auto; line-height: 1.7; }
+
+    /* ── SECTION ── */
+    .section { max-width: 1200px; margin: 0 auto; padding: 4rem 2rem; }
+    .section-title {
+      font-family: 'Alexandria', sans-serif; font-size: .65rem; font-weight: 700;
+      letter-spacing: .2em; text-transform: uppercase; color: var(--orange);
+      margin-bottom: 1.8rem; display: flex; align-items: center; gap: .7rem;
+    }
+    .section-title::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+
+    /* ── SHOWCASE GRID ── */
+    .showcase-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 1.8rem; }
+    .showcase-card {
+      background: var(--card); border: 1px solid var(--border); border-radius: 12px;
+      overflow: hidden; text-decoration: none; display: flex; flex-direction: column;
+      transition: transform .2s, box-shadow .2s;
+    }
+    .showcase-card:hover { transform: translateY(-4px); box-shadow: 0 14px 44px rgba(46,26,14,.12); }
+    .showcase-preview {
+      height: 220px; display: flex; align-items: flex-end; padding: 1.2rem;
+      position: relative; background-size: cover; background-position: center top;
+    }
+    .showcase-preview .live-badge {
+      position: absolute; top: 1rem; right: 1rem; font-size: .6rem; font-weight: 700;
+      letter-spacing: .14em; text-transform: uppercase; padding: .25rem .7rem; border-radius: 999px;
+    }
+    .showcase-preview .live-badge.live { background: #22a355; color: #fff; }
+    .showcase-preview .live-badge.pre-launch { background: var(--gold); color: var(--brown-dark); }
+    .showcase-body { padding: 1.6rem; flex: 1; display: flex; flex-direction: column; }
+    .showcase-body .tag {
+      font-size: .62rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
+      color: var(--orange); margin-bottom: .5rem; display: block;
+    }
+    .showcase-body h3 {
+      font-family: 'Alexandria', sans-serif; font-size: 1.2rem; font-weight: 800;
+      color: var(--brown-dark); letter-spacing: -.02em; line-height: 1.2; margin-bottom: .6rem;
+    }
+    .showcase-body p { font-size: .86rem; color: var(--brown-mid); flex: 1; margin: 0 0 1.2rem; line-height: 1.65; }
+    .showcase-meta { display: flex; flex-wrap: wrap; gap: .45rem; margin-bottom: .6rem; }
+    .showcase-meta .meta-pill {
+      font-size: .6rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase;
+      padding: .2rem .6rem; border-radius: 999px; background: var(--raised);
+      color: var(--brown-mid); border: 1px solid var(--border);
+    }
+    .showcase-footer {
+      padding: 1rem 1.6rem; border-top: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: space-between;
+      font-size: .72rem; color: var(--brown-muted);
+    }
+    .showcase-footer .visit-link { color: var(--orange); font-weight: 700; text-decoration: none; transition: color .2s; }
+    .showcase-footer .visit-link:hover { color: var(--brown-dark); }
+
+    .coming-soon-banner { text-align: center; padding: 3rem 2rem; color: var(--brown-muted); font-size: .88rem; font-style: italic; }
+
+    /* ── NEWSLETTER ── */
+    .newsletter {
+      background: var(--brown-dark); padding: 4rem 2rem; text-align: center;
+      position: relative; overflow: hidden;
+    }
+    .newsletter::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 50% 100%, rgba(192,71,26,.15) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .newsletter h2 { font-family: 'Alexandria', sans-serif; font-size: 1.8rem; font-weight: 900; color: #fff; letter-spacing: -.03em; margin-bottom: .7rem; }
+    .newsletter p { font-size: .9rem; color: rgba(255,255,255,.5); margin-bottom: 1.8rem; }
+    .newsletter-form { display: flex; gap: .6rem; max-width: 420px; margin: 0 auto; }
+    .newsletter-form input {
+      flex: 1; background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.12);
+      border-radius: 999px; padding: .75rem 1.3rem; font-size: .85rem; color: #fff;
+      font-family: 'Gabarito', sans-serif; outline: none;
+    }
+    .newsletter-form input::placeholder { color: rgba(255,255,255,.35); }
+    .newsletter-form button {
+      background: var(--gold); color: var(--brown-dark); border: none; border-radius: 999px;
+      padding: .75rem 1.5rem; font-size: .8rem; font-weight: 700;
+      font-family: 'Gabarito', sans-serif; cursor: pointer; white-space: nowrap; transition: background .2s;
+    }
+    .newsletter-form button:hover { background: var(--gold-hover); }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #1a0a04; border-top: 1px solid rgba(255,255,255,.05);
+      padding: 2.5rem 2rem; display: flex; align-items: center;
+      justify-content: space-between; gap: 1rem; flex-wrap: wrap;
+    }
+    .footer-brand { font-family: 'Alexandria', sans-serif; font-size: .85rem; font-weight: 800; color: rgba(255,255,255,.4); text-decoration: none; letter-spacing: -.01em; }
+    .footer-brand span { color: var(--orange); }
+    .footer-links { display: flex; gap: 1.5rem; list-style: none; flex-wrap: wrap; }
+    .footer-links a { font-size: .72rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: rgba(255,255,255,.3); text-decoration: none; transition: color .2s; }
+    .footer-links a:hover { color: rgba(255,255,255,.7); }
+    .footer-back { font-size: .72rem; font-weight: 700; color: var(--gold); text-decoration: none; letter-spacing: .05em; }
+    .footer-back:hover { color: var(--gold-hover); }
+
+    @media (max-width: 860px) {
+      .showcase-grid { grid-template-columns: 1fr; }
+      footer { flex-direction: column; align-items: flex-start; gap: 1.2rem; }
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- BACK BANNER -->
+<div class="back-banner">
+  <p>Part of <strong>Engaging UX Design</strong> &nbsp;·&nbsp; Freelance UX designer & developer based in the Netherlands</p>
+  <a href="https://engaginguxdesign.com" target="_blank">← Back to main site</a>
+</div>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-brand" href="home.html">
+    <span class="site-parent">engaginguxdesign.com /</span>
+    <span class="site-name">articles <span>·</span></span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="home.html">All</a></li>
+    <li><a href="home.html">UX Design</a></li>
+    <li><a href="projects.html" class="active">Projects</a></li>
+    <li><a href="research.html">Research</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <span class="hero-label">Project Showcases</span>
+  <h1>Built, shipped, <em>live</em></h1>
+  <p>Real projects designed and developed by Engaging UX Design. From personal brand websites to digital products — see the work in action.</p>
+</div>
+
+<!-- PROJECTS -->
+<div class="section">
+  <div class="section-title">Live Projects</div>
+
+  <div class="showcase-grid">
+
+    <!-- Joey de Laat -->
+    <a class="showcase-card" href="https://joeydelaat.nl/" target="_blank" rel="noopener noreferrer">
+      <div class="showcase-preview" style="background: linear-gradient(135deg, #0a0a12 0%, #1a1a2e 50%, #2a2a4a 100%);">
+        <span class="live-badge live">Live</span>
+      </div>
+      <div class="showcase-body">
+        <span class="tag">Personal Brand · Portfolio</span>
+        <h3>joeydelaat.nl</h3>
+        <p>Personal brand website for Joey de Laat — a Global Experience &amp; Insights Leader with 15+ years designing analytics capabilities and experience frameworks across global organisations. Clean, professional one-pager with consultation booking.</p>
+        <div class="showcase-meta">
+          <span class="meta-pill">UX Design</span>
+          <span class="meta-pill">Development</span>
+          <span class="meta-pill">Responsive</span>
+          <span class="meta-pill">Personal Brand</span>
+        </div>
+      </div>
+      <div class="showcase-footer">
+        <span>Designed &amp; developed by Engaging UX Design</span>
+        <span class="visit-link">Visit site →</span>
+      </div>
+    </a>
+
+    <!-- MyChildhoodBook -->
+    <a class="showcase-card" href="https://mychildhoodbook.com/en/" target="_blank" rel="noopener noreferrer">
+      <div class="showcase-preview" style="background: linear-gradient(135deg, #1a0e08 0%, #3a2218 50%, #6b4030 100%);">
+        <span class="live-badge pre-launch">Pre-Launch</span>
+      </div>
+      <div class="showcase-body">
+        <span class="tag">Digital Product · Web App</span>
+        <h3>mychildhoodbook.com</h3>
+        <p>A permanent digital archive where parents preserve memories, milestones, and wisdom for their children. Currently in pre-launch with early access signups and a parent survey shaping the product.</p>
+        <div class="showcase-meta">
+          <span class="meta-pill">Product Design</span>
+          <span class="meta-pill">Development</span>
+          <span class="meta-pill">EN / NL</span>
+          <span class="meta-pill">Pre-Launch</span>
+        </div>
+      </div>
+      <div class="showcase-footer">
+        <span>Developed by Engaging UX Design</span>
+        <span class="visit-link">Visit site →</span>
+      </div>
+    </a>
+
+  </div>
+
+  <p class="coming-soon-banner">More projects coming soon. Every project here is a real, live product.</p>
+</div>
+
+<!-- NEWSLETTER -->
+<div class="newsletter">
+  <h2>Stay sharp on UX</h2>
+  <p>New articles, project breakdowns, and research findings. No noise, no spam.</p>
+  <div class="newsletter-form">
+    <input type="email" placeholder="your@email.com"/>
+    <button>Subscribe</button>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <a class="footer-brand" href="home.html">articles<span>.</span>engaginguxdesign.com</a>
+  <ul class="footer-links">
+    <li><a href="home.html">UX Design</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="research.html">Research</a></li>
+    <li><a href="https://engaginguxdesign.com/about/">About</a></li>
+  </ul>
+  <a class="footer-back" href="https://engaginguxdesign.com" target="_blank">↗ engaginguxdesign.com</a>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Research · Engaging UX Design</title>
+  <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;600;700;800;900&family=Gabarito:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --cream:      #FDF6EE;
+      --brown-dark: #2b1206;
+      --brown-text: #2e1a0e;
+      --brown-mid:  #6b3820;
+      --brown-muted:#AA918C;
+      --orange:     #c0471a;
+      --gold:       #d4952a;
+      --gold-hover: #e8a832;
+      --border:     rgba(46,26,14,.1);
+      --card:       #fff9f3;
+      --raised:     #f5ede2;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { -webkit-font-smoothing: antialiased; }
+
+    body {
+      background: var(--cream);
+      color: var(--brown-text);
+      font-family: 'Gabarito', sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    /* ── BACK BANNER ── */
+    .back-banner {
+      background: var(--brown-dark);
+      padding: .65rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .back-banner p { font-size: .75rem; color: rgba(255,255,255,.55); letter-spacing: .04em; }
+    .back-banner p strong { color: rgba(255,255,255,.85); font-weight: 600; }
+    .back-banner a {
+      font-size: .72rem; font-weight: 700; color: var(--brown-dark); background: var(--gold);
+      padding: .4rem 1.1rem; border-radius: 999px; text-decoration: none; white-space: nowrap;
+      letter-spacing: -.01em; transition: background .2s; flex-shrink: 0;
+    }
+    .back-banner a:hover { background: var(--gold-hover); }
+
+    /* ── NAV ── */
+    nav {
+      background: var(--brown-dark);
+      border-bottom: 1px solid rgba(255,255,255,.06);
+      padding: 0 2rem; height: 64px;
+      display: flex; align-items: center; justify-content: space-between;
+      position: sticky; top: 0; z-index: 100;
+    }
+    .nav-brand { display: flex; flex-direction: column; line-height: 1.1; text-decoration: none; }
+    .nav-brand .site-parent { font-size: .62rem; letter-spacing: .14em; text-transform: uppercase; color: rgba(255,255,255,.38); font-weight: 600; }
+    .nav-brand .site-name { font-family: 'Alexandria', sans-serif; font-size: 1rem; font-weight: 800; color: #fff; letter-spacing: -.02em; }
+    .nav-brand .site-name span { color: var(--orange); }
+    .nav-links { display: flex; align-items: center; gap: 1.8rem; list-style: none; }
+    .nav-links a {
+      font-size: .72rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase;
+      color: rgba(255,255,255,.65); text-decoration: none; transition: color .2s;
+    }
+    .nav-links a:hover, .nav-links a.active { color: #fff; }
+    .nav-links a.active { color: var(--gold); }
+
+    /* ── HERO ── */
+    .hero {
+      background: var(--brown-dark);
+      padding: 5rem 2rem 4.5rem;
+      text-align: center;
+      position: relative; overflow: hidden;
+    }
+    .hero::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 60% 0%, rgba(192,71,26,.18) 0%, transparent 65%),
+                  radial-gradient(ellipse at 20% 100%, rgba(212,149,42,.1) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .hero-label {
+      display: inline-block; font-size: .65rem; font-weight: 700; letter-spacing: .2em;
+      text-transform: uppercase; color: var(--gold); border: 1px solid rgba(212,149,42,.35);
+      padding: .28rem .85rem; border-radius: 999px; margin-bottom: 1.6rem;
+    }
+    .hero h1 {
+      font-family: 'Alexandria', sans-serif; font-size: clamp(2.2rem, 5vw, 3.6rem); font-weight: 900;
+      color: #fff; letter-spacing: -.03em; line-height: 1.08; margin-bottom: 1.2rem;
+      max-width: 680px; margin-left: auto; margin-right: auto;
+    }
+    .hero h1 em { font-style: normal; color: var(--gold); }
+    .hero p { font-size: 1rem; color: rgba(255,255,255,.55); max-width: 480px; margin: 0 auto; line-height: 1.7; }
+
+    /* ── SECTION ── */
+    .section { max-width: 1200px; margin: 0 auto; padding: 4rem 2rem; }
+    .section-title {
+      font-family: 'Alexandria', sans-serif; font-size: .65rem; font-weight: 700;
+      letter-spacing: .2em; text-transform: uppercase; color: var(--orange);
+      margin-bottom: 1.8rem; display: flex; align-items: center; gap: .7rem;
+    }
+    .section-title::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+
+    /* ── SHOWCASE GRID ── */
+    .showcase-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 1.8rem; }
+    .showcase-preview {
+      height: 220px; display: flex; align-items: flex-end; padding: 1.2rem;
+      position: relative; background-size: cover; background-position: center top;
+    }
+    .showcase-preview .live-badge {
+      position: absolute; top: 1rem; right: 1rem; font-size: .6rem; font-weight: 700;
+      letter-spacing: .14em; text-transform: uppercase; padding: .25rem .7rem; border-radius: 999px;
+    }
+    .showcase-preview .live-badge.pre-launch { background: var(--gold); color: var(--brown-dark); }
+
+    /* ── RESEARCH CARD ── */
+    .research-card {
+      background: var(--card); border: 1px solid var(--border); border-radius: 12px;
+      overflow: hidden; display: flex; flex-direction: column;
+      transition: transform .2s, box-shadow .2s;
+    }
+    .research-card:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(46,26,14,.1); }
+    .research-card-header { padding: 2rem 2rem 1.6rem; position: relative; }
+    .research-card-header .tag {
+      font-size: .62rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
+      color: var(--orange); margin-bottom: .6rem; display: block;
+    }
+    .research-card-header h3 {
+      font-family: 'Alexandria', sans-serif; font-size: 1.3rem; font-weight: 800;
+      color: var(--brown-dark); letter-spacing: -.02em; line-height: 1.2; margin-bottom: .7rem;
+    }
+    .research-card-header p { font-size: .88rem; color: var(--brown-mid); margin: 0; line-height: 1.65; }
+    .research-card-body { padding: 0 2rem 2rem; }
+    .research-card-body .survey-details {
+      list-style: none; margin: 1rem 0 1.5rem;
+      display: flex; flex-direction: column; gap: .5rem;
+    }
+    .research-card-body .survey-details li {
+      display: flex; gap: .6rem; align-items: flex-start;
+      font-size: .85rem; color: var(--brown-mid);
+    }
+    .research-card-body .survey-details li::before {
+      content: '→'; color: var(--orange); font-weight: 700; flex-shrink: 0;
+    }
+    .survey-cta {
+      display: inline-block; background: var(--orange); color: #fff;
+      padding: 12px 28px; border-radius: 100px; font-size: .82rem; font-weight: 700;
+      letter-spacing: -.01em; text-decoration: none; transition: background .2s;
+    }
+    .survey-cta:hover { background: var(--brown-dark); }
+
+    .coming-soon-banner { text-align: center; padding: 3rem 2rem; color: var(--brown-muted); font-size: .88rem; font-style: italic; }
+
+    /* ── NEWSLETTER ── */
+    .newsletter {
+      background: var(--brown-dark); padding: 4rem 2rem; text-align: center;
+      position: relative; overflow: hidden;
+    }
+    .newsletter::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 50% 100%, rgba(192,71,26,.15) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .newsletter h2 { font-family: 'Alexandria', sans-serif; font-size: 1.8rem; font-weight: 900; color: #fff; letter-spacing: -.03em; margin-bottom: .7rem; }
+    .newsletter p { font-size: .9rem; color: rgba(255,255,255,.5); margin-bottom: 1.8rem; }
+    .newsletter-form { display: flex; gap: .6rem; max-width: 420px; margin: 0 auto; }
+    .newsletter-form input {
+      flex: 1; background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.12);
+      border-radius: 999px; padding: .75rem 1.3rem; font-size: .85rem; color: #fff;
+      font-family: 'Gabarito', sans-serif; outline: none;
+    }
+    .newsletter-form input::placeholder { color: rgba(255,255,255,.35); }
+    .newsletter-form button {
+      background: var(--gold); color: var(--brown-dark); border: none; border-radius: 999px;
+      padding: .75rem 1.5rem; font-size: .8rem; font-weight: 700;
+      font-family: 'Gabarito', sans-serif; cursor: pointer; white-space: nowrap; transition: background .2s;
+    }
+    .newsletter-form button:hover { background: var(--gold-hover); }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #1a0a04; border-top: 1px solid rgba(255,255,255,.05);
+      padding: 2.5rem 2rem; display: flex; align-items: center;
+      justify-content: space-between; gap: 1rem; flex-wrap: wrap;
+    }
+    .footer-brand { font-family: 'Alexandria', sans-serif; font-size: .85rem; font-weight: 800; color: rgba(255,255,255,.4); text-decoration: none; letter-spacing: -.01em; }
+    .footer-brand span { color: var(--orange); }
+    .footer-links { display: flex; gap: 1.5rem; list-style: none; flex-wrap: wrap; }
+    .footer-links a { font-size: .72rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: rgba(255,255,255,.3); text-decoration: none; transition: color .2s; }
+    .footer-links a:hover { color: rgba(255,255,255,.7); }
+    .footer-back { font-size: .72rem; font-weight: 700; color: var(--gold); text-decoration: none; letter-spacing: .05em; }
+    .footer-back:hover { color: var(--gold-hover); }
+
+    @media (max-width: 860px) {
+      .showcase-grid { grid-template-columns: 1fr; }
+      footer { flex-direction: column; align-items: flex-start; gap: 1.2rem; }
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- BACK BANNER -->
+<div class="back-banner">
+  <p>Part of <strong>Engaging UX Design</strong> &nbsp;·&nbsp; Freelance UX designer & developer based in the Netherlands</p>
+  <a href="https://engaginguxdesign.com" target="_blank">← Back to main site</a>
+</div>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-brand" href="home.html">
+    <span class="site-parent">engaginguxdesign.com /</span>
+    <span class="site-name">articles <span>·</span></span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="home.html">All</a></li>
+    <li><a href="home.html">UX Design</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="research.html" class="active">Research</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <span class="hero-label">Research &amp; Surveys</span>
+  <h1>Help shape what <em>gets built</em></h1>
+  <p>Original research, active surveys, and user studies. Your responses directly influence the products and insights we create.</p>
+</div>
+
+<!-- ACTIVE SURVEYS -->
+<div class="section">
+  <div class="section-title">Active Surveys</div>
+
+  <div class="showcase-grid">
+
+    <!-- MyChildhoodBook Survey -->
+    <div class="research-card">
+      <div class="showcase-preview" style="background: linear-gradient(135deg, #1a0e08 0%, #3a2218 50%, #6b4030 100%);">
+        <span class="live-badge pre-launch">Survey Open</span>
+      </div>
+      <div class="research-card-header">
+        <span class="tag">Product Research · Parent Survey</span>
+        <h3>MyChildhoodBook — Parent Experience Survey</h3>
+        <p>MyChildhoodBook is a permanent digital archive where parents preserve memories, milestones, and wisdom for their children. The product is currently in pre-launch, and your responses will directly shape what gets built.</p>
+      </div>
+      <div class="research-card-body">
+        <ul class="survey-details">
+          <li>Takes approximately 8 minutes to complete</li>
+          <li>Anonymous — no personal data collected beyond what you choose to share</li>
+          <li>Open to parents, expecting parents, and anyone who cares about preserving childhood memories</li>
+          <li>Available in English and Dutch</li>
+          <li>Your answers directly influence product features and priorities</li>
+        </ul>
+        <a class="survey-cta" href="https://mychildhoodbook.com/en/survey/" target="_blank" rel="noopener noreferrer">Take the survey →</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- COMING SOON -->
+<div class="section" style="padding-top:0">
+  <div class="section-title">Coming Soon</div>
+
+  <div class="showcase-grid">
+
+    <div class="research-card">
+      <div class="research-card-header">
+        <span class="tag">Original Research</span>
+        <h3>UX Benchmarks for Dutch SME Websites</h3>
+        <p>Original research on user expectations, conversion patterns, and design quality across small business websites in the Netherlands. Results will be published as an open article on this site.</p>
+      </div>
+      <div class="research-card-body">
+        <ul class="survey-details">
+          <li>Benchmarking real Dutch SME websites against established UX standards</li>
+          <li>Focus on conversion, mobile experience, and accessibility</li>
+          <li>Findings will be shared publicly as a free resource</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <p class="coming-soon-banner">More research projects and surveys will appear here as they launch.</p>
+</div>
+
+<!-- NEWSLETTER -->
+<div class="newsletter">
+  <h2>Stay sharp on UX</h2>
+  <p>New articles, project breakdowns, and research findings. No noise, no spam.</p>
+  <div class="newsletter-form">
+    <input type="email" placeholder="your@email.com"/>
+    <button>Subscribe</button>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <a class="footer-brand" href="home.html">articles<span>.</span>engaginguxdesign.com</a>
+  <ul class="footer-links">
+    <li><a href="home.html">UX Design</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="research.html">Research</a></li>
+    <li><a href="https://engaginguxdesign.com/about/">About</a></li>
+  </ul>
+  <a class="footer-back" href="https://engaginguxdesign.com" target="_blank">↗ engaginguxdesign.com</a>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Wat Wix, Squarespace en Canva je niet vertellen over het zelf bouwen van je website | Engaging UX Design</title>
+  <meta name="description" content="Wix, Squarespace en Canva zijn nuttige tools. Maar hun marketing laat een paar dingen weg die later veel uitmaken voor je bedrijf."/>
+  <meta name="keywords" content="Wix beperkingen, Squarespace nadelen, DIY website builder nadelen, website builder vs UX designer, maatwerk website Nederland"/>
+  <meta name="author" content="Engaging UX Design"/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://articles.engaginguxdesign.com/nl/wat-wix-squarespace-canva-je-niet-vertellen"/>
+  <meta property="og:type" content="article"/>
+  <meta property="og:title" content="Wat Wix, Squarespace en Canva je niet vertellen over het zelf bouwen van je website | Engaging UX Design"/>
+  <meta property="og:description" content="Wix, Squarespace en Canva zijn nuttige tools. Maar hun marketing laat een paar dingen weg die later veel uitmaken voor je bedrijf."/>
+  <meta property="og:url" content="https://articles.engaginguxdesign.com/nl/wat-wix-squarespace-canva-je-niet-vertellen"/>
+  <meta property="og:site_name" content="Engaging UX Design Articles"/>
+  <meta property="og:image" content="https://engaginguxdesign.com/image-assets/Logo-for-darkbg.png"/>
+  <meta property="article:author" content="Cess Garcia"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Wat Wix, Squarespace en Canva je niet vertellen over het zelf bouwen van je website | Engaging UX Design"/>
+  <meta name="twitter:description" content="Wix, Squarespace en Canva zijn nuttige tools. Maar hun marketing laat een paar dingen weg die later veel uitmaken voor je bedrijf."/>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Wat Wix, Squarespace en Canva je niet vertellen over het zelf bouwen van je website | Engaging UX Design",
+    "description": "Wix, Squarespace en Canva zijn nuttige tools. Maar hun marketing laat een paar dingen weg die later veel uitmaken voor je bedrijf.",
+    "inLanguage": "nl",
+    "author": {"@type": "Person", "name": "Cess Garcia", "url": "https://engaginguxdesign.com/about/"},
+    "publisher": {"@type": "Organization", "name": "Engaging UX Design", "url": "https://engaginguxdesign.com",
+      "logo": {"@type": "ImageObject", "url": "https://engaginguxdesign.com/image-assets/Logo-for-darkbg.png"}},
+    "mainEntityOfPage": {"@type": "WebPage", "@id": "https://articles.engaginguxdesign.com/nl/wat-wix-squarespace-canva-je-niet-vertellen"}
+  }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;600;700;800;900&family=Gabarito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --cream:       #FDF6EE;
+      --brown-dark:  #2b1206;
+      --brown-text:  #2e1a0e;
+      --brown-mid:   #6b3820;
+      --brown-light: #AA918C;
+      --orange:      #c0471a;
+      --gold:        #d4952a;
+      --gold-hover:  #e8a832;
+      --border:      rgba(46,26,14,.1);
+      --card-bg:     #fff9f3;
+      --raised:      #f5ede2;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { -webkit-font-smoothing: antialiased; scroll-behavior: smooth; }
+
+    body {
+      background: var(--cream);
+      color: var(--brown-text);
+      font-family: 'Gabarito', sans-serif;
+      font-size: 17px;
+      line-height: 1.78;
+    }
+
+    /* ── BACK BANNER ── */
+    .back-banner {
+      background: var(--brown-dark);
+      padding: .6rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .back-banner p { font-size: .73rem; color: rgba(255,255,255,.5); }
+    .back-banner p strong { color: rgba(255,255,255,.8); font-weight: 600; }
+    .back-banner a {
+      font-size: .7rem;
+      font-weight: 700;
+      color: var(--brown-dark);
+      background: var(--gold);
+      padding: .38rem 1rem;
+      border-radius: 999px;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: background .2s;
+      flex-shrink: 0;
+    }
+    .back-banner a:hover { background: var(--gold-hover); }
+
+    /* ── NAV ── */
+    nav {
+      background: var(--brown-dark);
+      border-bottom: 1px solid rgba(255,255,255,.06);
+      padding: 0 2rem;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav-logo img { height: 36px; width: auto; }
+    .nav-cta {
+      font-family: 'Gabarito', sans-serif;
+      font-size: 13px;
+      font-weight: 400;
+      color: var(--brown-dark);
+      background: var(--gold);
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 100px;
+      transition: background .2s;
+    }
+    .nav-cta:hover { background: var(--gold-hover); }
+    .nav-right { display: flex; align-items: center; gap: 1.5rem; }
+    .nav-links { display: flex; align-items: center; gap: 1.5rem; list-style: none; }
+    .nav-links a {
+      font-size: .7rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase;
+      color: rgba(255,255,255,.55); text-decoration: none; transition: color .2s;
+    }
+    .nav-links a:hover { color: #fff; }
+    .nav-links a.nav-back { color: var(--gold); font-weight: 700; }
+    .nav-links a.nav-back:hover { color: var(--gold-hover); }
+    .nav-divider { width: 1px; height: 20px; background: rgba(255,255,255,.12); }
+    .lang-switch {
+      display: flex; align-items: center; gap: .35rem;
+      font-size: .7rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase;
+    }
+    .lang-switch a { color: rgba(255,255,255,.4); text-decoration: none; transition: color .2s; }
+    .lang-switch a:hover { color: rgba(255,255,255,.7); }
+    .lang-switch a.active { color: #fff; }
+    .lang-switch .sep { color: rgba(255,255,255,.15); }
+
+    /* ── ARTICLE INDEX ── */
+    .article-index {
+      max-width: 900px;
+      margin: 4rem auto 0;
+      padding: 0 2rem 2rem;
+    }
+    .article-index h2 {
+      font-family: 'Alexandria', sans-serif;
+      font-size: .65rem;
+      font-weight: 700;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 1.2rem;
+    }
+    .index-list { display: flex; flex-direction: column; gap: .6rem; }
+    .index-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      text-decoration: none;
+      padding: .9rem 1.2rem;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      transition: border-color .2s;
+    }
+    .index-item:hover { border-color: var(--orange); }
+    .index-num {
+      font-family: 'Alexandria', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 900;
+      color: var(--orange);
+      flex-shrink: 0;
+      width: 28px;
+    }
+    .index-item span {
+      font-family: 'Alexandria', sans-serif;
+      font-size: .95rem;
+      font-weight: 700;
+      color: var(--brown-dark);
+      letter-spacing: -.01em;
+    }
+    .index-arrow { margin-left: auto; color: var(--brown-light); font-size: .85rem; }
+
+    /* ── ARTICLE WRAPPER ── */
+    .article-wrap {
+      max-width: 900px;
+      margin: 5rem auto 0;
+      padding: 0 2rem;
+    }
+    .article-divider {
+      border: none;
+      border-top: 2px solid var(--border);
+      margin: 6rem 0 0;
+    }
+
+    /* ── HERO ── */
+    .art-hero { padding: 3.5rem 0 3rem; border-bottom: 1px solid var(--border); }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: .4rem;
+      font-size: .65rem;
+      font-weight: 700;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      color: var(--orange);
+      border: 1px solid rgba(192,71,26,.28);
+      background: rgba(192,71,26,.06);
+      padding: .28rem .85rem;
+      border-radius: 999px;
+      margin-bottom: 1.6rem;
+    }
+    .art-hero h1 {
+      font-family: 'Alexandria', sans-serif;
+      font-size: clamp(1.9rem, 4.5vw, 3rem);
+      font-weight: 900;
+      line-height: 1.1;
+      letter-spacing: -.03em;
+      color: var(--brown-dark);
+      margin-bottom: 1.2rem;
+      max-width: 740px;
+    }
+    .art-hero h1 em { font-style: italic; color: var(--orange); }
+    .art-deck {
+      font-size: 1.05rem;
+      color: var(--brown-mid);
+      max-width: 600px;
+      line-height: 1.7;
+      margin-bottom: 1.6rem;
+    }
+    .byline {
+      font-size: .7rem;
+      font-weight: 600;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--brown-light);
+    }
+    .byline strong { color: var(--orange); }
+
+    /* ── BODY ── */
+    .art-body { padding: 2.8rem 0; max-width: 740px; }
+    .art-body p { margin-bottom: 1.55rem; color: #4a2a18; }
+    .art-body h2 {
+      font-family: 'Alexandria', sans-serif;
+      font-size: 1.55rem;
+      font-weight: 800;
+      letter-spacing: -.025em;
+      color: var(--brown-dark);
+      margin: 3.5rem 0 1rem;
+      line-height: 1.18;
+    }
+    .section-label {
+      display: block;
+      font-size: .65rem;
+      font-weight: 700;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin: 3rem 0 .7rem;
+    }
+    strong { color: var(--brown-dark); font-weight: 700; }
+    em.hi  { font-style: normal; color: var(--orange); font-weight: 600; }
+
+    /* ── STAT CARDS ── */
+    .stat-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(165px, 1fr));
+      gap: .9rem;
+      margin: 2.4rem 0;
+    }
+    .stat-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-top: 3px solid var(--orange);
+      padding: 1.4rem 1.2rem;
+      border-radius: 8px;
+    }
+    .stat-num {
+      font-family: 'Alexandria', sans-serif;
+      font-size: 2.3rem;
+      font-weight: 900;
+      color: var(--orange);
+      line-height: 1;
+      margin-bottom: .35rem;
+    }
+    .stat-desc { font-size: .8rem; color: var(--brown-mid); line-height: 1.5; }
+    .stat-source {
+      font-size: .62rem;
+      font-weight: 600;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+      color: var(--brown-light);
+      margin-top: .5rem;
+    }
+
+    /* ── BLOCKQUOTE ── */
+    blockquote {
+      margin: 2.5rem 0;
+      padding: 1.8rem 2rem;
+      background: var(--raised);
+      border-left: 4px solid var(--orange);
+      border-radius: 0 8px 8px 0;
+      font-family: 'Alexandria', sans-serif;
+      font-size: 1.05rem;
+      font-style: italic;
+      line-height: 1.6;
+      color: var(--brown-dark);
+    }
+    blockquote cite {
+      display: block;
+      margin-top: .65rem;
+      font-size: .68rem;
+      font-style: normal;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--orange);
+    }
+
+    /* ── STEP LIST ── */
+    .step-list { list-style: none; margin: 1.8rem 0; display: flex; flex-direction: column; gap: 1rem; }
+    .step-list li {
+      display: flex;
+      gap: 1rem;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.2rem 1.3rem;
+      align-items: flex-start;
+    }
+    .step-num {
+      font-family: 'Alexandria', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 900;
+      color: var(--orange);
+      flex-shrink: 0;
+      width: 26px;
+      line-height: 1.4;
+    }
+    .step-list li p { margin: 0; font-size: .9rem; color: #4a2a18; }
+    .step-list li strong { display: block; margin-bottom: .2rem; font-size: .95rem; }
+
+    /* ── MISTAKE LIST ── */
+    .mistake-list { list-style: none; margin: 1.8rem 0; display: flex; flex-direction: column; gap: 1.2rem; }
+    .mistake-list li {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--orange);
+      border-radius: 0 8px 8px 0;
+      padding: 1.3rem 1.4rem;
+    }
+    .mistake-list li .mistake-title {
+      font-family: 'Alexandria', sans-serif;
+      font-size: 1rem;
+      font-weight: 800;
+      color: var(--brown-dark);
+      letter-spacing: -.01em;
+      margin-bottom: .4rem;
+      display: flex;
+      align-items: center;
+      gap: .6rem;
+    }
+    .mistake-num {
+      background: var(--orange);
+      color: white;
+      font-size: .65rem;
+      font-weight: 900;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .mistake-list li p { font-size: .88rem; color: #4a2a18; margin: 0; }
+
+    /* ── CTA BOX ── */
+    .cta-box {
+      background: var(--brown-dark);
+      border-radius: 12px;
+      padding: 3rem 2.5rem;
+      margin: 3.5rem 0 1rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-box::after {
+      content: '';
+      position: absolute;
+      bottom: -50px; right: -50px;
+      width: 180px; height: 180px;
+      border-radius: 50%;
+      background: rgba(212,149,42,.07);
+      pointer-events: none;
+    }
+    .cta-box h3 {
+      font-family: 'Alexandria', sans-serif;
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: -.02em;
+      margin-bottom: .6rem;
+    }
+    .cta-box p { color: rgba(255,255,255,.6); font-size: .9rem; margin-bottom: 1.5rem; }
+    .cta-btn {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--brown-dark);
+      padding: 12px 28px;
+      border-radius: 100px;
+      font-size: .78rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: background .2s;
+    }
+    .cta-btn:hover { background: var(--gold-hover); }
+
+    /* ── SOURCES ── */
+    .sources {
+      margin-top: 3.5rem;
+      padding-top: 1.8rem;
+      border-top: 1px solid var(--border);
+    }
+    .sources ol { padding-left: 1.2rem; font-size: .78rem; color: var(--brown-mid); line-height: 1.8; }
+    .sources li { margin-bottom: .4rem; }
+    .sources a { color: var(--orange); text-decoration: none; }
+    .sources a:hover { text-decoration: underline; }
+
+    hr.divider { border: none; border-top: 1px solid var(--border); margin: 3rem 0; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--brown-dark);
+      padding: 2.8rem 2rem;
+      text-align: center;
+      margin-top: 6rem;
+    }
+    footer img { height: 34px; margin-bottom: .7rem; }
+    footer p { font-size: .78rem; color: rgba(255,255,255,.4); margin: 0; line-height: 1.7; }
+    footer a { color: var(--gold); text-decoration: none; }
+
+    @media (max-width: 640px) {
+      nav { padding: 0 1.2rem; }
+      .article-wrap { padding: 0 1.4rem; }
+      .back-banner { padding: .6rem 1.2rem; }
+      .art-hero h1 { font-size: 1.8rem; }
+      .stat-row { grid-template-columns: 1fr 1fr; }
+      .cta-box { padding: 2rem 1.5rem; }
+    }
+  
+    .art-nav {
+      max-width: 900px;
+      margin: 3rem auto 0;
+      padding: 1.5rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      border-top: 1px solid var(--border);
+    }
+    .art-nav-link {
+      font-size: .78rem;
+      font-weight: 700;
+      color: var(--orange);
+      text-decoration: none;
+      transition: color .2s;
+    }
+    .art-nav-link:hover { color: var(--brown-dark); }
+    .art-nav-link.next { margin-left: auto; }
+
+  
+    .art-nav {
+      max-width: 900px; margin: 3rem auto 0; padding: 1.5rem 2rem;
+      display: flex; justify-content: space-between; gap: 1rem;
+      border-top: 1px solid var(--border);
+    }
+    .art-nav-link { font-size: .78rem; font-weight: 700; color: var(--orange); text-decoration: none; transition: color .2s; }
+    .art-nav-link:hover { color: var(--brown-dark); }
+    .art-nav-link.next { margin-left: auto; }
+    .compare-table { width: 100%; border-collapse: collapse; margin: 2rem 0; font-size: .88rem; }
+    .compare-table th { background: var(--brown-dark); color: #fff; padding: .9rem 1rem; text-align: left; font-family: 'Alexandria', sans-serif; font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; }
+    .compare-table th:first-child { border-radius: 8px 0 0 0; } .compare-table th:last-child { border-radius: 0 8px 0 0; }
+    .compare-table td { padding: .85rem 1rem; border-bottom: 1px solid var(--border); color: #4a2a18; vertical-align: top; }
+    .compare-table tr:last-child td { border-bottom: none; }
+    .compare-table tr:nth-child(even) td { background: var(--card-bg); }
+    .compare-table td:first-child { font-weight: 700; color: var(--brown-dark); }
+    .price-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(195px, 1fr)); gap: 1rem; margin: 2rem 0; }
+    .price-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 10px; padding: 1.5rem 1.3rem; display: flex; flex-direction: column; }
+    .price-card.featured { border-color: var(--orange); border-width: 2px; }
+    .price-card .tier { font-size: .65rem; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; color: var(--orange); margin-bottom: .5rem; }
+    .price-card .amount { font-family: 'Alexandria', sans-serif; font-size: 1.7rem; font-weight: 900; color: var(--brown-dark); letter-spacing: -.03em; line-height: 1; margin-bottom: .3rem; }
+    .price-card .amount span { font-size: 1rem; font-weight: 500; color: var(--brown-mid); }
+    .price-card .price-desc { font-size: .82rem; color: var(--brown-mid); margin-bottom: 1rem; flex: 1; }
+    .price-card .price-includes { font-size: .75rem; color: var(--brown-mid); line-height: 1.7; padding-top: .8rem; border-top: 1px solid var(--border); }
+    .price-card .price-includes li { list-style: none; padding-left: 1.1rem; position: relative; }
+    .price-card .price-includes li::before { content: '✓'; position: absolute; left: 0; color: var(--orange); font-weight: 700; font-size: .75rem; }
+  </style>
+</head>
+<body>
+<div class="back-banner">
+  <p>Onderdeel van <strong>Engaging UX Design</strong> &nbsp;·&nbsp; Freelance UX designer gevestigd in Nederland</p>
+  <a href="https://engaginguxdesign.com" target="_blank">← Terug naar de website</a>
+</div>
+<nav>
+  <a href="https://engaginguxdesign.com">
+    <img class="nav-logo" src="https://engaginguxdesign.com/image-assets/Logo-for-darkbg.png" alt="Engaging UX Design"/>
+  </a>
+  <div class="nav-right">
+    <ul class="nav-links">
+      <li><a class="nav-back" href="home-nl.html">← Terug naar artikelen</a></li>
+      <li><a href="home-nl.html">UX Design</a></li>
+      <li><a href="../articles/projects.html">Projecten</a></li>
+      <li><a href="../articles/research.html">Onderzoek</a></li>
+    </ul>
+    <span class="nav-divider"></span>
+    <a class="nav-cta" href="https://quickestimate.engaginguxdesign.com/">Gratis schatting aanvragen</a>
+    <div class="lang-switch">
+      <a href="../articles/article-7-wix-squarespace-canva.html">EN</a>
+      <span class="sep">|</span>
+      <a href="nl-artikel-7-wix-squarespace-canva.html" class="active">NL</a>
+    </div>
+  </div>
+</nav>
+
+<div class="article-wrap">
+  <div class="art-hero">
+    <span class="pill">DIY-tools · Eerlijk verhaal</span>
+    <h1>Wat Wix, Squarespace en Canva je <em>niet vertellen</em> over het zelf bouwen van je website</h1>
+    <p class="art-deck">Deze tools zijn oprecht goed in wat ze doen. Maar hun marketing laat een paar dingen weg die later veel uitmaken voor je bedrijf. Dit staat er niet in de kleine lettertjes.</p>
+    <p class="byline">Door <strong>Engaging UX Design</strong> &nbsp;·&nbsp; UX Strategie &amp; Conversie</p>
+  </div>
+  <div class="art-body">
+    <p>Laten we helder zijn vooraf: Wix, Squarespace en Canva zijn geen slechte producten. Wix drijft 4,3 procent van alle websites ter wereld en genereerde in 2024 bijna twee miljard euro aan omzet. Squarespace werd overgenomen voor 6,9 miljard euro. Canva heeft meer dan 200 miljoen gebruikers. Deze bedrijven hebben echte, nuttige tools gebouwd die mensen werkelijk helpen snel en betaalbaar online te gaan.</p>
+    <p>Dit artikel is geen aanval op hen. Het is een eerlijke blik op wat hun marketing niet vermeldt: de beperkingen die pas zichtbaar worden nadat je de site een paar maanden gebruikt en je begint af te vragen waarom hij je bedrijf niet laat groeien zoals je had verwacht.</p>
+    <h2>De templateval: je site lijkt op die van iedereen</h2>
+    <p>Templates zijn het kernverkoopargument van elke websitebouwer. Kies er één, pas de kleuren en tekst aan en je hebt in een middag een professioneel uitziende website. Dat klopt.</p>
+    <p>Wat ook klopt: dezelfde template is duizenden keren gebruikt door andere bedrijven. Wix alleen al biedt duizenden templates uit een bibliotheek die gedeeld wordt door zijn 250 miljoen geregistreerde gebruikers. Squarespace heeft minder templates, maar een hoger gebruik per template. Wanneer een bezoeker op je site landt en die er identiek uitziet als drie concurrenten die hij deze week heeft bezocht, is het visuele signaal niet "professioneel" — het is "generiek."</p>
+    <blockquote>
+      "Elke branche wordt gedekt. Elke stijl is vertegenwoordigd. Elk bedrijf ziet er precies hetzelfde uit."
+      <cite>Webotix, The Rise of No-Code Web Design in 2025</cite>
+    </blockquote>
+    <p>Templates lossen het uitvoeringsprobleem van design op. Ze lossen het merkdifferentiatieproblem niet op. En in een concurrerende markt is differentiatie precies wat bezoekers omzet in klanten.</p>
+    <div class="stat-row">
+      <div class="stat-card">
+        <div class="stat-num">32%</div>
+        <div class="stat-desc">Van de kleine ondernemers gebruikt DIY-websitebouwers om hun website te maken</div>
+        <div class="stat-source">Marketing LTB, 2025</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">55%</div>
+        <div class="stat-desc">Van alle op bouwers gebaseerde websites draait op Wix of Squarespace</div>
+        <div class="stat-source">SiteBuilderReport, 2025</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">75%</div>
+        <div class="stat-desc">Van consumenten beoordeelt geloofwaardigheid op basis van websiteontwerp</div>
+        <div class="stat-source">Marketing LTB, 2025</div>
+      </div>
+    </div>
+    <h2>Je bezit je website niet</h2>
+    <p>Dit is het punt dat mensen het meest verrast. Wanneer je bouwt op Wix of Squarespace, huur je ruimte op hun platform. Je bezit de onderliggende code niet, de ontwerpstructuur niet, en in de meeste gevallen ook niet de mogelijkheid om je site ergens anders naartoe te verplaatsen.</p>
+    <p>Wix heeft geen native blog- of pagina-export. Er bestaat een workaround via RSS die afbeeldingen, categorieën, tags en metadata verwijdert. Squarespace biedt beperkte exportmogelijkheden. Als een van beide platforms zijn prijzen verhoogt, zijn voorwaarden wijzigt of simpelweg stopt met bestaan, verdwijnt je hele online aanwezigheid ermee of vereist een volledige herbouw.</p>
+    <p>Voor een bedrijf dat maanden heeft geïnvesteerd in het opbouwen van content, het verfijnen van paginateksten en het verdienen van zoekrankings, is dit geen theoretisch risico. Het is exact hetzelfde vendor lock-in-probleem dat deze tools oorspronkelijk beloofden op te lossen — alleen verplaatst van een ontwikkelaar naar een platform.</p>
+    <h2>Het SEO-plafond verschijnt eerder dan je verwacht</h2>
+    <p>Zowel Wix als Squarespace hebben hun SEO-tools de afgelopen jaren aanzienlijk verbeterd, en voor basisbehoeften, metatitels, beschrijvingen, sitemaps, alt-tekst voor afbeeldingen, dekken ze het essentiële. Maar er is een plafond, en de meeste groeiende bedrijven raken dat eerder dan verwacht.</p>
+    <p>De gemiddelde Squarespace-site scoort slechts 40,5 op 100 bij SEO-audits, met 66,4 procent van de afbeeldingen zonder alt-tekst en 47 procent met meerdere H1-tags — grotendeels door template-standaardinstellingen die gebruikers nooit aanpassen. Wix-sites hebben beperkingen rondom geavanceerde schema-markup, gestructureerde data en flexibiliteit in URL-structuur. Geen van beide platforms biedt de technische controle die een op maat gebouwde site geeft, wat telt wanneer je wilt ranken voor competitieve zoektermen.</p>
+    <div class="stat-row">
+      <div class="stat-card">
+        <div class="stat-num">40,5</div>
+        <div class="stat-desc">Gemiddelde SEO-auditscore voor Squarespace-sites op 100</div>
+        <div class="stat-source">SEOSpace / Colorlib, 2026</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">47%</div>
+        <div class="stat-desc">Van de Squarespace-sites heeft meerdere H1-tags door template-standaardinstellingen</div>
+        <div class="stat-source">Colorlib, 2026</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">1,5–3%</div>
+        <div class="stat-desc">Typische conversieratio voor Wix-sites, tegenover 3–7% voor Webflow/maatwerk</div>
+        <div class="stat-source">CSS Agency, 2026</div>
+      </div>
+    </div>
+    <h2>De drag-and-drop-editor heeft een verborgen UX-prijs</h2>
+    <p>Wix' kerneditor laat je elk element overal op een pagina slepen. Dat klinkt als vrijheid. In de praktijk betekent het dat twee mensen die dezelfde site onafhankelijk bewerken, visuele chaos kunnen veroorzaken: inconsistente witruimte, verkeerd uitgelijnde elementen en lay-outs die op mobiel breken omdat de desktopindeling zich niet vertaalt.</p>
+    <p>Onderzoek uit 90-daagse gebruikerstests liet zien dat sites die snel op Wix zijn gebouwd er op mobiel vaak rommelig uitzien, omdat de sleep-waar-je-maar-wilt-aanpak geen rasterorde afdwingt. De vrijheid die op dag één krachtig aanvoelt, wordt op maand drie een onderhoudsprobleem.</p>
+    <p>Belangrijker nog: geen van beide platforms neemt UX-beslissingen voor jou. Ze geven je tools om elementen te plaatsen. Ze vertellen je niet waar je de call-to-action moet plaatsen zodat hij converteert, hoe je je homepage moet structureren zodat hij een bezoeker van nieuwsgierigheid naar aanvraag leidt, of dat je huidige lay-out bezoekers laat vertrekken voordat ze je aanbod hebben gelezen. Dat denken zit niet in een template. Het is een apart vakgebied.</p>
+    <h2>Canva-websites: mooi, beperkt en onzichtbaar</h2>
+    <p>Canva's websitebouwer is de nieuwste toevoeging en visueel het meest gepolijst direct uit de doos. Voor een landingspagina of een eenvoudig portfolio kan het in minder dan een uur iets werkelijk aantrekkelijks opleveren.</p>
+    <p>Wat het niet goed doet, is presteren in zoekmachines. Canva-websites hebben significante beperkingen op het gebied van SEO-configuratie, aangepast domeinbeheer, analytics-integratie en schaalbaarheid. Het zijn in wezen presentatiebestanden die toevallig op het web gehost worden. Voor een bedrijf dat door nieuwe klanten gevonden wil worden via Google — waarmee 68 procent van alle online ervaringen begint — is een Canva-site grotendeels onzichtbaar.</p>
+    <h2>De echte kostenberekening</h2>
+    <p>DIY-bouwers adverteren hun lage maandelijkse prijs als de totale kosten. De werkelijke kosten van een website omvatten de tijd die je besteedt aan bouwen en onderhouden, de leads die je verliest omdat de UX niet conversiegericht was, de SEO-voortgang die je niet maakt omdat het platform technische plafonds heeft, en uiteindelijk de volledige herbouwkosten wanneer het bedrijf het platform ontgroeit.</p>
+    <p>Een Wix- of Squarespace-abonnement begint vanaf circa €16 per maand. Een op maat ontworpen zakelijke website in Nederland begint vanaf circa €1.500. Op papier verdient de DIY-site zichzelf terug in acht maanden. Maar als de maatwerk site twee keer zoveel bezoekers omzet in aanvragen, draait de berekening snel om — en blijft hij elke maand daarna in het voordeel van de maatwerksite omdraaien.</p>
+    <h2>Wanneer een DIY-tool dan wél de juiste keuze is</h2>
+    <p>Redelijk vaak, als de omstandigheden kloppen. Een DIY-bouwer is een redelijke keuze wanneer je een zakelijk idee test voordat je volledig investeert, wanneer je iets deze week online moet hebben en snelheid werkelijk zwaarder weegt dan optimalisatie, of wanneer het primaire doel van je site is te bevestigen dat je bestaat, niet actief leads te genereren.</p>
+    <p>Het wordt het verkeerde gereedschap wanneer je website je voornaamste bron van nieuwe klanten moet zijn, wanneer je in een concurrerende markt zit waar zoekmachinevindbaarheid telt, of wanneer je al gelanceerd hebt en merkt dat bezoekers binnenkomen maar niet converteren. Op dat moment is de beperking niet het platform — het is de afwezigheid van UX-denken dat het platform nooit heeft geboden.</p>
+    <div class="cta-box">
+      <h3>Zit je al op Wix of Squarespace? Dat hoeft geen probleem te zijn.</h3>
+      <p>Veel van de conversie- en UX-problemen die DIY-gebouwde websites treffen, zijn oplosbaar zonder een volledige herbouw. Een UX-audit identificeert precies welke knelpunten je leads kosten en wat je als eerste moet aanpakken. Bij Engaging UX Design is elke aanbeveling specifiek voor jouw site en gebaseerd op data, niet op templates.</p>
+      <a class="cta-btn" href="https://quickestimate.engaginguxdesign.com/">Gratis schatting aanvragen →</a>
+    </div>
+    <div class="sources">
+      <span class="section-label">Bronnen</span>
+      <ol>
+        <li><strong>Colorlib (2026).</strong> Wix- en Squarespace-statistieken: marktaandeel, SEO-scores, prestatiedata. <a href="https://colorlib.com/wp/wix-statistics/" target="_blank">colorlib.com</a></li>
+        <li><strong>Marketing LTB (2025).</strong> Statistieken kleine ondernemerswebsites. <a href="https://marketingltb.com/blog/statistics/small-business-website-statistics/" target="_blank">marketingltb.com</a></li>
+        <li><strong>Bits From Bytes (2026).</strong> Beste websitebouwer 2026: 90-dagen testreviews. <a href="https://bitsfrombytes.com/best-website-builder-2026-tested-guide/" target="_blank">bitsfrombytes.com</a></li>
+        <li><strong>The CSS Agency (2026).</strong> Conversieratio-benchmarks: Wix 1,5–3%, Webflow/maatwerk 3–7%. <a href="https://www.thecssagency.com/blog/top-no-code-website-builders" target="_blank">thecssagency.com</a></li>
+        <li><strong>SiteBuilderReport (2025).</strong> Wix en Squarespace drijven samen 55% van de websitebouwermarkt. <a href="https://www.sitebuilderreport.com/wix-vs-squarespace" target="_blank">sitebuilderreport.com</a></li>
+        <li><strong>WPBeginner (2026).</strong> Wix vendor lock-in: je kunt websiteontwerp of pagina's niet exporteren. <a href="https://www.wpbeginner.com/beginners-guide/how-to-choose-the-best-website-builder/" target="_blank">wpbeginner.com</a></li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+<div class="art-nav"><a class="art-nav-link prev" href="nl-artikel-6-website-kosten.html">← Wat mag een website kosten?</a><a class="art-nav-link next" href="nl-artikel-kleurpsychologie.html">Kleur en websitebeslissingen →</a></div>
+<!-- FOOTER -->
+<footer>
+  <img src="https://engaginguxdesign.com/image-assets/Logo-for-darkbg.png" alt="Engaging UX Design"/>
+  <p>Data-driven UX design creating engaging, conversion-focused websites that help businesses grow.</p>
+  <p style="margin-top:.4rem;">Eindhoven, NL &nbsp;·&nbsp; <a href="mailto:info@engaginguxdesign.com">info@engaginguxdesign.com</a> &nbsp;·&nbsp; <a href="https://engaginguxdesign.com">engaginguxdesign.com</a></p>
+</footer>
+</body>
+</html>

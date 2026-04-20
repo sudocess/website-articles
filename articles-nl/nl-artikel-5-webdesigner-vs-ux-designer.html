@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Webdesigner vs UX-designer: wat is het verschil? | Engaging UX Design</title>
+  <meta name="description" content="Ze werken allebei aan websites maar lossen andere problemen op. Begrijp het verschil om de juiste persoon voor je project in te huren."/>
+  <meta name="keywords" content="webdesigner versus UX designer, verschil webdesign UX design, UX designer inhuren Nederland, UX designer Eindhoven"/>
+  <meta name="author" content="Engaging UX Design"/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://articles.engaginguxdesign.com/nl/webdesigner-vs-ux-designer"/>
+  <meta property="og:type" content="article"/>
+  <meta property="og:title" content="Webdesigner vs UX-designer: wat is het verschil? | Engaging UX Design"/>
+  <meta property="og:description" content="Ze werken allebei aan websites maar lossen andere problemen op. Begrijp het verschil om de juiste persoon voor je project in te huren."/>
+  <meta property="og:url" content="https://articles.engaginguxdesign.com/nl/webdesigner-vs-ux-designer"/>
+  <meta property="og:site_name" content="Engaging UX Design Articles"/>
+  <meta property="og:image" content="https://engaginguxdesign.com/image-assets/Logo-for-darkbg.png"/>
+  <meta property="article:author" content="Cess Garcia"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Webdesigner vs UX-designer: wat is het verschil? | Engaging UX Design"/>
+  <meta name="twitter:description" content="Ze werken allebei aan websites maar lossen andere problemen op. Begrijp het verschil om de juiste persoon voor je project in te huren."/>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Webdesigner vs UX-designer: wat is het verschil? | Engaging UX Design",
+    "description": "Ze werken allebei aan websites maar lossen andere problemen op. Begrijp het verschil om de juiste persoon voor je project in te huren.",
+    "inLanguage": "nl",
+    "author": {"@type": "Person", "name": "Cess Garcia", "url": "https://engaginguxdesign.com/about/"},
+    "publisher": {"@type": "Organization", "name": "Engaging UX Design", "url": "https://engaginguxdesign.com",
+      "logo": {"@type": "ImageObject", "url": "https://engaginguxdesign.com/image-assets/Logo-for-darkbg.png"}},
+    "mainEntityOfPage": {"@type": "WebPage", "@id": "https://articles.engaginguxdesign.com/nl/webdesigner-vs-ux-designer"}
+  }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;600;700;800;900&family=Gabarito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --cream:       #FDF6EE;
+      --brown-dark:  #2b1206;
+      --brown-text:  #2e1a0e;
+      --brown-mid:   #6b3820;
+      --brown-light: #AA918C;
+      --orange:      #c0471a;
+      --gold:        #d4952a;
+      --gold-hover:  #e8a832;
+      --border:      rgba(46,26,14,.1);
+      --card-bg:     #fff9f3;
+      --raised:      #f5ede2;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { -webkit-font-smoothing: antialiased; scroll-behavior: smooth; }
+
+    body {
+      background: var(--cream);
+      color: var(--brown-text);
+      font-family: 'Gabarito', sans-serif;
+      font-size: 17px;
+      line-height: 1.78;
+    }
+
+    /* ── BACK BANNER ── */
+    .back-banner {
+      background: var(--brown-dark);
+      padding: .6rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .back-banner p { font-size: .73rem; color: rgba(255,255,255,.5); }
+    .back-banner p strong { color: rgba(255,255,255,.8); font-weight: 600; }
+    .back-banner a {
+      font-size: .7rem;
+      font-weight: 700;
+      color: var(--brown-dark);
+      background: var(--gold);
+      padding: .38rem 1rem;
+      border-radius: 999px;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: background .2s;
+      flex-shrink: 0;
+    }
+    .back-banner a:hover { background: var(--gold-hover); }
+
+    /* ── NAV ── */
+    nav {
+      background: var(--brown-dark);
+      border-bottom: 1px solid rgba(255,255,255,.06);
+      padding: 0 2rem;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav-logo img { height: 36px; width: auto; }
+    .nav-cta {
+      font-family: 'Gabarito', sans-serif;
+      font-size: 13px;
+      font-weight: 400;
+      color: var(--brown-dark);
+      background: var(--gold);
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 100px;
+      transition: background .2s;
+    }
+    .nav-cta:hover { background: var(--gold-hover); }
+    .nav-right { display: flex; align-items: center; gap: 1.5rem; }
+    .nav-links { display: flex; align-items: center; gap: 1.5rem; list-style: none; }
+    .nav-links a {
+      font-size: .7rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase;
+      color: rgba(255,255,255,.55); text-decoration: none; transition: color .2s;
+    }
+    .nav-links a:hover { color: #fff; }
+    .nav-links a.nav-back { color: var(--gold); font-weight: 700; }
+    .nav-links a.nav-back:hover { color: var(--gold-hover); }
+    .nav-divider { width: 1px; height: 20px; background: rgba(255,255,255,.12); }
+    .lang-switch {
+      display: flex; align-items: center; gap: .35rem;
+      font-size: .7rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase;
+    }
+    .lang-switch a { color: rgba(255,255,255,.4); text-decoration: none; transition: color .2s; }
+    .lang-switch a:hover { color: rgba(255,255,255,.7); }
+    .lang-switch a.active { color: #fff; }
+    .lang-switch .sep { color: rgba(255,255,255,.15); }
+
+    /* ── ARTICLE INDEX ── */
+    .article-index {
+      max-width: 900px;
+      margin: 4rem auto 0;
+      padding: 0 2rem 2rem;
+    }
+    .article-index h2 {
+      font-family: 'Alexandria', sans-serif;
+      font-size: .65rem;
+      font-weight: 700;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 1.2rem;
+    }
+    .index-list { display: flex; flex-direction: column; gap: .6rem; }
+    .index-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      text-decoration: none;
+      padding: .9rem 1.2rem;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      transition: border-color .2s;
+    }
+    .index-item:hover { border-color: var(--orange); }
+    .index-num {
+      font-family: 'Alexandria', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 900;
+      color: var(--orange);
+      flex-shrink: 0;
+      width: 28px;
+    }
+    .index-item span {
+      font-family: 'Alexandria', sans-serif;
+      font-size: .95rem;
+      font-weight: 700;
+      color: var(--brown-dark);
+      letter-spacing: -.01em;
+    }
+    .index-arrow { margin-left: auto; color: var(--brown-light); font-size: .85rem; }
+
+    /* ── ARTICLE WRAPPER ── */
+    .article-wrap {
+      max-width: 900px;
+      margin: 5rem auto 0;
+      padding: 0 2rem;
+    }
+    .article-divider {
+      border: none;
+      border-top: 2px solid var(--border);
+      margin: 6rem 0 0;
+    }
+
+    /* ── HERO ── */
+    .art-hero { padding: 3.5rem 0 3rem; border-bottom: 1px solid var(--border); }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: .4rem;
+      font-size: .65rem;
+      font-weight: 700;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      color: var(--orange);
+      border: 1px solid rgba(192,71,26,.28);
+      background: rgba(192,71,26,.06);
+      padding: .28rem .85rem;
+      border-radius: 999px;
+      margin-bottom: 1.6rem;
+    }
+    .art-hero h1 {
+      font-family: 'Alexandria', sans-serif;
+      font-size: clamp(1.9rem, 4.5vw, 3rem);
+      font-weight: 900;
+      line-height: 1.1;
+      letter-spacing: -.03em;
+      color: var(--brown-dark);
+      margin-bottom: 1.2rem;
+      max-width: 740px;
+    }
+    .art-hero h1 em { font-style: italic; color: var(--orange); }
+    .art-deck {
+      font-size: 1.05rem;
+      color: var(--brown-mid);
+      max-width: 600px;
+      line-height: 1.7;
+      margin-bottom: 1.6rem;
+    }
+    .byline {
+      font-size: .7rem;
+      font-weight: 600;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--brown-light);
+    }
+    .byline strong { color: var(--orange); }
+
+    /* ── BODY ── */
+    .art-body { padding: 2.8rem 0; max-width: 740px; }
+    .art-body p { margin-bottom: 1.55rem; color: #4a2a18; }
+    .art-body h2 {
+      font-family: 'Alexandria', sans-serif;
+      font-size: 1.55rem;
+      font-weight: 800;
+      letter-spacing: -.025em;
+      color: var(--brown-dark);
+      margin: 3.5rem 0 1rem;
+      line-height: 1.18;
+    }
+    .section-label {
+      display: block;
+      font-size: .65rem;
+      font-weight: 700;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin: 3rem 0 .7rem;
+    }
+    strong { color: var(--brown-dark); font-weight: 700; }
+    em.hi  { font-style: normal; color: var(--orange); font-weight: 600; }
+
+    /* ── STAT CARDS ── */
+    .stat-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(165px, 1fr));
+      gap: .9rem;
+      margin: 2.4rem 0;
+    }
+    .stat-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-top: 3px solid var(--orange);
+      padding: 1.4rem 1.2rem;
+      border-radius: 8px;
+    }
+    .stat-num {
+      font-family: 'Alexandria', sans-serif;
+      font-size: 2.3rem;
+      font-weight: 900;
+      color: var(--orange);
+      line-height: 1;
+      margin-bottom: .35rem;
+    }
+    .stat-desc { font-size: .8rem; color: var(--brown-mid); line-height: 1.5; }
+    .stat-source {
+      font-size: .62rem;
+      font-weight: 600;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+      color: var(--brown-light);
+      margin-top: .5rem;
+    }
+
+    /* ── BLOCKQUOTE ── */
+    blockquote {
+      margin: 2.5rem 0;
+      padding: 1.8rem 2rem;
+      background: var(--raised);
+      border-left: 4px solid var(--orange);
+      border-radius: 0 8px 8px 0;
+      font-family: 'Alexandria', sans-serif;
+      font-size: 1.05rem;
+      font-style: italic;
+      line-height: 1.6;
+      color: var(--brown-dark);
+    }
+    blockquote cite {
+      display: block;
+      margin-top: .65rem;
+      font-size: .68rem;
+      font-style: normal;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--orange);
+    }
+
+    /* ── STEP LIST ── */
+    .step-list { list-style: none; margin: 1.8rem 0; display: flex; flex-direction: column; gap: 1rem; }
+    .step-list li {
+      display: flex;
+      gap: 1rem;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.2rem 1.3rem;
+      align-items: flex-start;
+    }
+    .step-num {
+      font-family: 'Alexandria', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 900;
+      color: var(--orange);
+      flex-shrink: 0;
+      width: 26px;
+      line-height: 1.4;
+    }
+    .step-list li p { margin: 0; font-size: .9rem; color: #4a2a18; }
+    .step-list li strong { display: block; margin-bottom: .2rem; font-size: .95rem; }
+
+    /* ── MISTAKE LIST ── */
+    .mistake-list { list-style: none; margin: 1.8rem 0; display: flex; flex-direction: column; gap: 1.2rem; }
+    .mistake-list li {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--orange);
+      border-radius: 0 8px 8px 0;
+      padding: 1.3rem 1.4rem;
+    }
+    .mistake-list li .mistake-title {
+      font-family: 'Alexandria', sans-serif;
+      font-size: 1rem;
+      font-weight: 800;
+      color: var(--brown-dark);
+      letter-spacing: -.01em;
+      margin-bottom: .4rem;
+      display: flex;
+      align-items: center;
+      gap: .6rem;
+    }
+    .mistake-num {
+      background: var(--orange);
+      color: white;
+      font-size: .65rem;
+      font-weight: 900;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .mistake-list li p { font-size: .88rem; color: #4a2a18; margin: 0; }
+
+    /* ── CTA BOX ── */
+    .cta-box {
+      background: var(--brown-dark);
+      border-radius: 12px;
+      padding: 3rem 2.5rem;
+      margin: 3.5rem 0 1rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-box::after {
+      content: '';
+      position: absolute;
+      bottom: -50px; right: -50px;
+      width: 180px; height: 180px;
+      border-radius: 50%;
+      background: rgba(212,149,42,.07);
+      pointer-events: none;
+    }
+    .cta-box h3 {
+      font-family: 'Alexandria', sans-serif;
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: -.02em;
+      margin-bottom: .6rem;
+    }
+    .cta-box p { color: rgba(255,255,255,.6); font-size: .9rem; margin-bottom: 1.5rem; }
+    .cta-btn {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--brown-dark);
+      padding: 12px 28px;
+      border-radius: 100px;
+      font-size: .78rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: background .2s;
+    }
+    .cta-btn:hover { background: var(--gold-hover); }
+
+    /* ── SOURCES ── */
+    .sources {
+      margin-top: 3.5rem;
+      padding-top: 1.8rem;
+      border-top: 1px solid var(--border);
+    }
+    .sources ol { padding-left: 1.2rem; font-size: .78rem; color: var(--brown-mid); line-height: 1.8; }
+    .sources li { margin-bottom: .4rem; }
+    .sources a { color: var(--orange); text-decoration: none; }
+    .sources a:hover { text-decoration: underline; }
+
+    hr.divider { border: none; border-top: 1px solid var(--border); margin: 3rem 0; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--brown-dark);
+      padding: 2.8rem 2rem;
+      text-align: center;
+      margin-top: 6rem;
+    }
+    footer img { height: 34px; margin-bottom: .7rem; }
+    footer p { font-size: .78rem; color: rgba(255,255,255,.4); margin: 0; line-height: 1.7; }
+    footer a { color: var(--gold); text-decoration: none; }
+
+    @media (max-width: 640px) {
+      nav { padding: 0 1.2rem; }
+      .article-wrap { padding: 0 1.4rem; }
+      .back-banner { padding: .6rem 1.2rem; }
+      .art-hero h1 { font-size: 1.8rem; }
+      .stat-row { grid-template-columns: 1fr 1fr; }
+      .cta-box { padding: 2rem 1.5rem; }
+    }
+  
+    .art-nav {
+      max-width: 900px;
+      margin: 3rem auto 0;
+      padding: 1.5rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      border-top: 1px solid var(--border);
+    }
+    .art-nav-link {
+      font-size: .78rem;
+      font-weight: 700;
+      color: var(--orange);
+      text-decoration: none;
+      transition: color .2s;
+    }
+    .art-nav-link:hover { color: var(--brown-dark); }
+    .art-nav-link.next { margin-left: auto; }
+
+  
+    .art-nav {
+      max-width: 900px; margin: 3rem auto 0; padding: 1.5rem 2rem;
+      display: flex; justify-content: space-between; gap: 1rem;
+      border-top: 1px solid var(--border);
+    }
+    .art-nav-link { font-size: .78rem; font-weight: 700; color: var(--orange); text-decoration: none; transition: color .2s; }
+    .art-nav-link:hover { color: var(--brown-dark); }
+    .art-nav-link.next { margin-left: auto; }
+    .compare-table { width: 100%; border-collapse: collapse; margin: 2rem 0; font-size: .88rem; }
+    .compare-table th { background: var(--brown-dark); color: #fff; padding: .9rem 1rem; text-align: left; font-family: 'Alexandria', sans-serif; font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; }
+    .compare-table th:first-child { border-radius: 8px 0 0 0; } .compare-table th:last-child { border-radius: 0 8px 0 0; }
+    .compare-table td { padding: .85rem 1rem; border-bottom: 1px solid var(--border); color: #4a2a18; vertical-align: top; }
+    .compare-table tr:last-child td { border-bottom: none; }
+    .compare-table tr:nth-child(even) td { background: var(--card-bg); }
+    .compare-table td:first-child { font-weight: 700; color: var(--brown-dark); }
+    .price-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(195px, 1fr)); gap: 1rem; margin: 2rem 0; }
+    .price-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 10px; padding: 1.5rem 1.3rem; display: flex; flex-direction: column; }
+    .price-card.featured { border-color: var(--orange); border-width: 2px; }
+    .price-card .tier { font-size: .65rem; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; color: var(--orange); margin-bottom: .5rem; }
+    .price-card .amount { font-family: 'Alexandria', sans-serif; font-size: 1.7rem; font-weight: 900; color: var(--brown-dark); letter-spacing: -.03em; line-height: 1; margin-bottom: .3rem; }
+    .price-card .amount span { font-size: 1rem; font-weight: 500; color: var(--brown-mid); }
+    .price-card .price-desc { font-size: .82rem; color: var(--brown-mid); margin-bottom: 1rem; flex: 1; }
+    .price-card .price-includes { font-size: .75rem; color: var(--brown-mid); line-height: 1.7; padding-top: .8rem; border-top: 1px solid var(--border); }
+    .price-card .price-includes li { list-style: none; padding-left: 1.1rem; position: relative; }
+    .price-card .price-includes li::before { content: '✓'; position: absolute; left: 0; color: var(--orange); font-weight: 700; font-size: .75rem; }
+  </style>
+</head>
+<body>
+<div class="back-banner">
+  <p>Onderdeel van <strong>Engaging UX Design</strong> &nbsp;·&nbsp; Freelance UX designer gevestigd in Nederland</p>
+  <a href="https://engaginguxdesign.com" target="_blank">← Terug naar de website</a>
+</div>
+<nav>
+  <a href="https://engaginguxdesign.com">
+    <img class="nav-logo" src="https://engaginguxdesign.com/image-assets/Logo-for-darkbg.png" alt="Engaging UX Design"/>
+  </a>
+  <div class="nav-right">
+    <ul class="nav-links">
+      <li><a class="nav-back" href="home-nl.html">← Terug naar artikelen</a></li>
+      <li><a href="home-nl.html">UX Design</a></li>
+      <li><a href="../articles/projects.html">Projecten</a></li>
+      <li><a href="../articles/research.html">Onderzoek</a></li>
+    </ul>
+    <span class="nav-divider"></span>
+    <a class="nav-cta" href="https://quickestimate.engaginguxdesign.com/">Gratis schatting aanvragen</a>
+    <div class="lang-switch">
+      <a href="../articles/article-5-web-designer-vs-ux-designer.html">EN</a>
+      <span class="sep">|</span>
+      <a href="nl-artikel-5-webdesigner-vs-ux-designer.html" class="active">NL</a>
+    </div>
+  </div>
+</nav>
+
+<div class="article-wrap">
+  <div class="art-hero">
+    <span class="pill">UX Design · Webdesign</span>
+    <h1>Wat is het verschil tussen een webdesigner <em>en een UX-designer?</em></h1>
+    <p class="art-deck">Ze werken allebei aan websites. Ze gebruiken allebei ontwerpsoftware. Maar ze lossen fundamenteel verschillende problemen op. Begrijpen wat dat verschil is, kan je behoeden voor het inhuren van de verkeerde persoon voor je project.</p>
+    <p class="byline">Door <strong>Engaging UX Design</strong> &nbsp;·&nbsp; UX Strategie &amp; Conversie</p>
+  </div>
+  <div class="art-body">
+    <p>De meeste kleine ondernemers gebruiken de termen door elkaar. "Ik heb een webdesigner nodig" betekent vaak "ik heb iemand nodig die mijn website bouwt." Maar de webdesignwereld heeft zich opgesplitst in duidelijke specialismen, en de verkeerde inhuren voor de taak in kwestie is een veelgemaakte en kostbare fout.</p>
+    <p>De helderste manier om het verschil te begrijpen: een webdesigner zorgt ervoor dat websites er goed uitzien. Een UX-designer zorgt ervoor dat websites goed werken voor de mensen die ze gebruiken. Beide zijn belangrijk. Maar het zijn niet dezelfde vaardigheden, en het is niet hetzelfde type werk.</p>
+    <h2>Wat een webdesigner doet</h2>
+    <p>Een webdesigner is verantwoordelijk voor de visuele laag van een website. Dat betekent lay-out, typografie, kleurpaletten, beeldgebruik, responsief gedrag op verschillende apparaten en de algehele esthetische samenhang van de site. Ze werken aan de front-end, het deel dat je kunt zien, en hebben vaak kennis van HTML, CSS en soms JavaScript.</p>
+    <p>Hun kernvraag is: ziet dit er goed uit? Vertegenwoordigt het het merk? Is het visueel aantrekkelijk en technisch functioneel op alle apparaten? Webdesigners zijn, in de woorden van een veelgebruikte analogie, als architecten: ze ontwerpen de structuur en uitstraling van het gebouw.</p>
+    <h2>Wat een UX-designer doet</h2>
+    <p>Een UX-designer is verantwoordelijk voor hoe een website aanvoelt om te gebruiken. Ze doen gebruikersonderzoek, brengen gebruikersreizen in kaart, ontwerpen wireframes die weerspiegelen hoe mensen werkelijk denken en navigeren, en voeren usabilitytests uit om knelpunten te vinden.</p>
+    <p>Hun kernvraag is: werkt dit voor de persoon die het gebruikt? Klopt de structuur? Kan iemand snel vinden wat hij nodig heeft? Voelt de stroom van op de pagina landen naar actie ondernemen natuurlijk aan? UX-designers zijn de binnenhuisarchitecten in dezelfde analogie: gefocust op hoe mensen door de ruimte bewegen en of elke kamer zijn doel dient.</p>
+    <h2>Naast elkaar</h2>
+    <table class="compare-table">
+      <thead>
+        <tr><th>Aspect</th><th>Webdesigner</th><th>UX-designer</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Primaire focus</td><td>Visuele esthetiek en technische uitvoering</td><td>Gebruikersgedrag en ervaringsstroom</td></tr>
+        <tr><td>Kerntools</td><td>Figma, HTML/CSS, Adobe Suite</td><td>Figma, gebruikersonderzoektools, journey maps, analytics</td></tr>
+        <tr><td>Startpunt</td><td>Merkrichtlijnen, visuele briefing</td><td>Gebruikersonderzoek, bedrijfsdoelen, conversiedata</td></tr>
+        <tr><td>Belangrijkste oplevering</td><td>Afgerond visueel ontwerp, gecodeerde pagina's</td><td>Wireframes, prototypes, usabilityrapportages</td></tr>
+        <tr><td>Meet succes aan</td><td>Visuele kwaliteit, klanttevredenheid</td><td>Conversieratio, taakvoltooiing, bouncepercentage</td></tr>
+        <tr><td>Werkt aan</td><td>Websites (browsergebaseerd)</td><td>Elk digitaal product: websites, apps, software</td></tr>
+      </tbody>
+    </table>
+    <h2>Waar het ingewikkeld wordt</h2>
+    <p>In grotere organisaties zijn deze rollen duidelijk gescheiden. Een UX-designer doet het onderzoek en de wireframes. Een UI-designer verzorgt de visuele interface. Een webdesigner of ontwikkelaar verzorgt de bouw. Elk is een specialist.</p>
+    <p>Voor kleine bedrijven en freelancework is de realiteit anders. Veel designers werken op meerdere vlakken tegelijk. Een freelancer die zichzelf omschrijft als "UX/UI-designer en webontwikkelaar" is iemand die de volledige keten beheerst: onderzoek, ontwerp en bouw in één engagement. Dat is geen compromis. Voor de meeste kleine ondernemersprojecten is het precies wat je nodig hebt: één persoon die begrijpt hoe de site moet werken én hoe hij moet uitzienn, en die hem ook kan bouwen.</p>
+    <blockquote>
+      "Webdesign richt zich op het maken van websites die werken. UX-design richt zich op de gebruiker. De UX-designer bedenkt de beste manier om een product te optimaliseren voor de specifieke behoeften van de gebruiker."
+      <cite>Userpilot, 2026</cite>
+    </blockquote>
+    <h2>Wat heb jij eigenlijk nodig?</h2>
+    <p>Als je een website wilt laten bouwen en je primaire zorg is dat hij er professioneel uitziet en technisch werkt, dan ben je met een webdesigner goed af. Als je een bestaande site opnieuw opzet omdat hij niet converteert, bezoekers verliest of klachten over usability genereert, heb je UX-werk nodig vóór visueel werk. Het redesignen van de esthetiek van een site met structurele UX-problemen lost de conversieratio niet op. Het maakt dezelfde problemen er alleen beter uitzien.</p>
+    <p>De meest waardevolle inhuur voor de meeste kleine bedrijven is iemand die denkt als een UX-designer (begint bij gebruikersbehoeften en bedrijfsdoelen) en uitvoert als een webdesigner (bouwt iets dat werkt, er fantastisch uitziet en online gaat). Dat is precies het snijvlak waar conversiegerichte freelancers opereren.</p>
+    <div class="cta-box">
+      <h3>Je hebt beide nodig. Dat is wat wij bieden.</h3>
+      <p>Engaging UX Design pakt het hele plaatje aan: gebruikersonderzoek, strategische wireframes, visueel ontwerp en ontwikkeling. Elk project begint met inzicht in je gebruikers en eindigt met een site die is gebouwd om hen te converteren. Gevestigd in Eindhoven, actief voor bedrijven door heel Nederland.</p>
+      <a class="cta-btn" href="https://engaginguxdesign.com/solutions/business-and-lead-generating-websites/">Bekijk hoe wij werken →</a>
+    </div>
+    <div class="sources">
+      <span class="section-label">Bronnen</span>
+      <ol>
+        <li><strong>Userpilot (2026).</strong> Webdesigner vs UX-designer: de voornaamste verschillen. <a href="https://userpilot.com/blog/web-designer-vs-ux-designer/" target="_blank">userpilot.com</a></li>
+        <li><strong>Contentsquare (2025).</strong> Het verschil tussen webdesign en UX-design uitgelegd. <a href="https://contentsquare.com/guides/web-design/vs-ux-design/" target="_blank">contentsquare.com</a></li>
+        <li><strong>Futuretheory (2024).</strong> Het verschil tussen webdesign, UI en UX-design. <a href="https://futuretheory.co/web-design-ui-ux-design/" target="_blank">futuretheory.co</a></li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+<div class="art-nav"><a class="art-nav-link prev" href="nl-artikel-4-ai-menselijke-designer.html">← Heb je nog een menselijke designer nodig?</a><a class="art-nav-link next" href="nl-artikel-6-website-kosten.html">Wat mag een website kosten? →</a></div>
+<!-- FOOTER -->
+<footer>
+  <img src="https://engaginguxdesign.com/image-assets/Logo-for-darkbg.png" alt="Engaging UX Design"/>
+  <p>Data-driven UX design creating engaging, conversion-focused websites that help businesses grow.</p>
+  <p style="margin-top:.4rem;">Eindhoven, NL &nbsp;·&nbsp; <a href="mailto:info@engaginguxdesign.com">info@engaginguxdesign.com</a> &nbsp;·&nbsp; <a href="https://engaginguxdesign.com">engaginguxdesign.com</a></p>
+</footer>
+</body>
+</html>

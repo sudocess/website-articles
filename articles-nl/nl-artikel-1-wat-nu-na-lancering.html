@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Je website is live. En nu? | Engaging UX Design</title>
+  <meta name="description" content="Online gaan is niet de finish. Dit zijn de vijf essentiële stappen die elke ondernemer moet nemen na de lancering van zijn website."/>
+  <meta name="keywords" content="website lancering wat nu, Google Analytics instellen, website optimalisatie Nederland, UX design Eindhoven"/>
+  <meta name="author" content="Engaging UX Design"/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://articles.engaginguxdesign.com/nl/wat-nu-na-de-lancering"/>
+  <meta property="og:type" content="article"/>
+  <meta property="og:title" content="Je website is live. En nu? | Engaging UX Design"/>
+  <meta property="og:description" content="Online gaan is niet de finish. Dit zijn de vijf essentiële stappen die elke ondernemer moet nemen na de lancering van zijn website."/>
+  <meta property="og:url" content="https://articles.engaginguxdesign.com/nl/wat-nu-na-de-lancering"/>
+  <meta property="og:site_name" content="Engaging UX Design Articles"/>
+  <meta property="og:image" content="https://engaginguxdesign.com/image-assets/Logo-for-darkbg.png"/>
+  <meta property="article:author" content="Cess Garcia"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Je website is live. En nu? | Engaging UX Design"/>
+  <meta name="twitter:description" content="Online gaan is niet de finish. Dit zijn de vijf essentiële stappen die elke ondernemer moet nemen na de lancering van zijn website."/>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Je website is live. En nu? | Engaging UX Design",
+    "description": "Online gaan is niet de finish. Dit zijn de vijf essentiële stappen die elke ondernemer moet nemen na de lancering van zijn website.",
+    "inLanguage": "nl",
+    "author": {"@type": "Person", "name": "Cess Garcia", "url": "https://engaginguxdesign.com/about/"},
+    "publisher": {"@type": "Organization", "name": "Engaging UX Design", "url": "https://engaginguxdesign.com",
+      "logo": {"@type": "ImageObject", "url": "https://engaginguxdesign.com/image-assets/Logo-for-darkbg.png"}},
+    "mainEntityOfPage": {"@type": "WebPage", "@id": "https://articles.engaginguxdesign.com/nl/wat-nu-na-de-lancering"}
+  }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;600;700;800;900&family=Gabarito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --cream:       #FDF6EE;
+      --brown-dark:  #2b1206;
+      --brown-text:  #2e1a0e;
+      --brown-mid:   #6b3820;
+      --brown-light: #AA918C;
+      --orange:      #c0471a;
+      --gold:        #d4952a;
+      --gold-hover:  #e8a832;
+      --border:      rgba(46,26,14,.1);
+      --card-bg:     #fff9f3;
+      --raised:      #f5ede2;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { -webkit-font-smoothing: antialiased; scroll-behavior: smooth; }
+
+    body {
+      background: var(--cream);
+      color: var(--brown-text);
+      font-family: 'Gabarito', sans-serif;
+      font-size: 17px;
+      line-height: 1.78;
+    }
+
+    /* ── BACK BANNER ── */
+    .back-banner {
+      background: var(--brown-dark);
+      padding: .6rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .back-banner p { font-size: .73rem; color: rgba(255,255,255,.5); }
+    .back-banner p strong { color: rgba(255,255,255,.8); font-weight: 600; }
+    .back-banner a {
+      font-size: .7rem;
+      font-weight: 700;
+      color: var(--brown-dark);
+      background: var(--gold);
+      padding: .38rem 1rem;
+      border-radius: 999px;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: background .2s;
+      flex-shrink: 0;
+    }
+    .back-banner a:hover { background: var(--gold-hover); }
+
+    /* ── NAV ── */
+    nav {
+      background: var(--brown-dark);
+      border-bottom: 1px solid rgba(255,255,255,.06);
+      padding: 0 2rem;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav-logo img { height: 36px; width: auto; }
+    .nav-cta {
+      font-family: 'Gabarito', sans-serif;
+      font-size: 13px;
+      font-weight: 400;
+      color: var(--brown-dark);
+      background: var(--gold);
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 100px;
+      transition: background .2s;
+    }
+    .nav-cta:hover { background: var(--gold-hover); }
+    .nav-right { display: flex; align-items: center; gap: 1.5rem; }
+    .nav-links { display: flex; align-items: center; gap: 1.5rem; list-style: none; }
+    .nav-links a {
+      font-size: .7rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase;
+      color: rgba(255,255,255,.55); text-decoration: none; transition: color .2s;
+    }
+    .nav-links a:hover { color: #fff; }
+    .nav-links a.nav-back { color: var(--gold); font-weight: 700; }
+    .nav-links a.nav-back:hover { color: var(--gold-hover); }
+    .nav-divider { width: 1px; height: 20px; background: rgba(255,255,255,.12); }
+    .lang-switch {
+      display: flex; align-items: center; gap: .35rem;
+      font-size: .7rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase;
+    }
+    .lang-switch a { color: rgba(255,255,255,.4); text-decoration: none; transition: color .2s; }
+    .lang-switch a:hover { color: rgba(255,255,255,.7); }
+    .lang-switch a.active { color: #fff; }
+    .lang-switch .sep { color: rgba(255,255,255,.15); }
+
+    /* ── ARTICLE INDEX ── */
+    .article-index {
+      max-width: 900px;
+      margin: 4rem auto 0;
+      padding: 0 2rem 2rem;
+    }
+    .article-index h2 {
+      font-family: 'Alexandria', sans-serif;
+      font-size: .65rem;
+      font-weight: 700;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 1.2rem;
+    }
+    .index-list { display: flex; flex-direction: column; gap: .6rem; }
+    .index-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      text-decoration: none;
+      padding: .9rem 1.2rem;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      transition: border-color .2s;
+    }
+    .index-item:hover { border-color: var(--orange); }
+    .index-num {
+      font-family: 'Alexandria', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 900;
+      color: var(--orange);
+      flex-shrink: 0;
+      width: 28px;
+    }
+    .index-item span {
+      font-family: 'Alexandria', sans-serif;
+      font-size: .95rem;
+      font-weight: 700;
+      color: var(--brown-dark);
+      letter-spacing: -.01em;
+    }
+    .index-arrow { margin-left: auto; color: var(--brown-light); font-size: .85rem; }
+
+    /* ── ARTICLE WRAPPER ── */
+    .article-wrap {
+      max-width: 900px;
+      margin: 5rem auto 0;
+      padding: 0 2rem;
+    }
+    .article-divider {
+      border: none;
+      border-top: 2px solid var(--border);
+      margin: 6rem 0 0;
+    }
+
+    /* ── HERO ── */
+    .art-hero { padding: 3.5rem 0 3rem; border-bottom: 1px solid var(--border); }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: .4rem;
+      font-size: .65rem;
+      font-weight: 700;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      color: var(--orange);
+      border: 1px solid rgba(192,71,26,.28);
+      background: rgba(192,71,26,.06);
+      padding: .28rem .85rem;
+      border-radius: 999px;
+      margin-bottom: 1.6rem;
+    }
+    .art-hero h1 {
+      font-family: 'Alexandria', sans-serif;
+      font-size: clamp(1.9rem, 4.5vw, 3rem);
+      font-weight: 900;
+      line-height: 1.1;
+      letter-spacing: -.03em;
+      color: var(--brown-dark);
+      margin-bottom: 1.2rem;
+      max-width: 740px;
+    }
+    .art-hero h1 em { font-style: italic; color: var(--orange); }
+    .art-deck {
+      font-size: 1.05rem;
+      color: var(--brown-mid);
+      max-width: 600px;
+      line-height: 1.7;
+      margin-bottom: 1.6rem;
+    }
+    .byline {
+      font-size: .7rem;
+      font-weight: 600;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--brown-light);
+    }
+    .byline strong { color: var(--orange); }
+
+    /* ── BODY ── */
+    .art-body { padding: 2.8rem 0; max-width: 740px; }
+    .art-body p { margin-bottom: 1.55rem; color: #4a2a18; }
+    .art-body h2 {
+      font-family: 'Alexandria', sans-serif;
+      font-size: 1.55rem;
+      font-weight: 800;
+      letter-spacing: -.025em;
+      color: var(--brown-dark);
+      margin: 3.5rem 0 1rem;
+      line-height: 1.18;
+    }
+    .section-label {
+      display: block;
+      font-size: .65rem;
+      font-weight: 700;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin: 3rem 0 .7rem;
+    }
+    strong { color: var(--brown-dark); font-weight: 700; }
+    em.hi  { font-style: normal; color: var(--orange); font-weight: 600; }
+
+    /* ── STAT CARDS ── */
+    .stat-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(165px, 1fr));
+      gap: .9rem;
+      margin: 2.4rem 0;
+    }
+    .stat-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-top: 3px solid var(--orange);
+      padding: 1.4rem 1.2rem;
+      border-radius: 8px;
+    }
+    .stat-num {
+      font-family: 'Alexandria', sans-serif;
+      font-size: 2.3rem;
+      font-weight: 900;
+      color: var(--orange);
+      line-height: 1;
+      margin-bottom: .35rem;
+    }
+    .stat-desc { font-size: .8rem; color: var(--brown-mid); line-height: 1.5; }
+    .stat-source {
+      font-size: .62rem;
+      font-weight: 600;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+      color: var(--brown-light);
+      margin-top: .5rem;
+    }
+
+    /* ── BLOCKQUOTE ── */
+    blockquote {
+      margin: 2.5rem 0;
+      padding: 1.8rem 2rem;
+      background: var(--raised);
+      border-left: 4px solid var(--orange);
+      border-radius: 0 8px 8px 0;
+      font-family: 'Alexandria', sans-serif;
+      font-size: 1.05rem;
+      font-style: italic;
+      line-height: 1.6;
+      color: var(--brown-dark);
+    }
+    blockquote cite {
+      display: block;
+      margin-top: .65rem;
+      font-size: .68rem;
+      font-style: normal;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--orange);
+    }
+
+    /* ── STEP LIST ── */
+    .step-list { list-style: none; margin: 1.8rem 0; display: flex; flex-direction: column; gap: 1rem; }
+    .step-list li {
+      display: flex;
+      gap: 1rem;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.2rem 1.3rem;
+      align-items: flex-start;
+    }
+    .step-num {
+      font-family: 'Alexandria', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 900;
+      color: var(--orange);
+      flex-shrink: 0;
+      width: 26px;
+      line-height: 1.4;
+    }
+    .step-list li p { margin: 0; font-size: .9rem; color: #4a2a18; }
+    .step-list li strong { display: block; margin-bottom: .2rem; font-size: .95rem; }
+
+    /* ── MISTAKE LIST ── */
+    .mistake-list { list-style: none; margin: 1.8rem 0; display: flex; flex-direction: column; gap: 1.2rem; }
+    .mistake-list li {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--orange);
+      border-radius: 0 8px 8px 0;
+      padding: 1.3rem 1.4rem;
+    }
+    .mistake-list li .mistake-title {
+      font-family: 'Alexandria', sans-serif;
+      font-size: 1rem;
+      font-weight: 800;
+      color: var(--brown-dark);
+      letter-spacing: -.01em;
+      margin-bottom: .4rem;
+      display: flex;
+      align-items: center;
+      gap: .6rem;
+    }
+    .mistake-num {
+      background: var(--orange);
+      color: white;
+      font-size: .65rem;
+      font-weight: 900;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .mistake-list li p { font-size: .88rem; color: #4a2a18; margin: 0; }
+
+    /* ── CTA BOX ── */
+    .cta-box {
+      background: var(--brown-dark);
+      border-radius: 12px;
+      padding: 3rem 2.5rem;
+      margin: 3.5rem 0 1rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-box::after {
+      content: '';
+      position: absolute;
+      bottom: -50px; right: -50px;
+      width: 180px; height: 180px;
+      border-radius: 50%;
+      background: rgba(212,149,42,.07);
+      pointer-events: none;
+    }
+    .cta-box h3 {
+      font-family: 'Alexandria', sans-serif;
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: -.02em;
+      margin-bottom: .6rem;
+    }
+    .cta-box p { color: rgba(255,255,255,.6); font-size: .9rem; margin-bottom: 1.5rem; }
+    .cta-btn {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--brown-dark);
+      padding: 12px 28px;
+      border-radius: 100px;
+      font-size: .78rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: background .2s;
+    }
+    .cta-btn:hover { background: var(--gold-hover); }
+
+    /* ── SOURCES ── */
+    .sources {
+      margin-top: 3.5rem;
+      padding-top: 1.8rem;
+      border-top: 1px solid var(--border);
+    }
+    .sources ol { padding-left: 1.2rem; font-size: .78rem; color: var(--brown-mid); line-height: 1.8; }
+    .sources li { margin-bottom: .4rem; }
+    .sources a { color: var(--orange); text-decoration: none; }
+    .sources a:hover { text-decoration: underline; }
+
+    hr.divider { border: none; border-top: 1px solid var(--border); margin: 3rem 0; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--brown-dark);
+      padding: 2.8rem 2rem;
+      text-align: center;
+      margin-top: 6rem;
+    }
+    footer img { height: 34px; margin-bottom: .7rem; }
+    footer p { font-size: .78rem; color: rgba(255,255,255,.4); margin: 0; line-height: 1.7; }
+    footer a { color: var(--gold); text-decoration: none; }
+
+    @media (max-width: 640px) {
+      nav { padding: 0 1.2rem; }
+      .article-wrap { padding: 0 1.4rem; }
+      .back-banner { padding: .6rem 1.2rem; }
+      .art-hero h1 { font-size: 1.8rem; }
+      .stat-row { grid-template-columns: 1fr 1fr; }
+      .cta-box { padding: 2rem 1.5rem; }
+    }
+  
+    .art-nav {
+      max-width: 900px;
+      margin: 3rem auto 0;
+      padding: 1.5rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      border-top: 1px solid var(--border);
+    }
+    .art-nav-link {
+      font-size: .78rem;
+      font-weight: 700;
+      color: var(--orange);
+      text-decoration: none;
+      transition: color .2s;
+    }
+    .art-nav-link:hover { color: var(--brown-dark); }
+    .art-nav-link.next { margin-left: auto; }
+
+  
+    .art-nav {
+      max-width: 900px; margin: 3rem auto 0; padding: 1.5rem 2rem;
+      display: flex; justify-content: space-between; gap: 1rem;
+      border-top: 1px solid var(--border);
+    }
+    .art-nav-link { font-size: .78rem; font-weight: 700; color: var(--orange); text-decoration: none; transition: color .2s; }
+    .art-nav-link:hover { color: var(--brown-dark); }
+    .art-nav-link.next { margin-left: auto; }
+    .compare-table { width: 100%; border-collapse: collapse; margin: 2rem 0; font-size: .88rem; }
+    .compare-table th { background: var(--brown-dark); color: #fff; padding: .9rem 1rem; text-align: left; font-family: 'Alexandria', sans-serif; font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; }
+    .compare-table th:first-child { border-radius: 8px 0 0 0; } .compare-table th:last-child { border-radius: 0 8px 0 0; }
+    .compare-table td { padding: .85rem 1rem; border-bottom: 1px solid var(--border); color: #4a2a18; vertical-align: top; }
+    .compare-table tr:last-child td { border-bottom: none; }
+    .compare-table tr:nth-child(even) td { background: var(--card-bg); }
+    .compare-table td:first-child { font-weight: 700; color: var(--brown-dark); }
+    .price-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(195px, 1fr)); gap: 1rem; margin: 2rem 0; }
+    .price-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 10px; padding: 1.5rem 1.3rem; display: flex; flex-direction: column; }
+    .price-card.featured { border-color: var(--orange); border-width: 2px; }
+    .price-card .tier { font-size: .65rem; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; color: var(--orange); margin-bottom: .5rem; }
+    .price-card .amount { font-family: 'Alexandria', sans-serif; font-size: 1.7rem; font-weight: 900; color: var(--brown-dark); letter-spacing: -.03em; line-height: 1; margin-bottom: .3rem; }
+    .price-card .amount span { font-size: 1rem; font-weight: 500; color: var(--brown-mid); }
+    .price-card .price-desc { font-size: .82rem; color: var(--brown-mid); margin-bottom: 1rem; flex: 1; }
+    .price-card .price-includes { font-size: .75rem; color: var(--brown-mid); line-height: 1.7; padding-top: .8rem; border-top: 1px solid var(--border); }
+    .price-card .price-includes li { list-style: none; padding-left: 1.1rem; position: relative; }
+    .price-card .price-includes li::before { content: '✓'; position: absolute; left: 0; color: var(--orange); font-weight: 700; font-size: .75rem; }
+  </style>
+</head>
+<body>
+<div class="back-banner">
+  <p>Onderdeel van <strong>Engaging UX Design</strong> &nbsp;·&nbsp; Freelance UX designer gevestigd in Nederland</p>
+  <a href="https://engaginguxdesign.com" target="_blank">← Terug naar de website</a>
+</div>
+<nav>
+  <a href="https://engaginguxdesign.com">
+    <img class="nav-logo" src="https://engaginguxdesign.com/image-assets/Logo-for-darkbg.png" alt="Engaging UX Design"/>
+  </a>
+  <div class="nav-right">
+    <ul class="nav-links">
+      <li><a class="nav-back" href="home-nl.html">← Terug naar artikelen</a></li>
+      <li><a href="home-nl.html">UX Design</a></li>
+      <li><a href="../articles/projects.html">Projecten</a></li>
+      <li><a href="../articles/research.html">Onderzoek</a></li>
+    </ul>
+    <span class="nav-divider"></span>
+    <a class="nav-cta" href="https://quickestimate.engaginguxdesign.com/">Gratis schatting aanvragen</a>
+    <div class="lang-switch">
+      <a href="../articles/article-1-whats-next-after-launch_1.html">EN</a>
+      <span class="sep">|</span>
+      <a href="nl-artikel-1-wat-nu-na-lancering.html" class="active">NL</a>
+    </div>
+  </div>
+</nav>
+
+<div class="article-wrap">
+  <div class="art-hero">
+    <span class="pill">Na de lancering · Groei</span>
+    <h1>Je website is live. <em>En nu?</em></h1>
+    <p class="art-deck">Online gaan is niet de finish. Voor de meeste ondernemers is het pas het startschot. Dit zegt het onderzoek over wat je direct na de lancering moet doen.</p>
+    <p class="byline">Door <strong>Engaging UX Design</strong> &nbsp;·&nbsp; UX Strategie &amp; Conversie</p>
+  </div>
+  <div class="art-body">
+    <p>Er is een moment na de lancering van een website dat voelt als een prestatie. En dat is het ook. Bouwen vanuit nul, beslissingen nemen over structuur, tekst en ontwerp en het geheel de wereld in sturen: dat kost echte inspanning. Maar hier is de ongemakkelijke waarheid die de meeste bureaus je niet vertellen: lanceren is niet het einde van het project. Het is het begin van een compleet ander traject.</p>
+    <p>Een website die na de lancering onaangeraakt blijft, is als een winkel die zijn deuren opent en daarna stopt met het opleiden van personeel, het vernieuwen van de etalage en het controleren of klanten de kassa wel kunnen vinden. Het gebouw staat er. Maar het bedrijf werkt niet.</p>
+    <h2>Stap één: meet wat er gebeurt</h2>
+    <p>Zorg eerst dat je kunt zien wat er op je site gebeurt. Dat betekent Google Analytics 4 en Google Search Console, allebei correct ingesteld en geverifieerd. Dit zijn geen extra's voor grotere bedrijven. Het is de absolute minimumstandaard om te begrijpen of je website werkt.</p>
+    <p>Google Search Console vertelt je welke zoekopdrachten je site laten zien, welke pagina's impressies krijgen en waar technische problemen zich verbergen. Google Analytics vertelt je wat bezoekers doen zodra ze binnenkomen: op welke pagina's ze landen, waar ze afhaken en hoe lang ze blijven. Zonder beide vlieg je blind.</p>
+    <div class="stat-row">
+      <div class="stat-card">
+        <div class="stat-num">68%</div>
+        <div class="stat-desc">Van alle online ervaringen begint met een zoekmachine</div>
+        <div class="stat-source">SE Ranking, 2025</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">94%</div>
+        <div class="stat-desc">Van alle webpagina's ontvangt nul bezoekers via Google</div>
+        <div class="stat-source">SE Ranking, 2025</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">0,63%</div>
+        <div class="stat-desc">Van de gebruikers klikt ooit op de tweede pagina van Google</div>
+        <div class="stat-source">Backlinko, 2025</div>
+      </div>
+    </div>
+    <p>Dat laatste cijfer is het meest veelzeggend. Wie niet op pagina één van Google staat, is voor zoekverkeer functioneel onzichtbaar. Google Search Console instellen is de eerste stap om te meten waar je staat en waar kansen liggen.</p>
+    <h2>Stap twee: dien je sitemap in en controleer indexering</h2>
+    <p>Google weet niet automatisch dat jouw website bestaat. Je moet je XML-sitemap indienen via Search Console en controleren of je pagina's correct geïndexeerd worden. Het klinkt technisch, maar het is een eenmalige taak met blijvend effect op je vindbaarheid. Pagina's die niet geïndexeerd zijn, worden nooit gevonden.</p>
+    <h2>Stap drie: check je snelheid op mobiel</h2>
+    <p>De meeste bezoekers komen via hun telefoon. Als je site niet snel laadt op mobiel, zijn ze vertrokken voordat ze iets hebben gezien.</p>
+    <blockquote>
+      "Webshops die laden in één seconde hebben drie keer hogere conversieratio's dan sites die vijf seconden doen over het laden."
+      <cite>Portent, 2024</cite>
+    </blockquote>
+    <p>Gebruik Google's PageSpeed Insights of het Core Web Vitals-rapport in Search Console voor je beginscore. De meeste vers gebouwde sites hebben minstens één of twee snelle verbeteringen beschikbaar: afbeeldingen comprimeren, ongebruikte scripts verwijderen of caching inschakelen.</p>
+    <h2>Stap vier: publiceer regelmatig content</h2>
+    <p>Een statische website is in de ogen van Google een dode website. Verse, relevante content geeft het signaal dat je site actief en gezaghebbend is. Je hoeft niet dagelijks te publiceren. Onderzoek van Orbit Media laat zien dat 48 procent van de marketeers twee tot vier keer per maand nieuwe content publiceert, en dat is genoeg om zichtbaar te blijven als de kwaliteit goed is.</p>
+    <p>Bovendien is content de manier waarop je organisch verkeer opbouwt. Een goed geschreven artikel dat een vraag beantwoordt waar jouw ideale klant op zoekt, kan jarenlang bezoekers naar je site trekken. Dat is de samengestelde kracht van content die de meeste ondernemers onderschatten.</p>
+    <h2>Stap vijf: evalueer en verbeter maandelijks</h2>
+    <p>Stel een maandelijkse herinnering in om je analytics te bekijken. Welke pagina's krijgen verkeer? Welke hebben een hoge bouncepercentage? Welke converteren? Een hoog bouncepercentage op je homepage is een signaal dat er iets mis is met de eerste indruk. Een pagina die wel bezoekers krijgt maar geen aanvragen genereert, heeft een conversieprobleem, geen verkeersproblem. Dat zijn twee compleet verschillende oplossingen.</p>
+    <p>De website die je hebt gelanceerd is versie één. Het doel is hem elke maand beter te maken op basis van echte data, niet op basis van gevoel.</p>
+    <div class="cta-box">
+      <h3>Weet je niet wat je data je vertelt?</h3>
+      <p>Bij Engaging UX Design is optimalisatie na de lancering onderdeel van hoe we met klanten werken. Van het correct instellen van analytics tot het identificeren van conversieblokkades: wij helpen je de data te lezen en er op te handelen. Gevestigd in Eindhoven, actief voor ondernemers door heel Nederland.</p>
+      <a class="cta-btn" href="https://quickestimate.engaginguxdesign.com/">Gratis schatting aanvragen →</a>
+    </div>
+    <div class="sources">
+      <span class="section-label">Bronnen</span>
+      <ol>
+        <li><strong>SE Ranking (2025).</strong> 120+ actuele SEO-statistieken. <a href="https://seranking.com/blog/seo-statistics/" target="_blank">seranking.com</a></li>
+        <li><strong>Backlinko (2025).</strong> Slechts 0,63% van gebruikers klikt door naar pagina twee. Via <a href="https://searchatlas.com/blog/seo-statistics/" target="_blank">Search Atlas</a></li>
+        <li><strong>Portent (2024).</strong> Verband tussen laadtijd en conversieratio. Via <a href="https://www.designrush.com/agency/ui-ux-design/trends/ui-ux-statistics" target="_blank">DesignRush</a></li>
+        <li><strong>Orbit Media (2025).</strong> 48% publiceert 2–4 keer per maand. Via <a href="https://seranking.com/blog/seo-statistics/" target="_blank">SE Ranking</a></li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+<div class="art-nav"><a class="art-nav-link next" href="nl-artikel-2-waarom-ux-designer.html">Waarom je na de lancering nog een UX-designer nodig hebt →</a></div>
+<!-- FOOTER -->
+<footer>
+  <img src="https://engaginguxdesign.com/image-assets/Logo-for-darkbg.png" alt="Engaging UX Design"/>
+  <p>Data-driven UX design creating engaging, conversion-focused websites that help businesses grow.</p>
+  <p style="margin-top:.4rem;">Eindhoven, NL &nbsp;·&nbsp; <a href="mailto:info@engaginguxdesign.com">info@engaginguxdesign.com</a> &nbsp;·&nbsp; <a href="https://engaginguxdesign.com">engaginguxdesign.com</a></p>
+</footer>
+</body>
+</html>

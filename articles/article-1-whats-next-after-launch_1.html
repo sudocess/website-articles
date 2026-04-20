@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!-- Primary SEO -->
+  <title>You've Published Your Website. What's Next? | Engaging UX Design</title>
+  <meta name="description" content="Going live is just the beginning. Learn the 5 essential post-launch steps every website owner should take to drive traffic, track performance, and grow their business."/>
+  <meta name="keywords" content="post-launch website, website SEO checklist, Google Analytics setup, website optimisation, UX design Netherlands"/>
+  <meta name="author" content="Engaging UX Design"/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://articles.engaginguxdesign.com/whats-next-after-launch"/>
+
+  <!-- Open Graph (Facebook, LinkedIn) -->
+  <meta property="og:type" content="article"/>
+  <meta property="og:title" content="You've Published Your Website. What's Next? | Engaging UX Design"/>
+  <meta property="og:description" content="Going live is just the beginning. Learn the 5 essential post-launch steps every website owner should take to drive traffic, track performance, and grow their business."/>
+  <meta property="og:url" content="https://articles.engaginguxdesign.com/whats-next-after-launch"/>
+  <meta property="og:site_name" content="Engaging UX Design Articles"/>
+  <meta property="og:image" content="https://engaginguxdesign.com/image-assets/Logo-for-darkbg.png"/>
+  <meta property="article:author" content="Cess Garcia"/>
+  <meta property="article:publisher" content="https://engaginguxdesign.com"/>
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="You've Published Your Website. What's Next? | Engaging UX Design"/>
+  <meta name="twitter:description" content="Going live is just the beginning. Learn the 5 essential post-launch steps every website owner should take to drive traffic, track performance, and grow their business."/>
+  <meta name="twitter:image" content="https://engaginguxdesign.com/image-assets/Logo-for-darkbg.png"/>
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "You've Published Your Website. What's Next? | Engaging UX Design",
+    "description": "Going live is just the beginning. Learn the 5 essential post-launch steps every website owner should take to drive traffic, track performance, and grow their business.",
+    "author": {
+      "@type": "Person",
+      "name": "Cess Garcia",
+      "url": "https://engaginguxdesign.com/about/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Engaging UX Design",
+      "url": "https://engaginguxdesign.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://engaginguxdesign.com/image-assets/Logo-for-darkbg.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://articles.engaginguxdesign.com/whats-next-after-launch"
+    }
+  }
+  </script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;600;700;800;900&family=Gabarito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --cream:       #FDF6EE;
+      --brown-dark:  #2b1206;
+      --brown-text:  #2e1a0e;
+      --brown-mid:   #6b3820;
+      --brown-light: #AA918C;
+      --orange:      #c0471a;
+      --gold:        #d4952a;
+      --gold-hover:  #e8a832;
+      --border:      rgba(46,26,14,.1);
+      --card-bg:     #fff9f3;
+      --raised:      #f5ede2;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { -webkit-font-smoothing: antialiased; scroll-behavior: smooth; }
+
+    body {
+      background: var(--cream);
+      color: var(--brown-text);
+      font-family: 'Gabarito', sans-serif;
+      font-size: 17px;
+      line-height: 1.78;
+    }
+
+    /* ── BACK BANNER ── */
+    .back-banner {
+      background: var(--brown-dark);
+      padding: .6rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .back-banner p { font-size: .73rem; color: rgba(255,255,255,.5); }
+    .back-banner p strong { color: rgba(255,255,255,.8); font-weight: 600; }
+    .back-banner a {
+      font-size: .7rem;
+      font-weight: 700;
+      color: var(--brown-dark);
+      background: var(--gold);
+      padding: .38rem 1rem;
+      border-radius: 999px;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: background .2s;
+      flex-shrink: 0;
+    }
+    .back-banner a:hover { background: var(--gold-hover); }
+
+    /* ── NAV ── */
+    nav {
+      background: var(--brown-dark);
+      border-bottom: 1px solid rgba(255,255,255,.06);
+      padding: 0 2rem;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav-logo img { height: 36px; width: auto; }
+    .nav-cta {
+      font-family: 'Gabarito', sans-serif;
+      font-size: 13px;
+      font-weight: 400;
+      color: var(--brown-dark);
+      background: var(--gold);
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 100px;
+      transition: background .2s;
+    }
+    .nav-cta:hover { background: var(--gold-hover); }
+    .nav-right { display: flex; align-items: center; gap: 1.5rem; }
+    .nav-links { display: flex; align-items: center; gap: 1.5rem; list-style: none; }
+    .nav-links a {
+      font-size: .7rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase;
+      color: rgba(255,255,255,.55); text-decoration: none; transition: color .2s;
+    }
+    .nav-links a:hover { color: #fff; }
+    .nav-links a.nav-back { color: var(--gold); font-weight: 700; }
+    .nav-links a.nav-back:hover { color: var(--gold-hover); }
+    .nav-divider { width: 1px; height: 20px; background: rgba(255,255,255,.12); }
+    .lang-switch {
+      display: flex; align-items: center; gap: .35rem;
+      font-size: .7rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase;
+    }
+    .lang-switch a { color: rgba(255,255,255,.4); text-decoration: none; transition: color .2s; }
+    .lang-switch a:hover { color: rgba(255,255,255,.7); }
+    .lang-switch a.active { color: #fff; }
+    .lang-switch .sep { color: rgba(255,255,255,.15); }
+
+    /* ── ARTICLE INDEX ── */
+    .article-index {
+      max-width: 900px;
+      margin: 4rem auto 0;
+      padding: 0 2rem 2rem;
+    }
+    .article-index h2 {
+      font-family: 'Alexandria', sans-serif;
+      font-size: .65rem;
+      font-weight: 700;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 1.2rem;
+    }
+    .index-list { display: flex; flex-direction: column; gap: .6rem; }
+    .index-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      text-decoration: none;
+      padding: .9rem 1.2rem;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      transition: border-color .2s;
+    }
+    .index-item:hover { border-color: var(--orange); }
+    .index-num {
+      font-family: 'Alexandria', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 900;
+      color: var(--orange);
+      flex-shrink: 0;
+      width: 28px;
+    }
+    .index-item span {
+      font-family: 'Alexandria', sans-serif;
+      font-size: .95rem;
+      font-weight: 700;
+      color: var(--brown-dark);
+      letter-spacing: -.01em;
+    }
+    .index-arrow { margin-left: auto; color: var(--brown-light); font-size: .85rem; }
+
+    /* ── ARTICLE WRAPPER ── */
+    .article-wrap {
+      max-width: 900px;
+      margin: 5rem auto 0;
+      padding: 0 2rem;
+    }
+    .article-divider {
+      border: none;
+      border-top: 2px solid var(--border);
+      margin: 6rem 0 0;
+    }
+
+    /* ── HERO ── */
+    .art-hero { padding: 3.5rem 0 3rem; border-bottom: 1px solid var(--border); }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: .4rem;
+      font-size: .65rem;
+      font-weight: 700;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      color: var(--orange);
+      border: 1px solid rgba(192,71,26,.28);
+      background: rgba(192,71,26,.06);
+      padding: .28rem .85rem;
+      border-radius: 999px;
+      margin-bottom: 1.6rem;
+    }
+    .art-hero h1 {
+      font-family: 'Alexandria', sans-serif;
+      font-size: clamp(1.9rem, 4.5vw, 3rem);
+      font-weight: 900;
+      line-height: 1.1;
+      letter-spacing: -.03em;
+      color: var(--brown-dark);
+      margin-bottom: 1.2rem;
+      max-width: 740px;
+    }
+    .art-hero h1 em { font-style: italic; color: var(--orange); }
+    .art-deck {
+      font-size: 1.05rem;
+      color: var(--brown-mid);
+      max-width: 600px;
+      line-height: 1.7;
+      margin-bottom: 1.6rem;
+    }
+    .byline {
+      font-size: .7rem;
+      font-weight: 600;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--brown-light);
+    }
+    .byline strong { color: var(--orange); }
+
+    /* ── BODY ── */
+    .art-body { padding: 2.8rem 0; max-width: 740px; }
+    .art-body p { margin-bottom: 1.55rem; color: #4a2a18; }
+    .art-body h2 {
+      font-family: 'Alexandria', sans-serif;
+      font-size: 1.55rem;
+      font-weight: 800;
+      letter-spacing: -.025em;
+      color: var(--brown-dark);
+      margin: 3.5rem 0 1rem;
+      line-height: 1.18;
+    }
+    .section-label {
+      display: block;
+      font-size: .65rem;
+      font-weight: 700;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin: 3rem 0 .7rem;
+    }
+    strong { color: var(--brown-dark); font-weight: 700; }
+    em.hi  { font-style: normal; color: var(--orange); font-weight: 600; }
+
+    /* ── STAT CARDS ── */
+    .stat-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(165px, 1fr));
+      gap: .9rem;
+      margin: 2.4rem 0;
+    }
+    .stat-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-top: 3px solid var(--orange);
+      padding: 1.4rem 1.2rem;
+      border-radius: 8px;
+    }
+    .stat-num {
+      font-family: 'Alexandria', sans-serif;
+      font-size: 2.3rem;
+      font-weight: 900;
+      color: var(--orange);
+      line-height: 1;
+      margin-bottom: .35rem;
+    }
+    .stat-desc { font-size: .8rem; color: var(--brown-mid); line-height: 1.5; }
+    .stat-source {
+      font-size: .62rem;
+      font-weight: 600;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+      color: var(--brown-light);
+      margin-top: .5rem;
+    }
+
+    /* ── BLOCKQUOTE ── */
+    blockquote {
+      margin: 2.5rem 0;
+      padding: 1.8rem 2rem;
+      background: var(--raised);
+      border-left: 4px solid var(--orange);
+      border-radius: 0 8px 8px 0;
+      font-family: 'Alexandria', sans-serif;
+      font-size: 1.05rem;
+      font-style: italic;
+      line-height: 1.6;
+      color: var(--brown-dark);
+    }
+    blockquote cite {
+      display: block;
+      margin-top: .65rem;
+      font-size: .68rem;
+      font-style: normal;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--orange);
+    }
+
+    /* ── STEP LIST ── */
+    .step-list { list-style: none; margin: 1.8rem 0; display: flex; flex-direction: column; gap: 1rem; }
+    .step-list li {
+      display: flex;
+      gap: 1rem;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.2rem 1.3rem;
+      align-items: flex-start;
+    }
+    .step-num {
+      font-family: 'Alexandria', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 900;
+      color: var(--orange);
+      flex-shrink: 0;
+      width: 26px;
+      line-height: 1.4;
+    }
+    .step-list li p { margin: 0; font-size: .9rem; color: #4a2a18; }
+    .step-list li strong { display: block; margin-bottom: .2rem; font-size: .95rem; }
+
+    /* ── MISTAKE LIST ── */
+    .mistake-list { list-style: none; margin: 1.8rem 0; display: flex; flex-direction: column; gap: 1.2rem; }
+    .mistake-list li {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--orange);
+      border-radius: 0 8px 8px 0;
+      padding: 1.3rem 1.4rem;
+    }
+    .mistake-list li .mistake-title {
+      font-family: 'Alexandria', sans-serif;
+      font-size: 1rem;
+      font-weight: 800;
+      color: var(--brown-dark);
+      letter-spacing: -.01em;
+      margin-bottom: .4rem;
+      display: flex;
+      align-items: center;
+      gap: .6rem;
+    }
+    .mistake-num {
+      background: var(--orange);
+      color: white;
+      font-size: .65rem;
+      font-weight: 900;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .mistake-list li p { font-size: .88rem; color: #4a2a18; margin: 0; }
+
+    /* ── CTA BOX ── */
+    .cta-box {
+      background: var(--brown-dark);
+      border-radius: 12px;
+      padding: 3rem 2.5rem;
+      margin: 3.5rem 0 1rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-box::after {
+      content: '';
+      position: absolute;
+      bottom: -50px; right: -50px;
+      width: 180px; height: 180px;
+      border-radius: 50%;
+      background: rgba(212,149,42,.07);
+      pointer-events: none;
+    }
+    .cta-box h3 {
+      font-family: 'Alexandria', sans-serif;
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: -.02em;
+      margin-bottom: .6rem;
+    }
+    .cta-box p { color: rgba(255,255,255,.6); font-size: .9rem; margin-bottom: 1.5rem; }
+    .cta-btn {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--brown-dark);
+      padding: 12px 28px;
+      border-radius: 100px;
+      font-size: .78rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: background .2s;
+    }
+    .cta-btn:hover { background: var(--gold-hover); }
+
+    /* ── SOURCES ── */
+    .sources {
+      margin-top: 3.5rem;
+      padding-top: 1.8rem;
+      border-top: 1px solid var(--border);
+    }
+    .sources ol { padding-left: 1.2rem; font-size: .78rem; color: var(--brown-mid); line-height: 1.8; }
+    .sources li { margin-bottom: .4rem; }
+    .sources a { color: var(--orange); text-decoration: none; }
+    .sources a:hover { text-decoration: underline; }
+
+    hr.divider { border: none; border-top: 1px solid var(--border); margin: 3rem 0; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--brown-dark);
+      padding: 2.8rem 2rem;
+      text-align: center;
+      margin-top: 6rem;
+    }
+    footer img { height: 34px; margin-bottom: .7rem; }
+    footer p { font-size: .78rem; color: rgba(255,255,255,.4); margin: 0; line-height: 1.7; }
+    footer a { color: var(--gold); text-decoration: none; }
+
+    @media (max-width: 640px) {
+      nav { padding: 0 1.2rem; }
+      .article-wrap { padding: 0 1.4rem; }
+      .back-banner { padding: .6rem 1.2rem; }
+      .art-hero h1 { font-size: 1.8rem; }
+      .stat-row { grid-template-columns: 1fr 1fr; }
+      .cta-box { padding: 2rem 1.5rem; }
+    }
+  
+    .art-nav {
+      max-width: 900px;
+      margin: 3rem auto 0;
+      padding: 1.5rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      border-top: 1px solid var(--border);
+    }
+    .art-nav-link {
+      font-size: .78rem;
+      font-weight: 700;
+      color: var(--orange);
+      text-decoration: none;
+      transition: color .2s;
+    }
+    .art-nav-link:hover { color: var(--brown-dark); }
+    .art-nav-link.next { margin-left: auto; }
+
+  </style>
+</head>
+<body>
+
+<!-- BACK BANNER -->
+<div class="back-banner">
+  <p>Part of <strong>Engaging UX Design</strong> &nbsp;·&nbsp; Freelance UX designer based in the Netherlands</p>
+  <a href="https://engaginguxdesign.com" target="_blank">← Back to main site</a>
+</div>
+
+<!-- NAV -->
+<nav>
+  <a href="https://engaginguxdesign.com">
+    <img class="nav-logo" src="https://engaginguxdesign.com/image-assets/Logo-for-darkbg.png" alt="Engaging UX Design"/>
+  </a>
+  <div class="nav-right">
+    <ul class="nav-links">
+      <li><a class="nav-back" href="home.html">← Back to articles</a></li>
+      <li><a href="home.html">UX Design</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="research.html">Research</a></li>
+    </ul>
+    <span class="nav-divider"></span>
+    <a class="nav-cta" href="https://quickestimate.engaginguxdesign.com/">Get a quick estimate</a>
+    <div class="lang-switch">
+      <a href="article-1-whats-next-after-launch_1.html" class="active">EN</a>
+      <span class="sep">|</span>
+      <a href="../articles-nl/nl-artikel-1-wat-nu-na-lancering.html">NL</a>
+    </div>
+  </div>
+</nav>
+
+<div class="article-wrap" id="article-1">
+  <div class="art-hero">
+    <span class="pill">Post-Launch · Growth</span>
+    <h1>You've published your website. <em>What's next?</em></h1>
+    <p class="art-deck">Going live is not the finish line. For most small businesses, it is actually the starting gun. Here is what the data says you should do immediately after launch.</p>
+    <p class="byline">By <strong>Engaging UX Design</strong> &nbsp;·&nbsp; UX Strategy &amp; Conversion</p>
+  </div>
+
+  <div class="art-body">
+
+    <p>There is a moment after a website goes live that feels like an achievement. And it is. Building something from scratch, making decisions about structure, copy, design, and putting it out into the world takes real effort. But here is the uncomfortable truth that most agencies will not tell you upfront: launching is not the end of the project. It is the beginning of a completely different one.</p>
+
+    <p>A website that sits untouched after launch is like a shop that opens its doors and then stops training staff, stops updating its window display, and stops checking whether customers can actually find the checkout. The building exists. But the business is not working.</p>
+
+    <h2>Step one: connect your measurement tools</h2>
+
+    <p>Before anything else, make sure you can see what is happening. That means Google Analytics 4 and Google Search Console, both configured and verified. These are not optional extras for larger companies. They are the minimum baseline for understanding whether your website is working.</p>
+
+    <p>Google Search Console tells you which search queries are surfacing your site, which pages are getting impressions, and where technical issues are hiding. Google Analytics tells you what visitors do when they arrive: which pages they land on, where they drop off, and how long they stay. Without both, you are flying blind.</p>
+
+    <div class="stat-row">
+      <div class="stat-card">
+        <div class="stat-num">68%</div>
+        <div class="stat-desc">Of all online experiences begin with a search engine</div>
+        <div class="stat-source">SE Ranking, 2025</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">94%</div>
+        <div class="stat-desc">Of all webpages receive zero traffic from Google</div>
+        <div class="stat-source">SE Ranking, 2025</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">0.63%</div>
+        <div class="stat-desc">Of users ever click on page two of Google results</div>
+        <div class="stat-source">Backlinko, 2025</div>
+      </div>
+    </div>
+
+    <p>That last number is the one worth sitting with. If your pages are not on page one of Google, you are functionally invisible to search traffic. Setting up Search Console lets you start tracking where you stand and spot opportunities to climb.</p>
+
+    <h2>Step two: submit your sitemap and check indexing</h2>
+
+    <p>Google does not automatically know your website exists. You need to submit your XML sitemap through Search Console and verify that your pages are being indexed correctly. It sounds technical, but it is a one-time task that has a permanent impact on discoverability. If your pages are not indexed, no amount of great content will get you found.</p>
+
+    <h2>Step three: check your speed on mobile</h2>
+
+    <p>Most visitors will arrive on a phone. If your site does not load quickly on mobile, they will leave before they have seen anything.</p>
+
+    <blockquote>
+      "E-commerce sites that load in one second have three times higher conversion rates than those that take five seconds."
+      <cite>Portent, 2024</cite>
+    </blockquote>
+
+    <p>Use Google's PageSpeed Insights or Core Web Vitals report in Search Console to get your baseline score. Most freshly built sites have at least one or two quick wins available: image compression, removing unused scripts, or enabling caching. These are worth addressing early, before traffic builds.</p>
+
+    <h2>Step four: publish content consistently</h2>
+
+    <p>A static website is a dead website in Google's eyes. Fresh, relevant content signals that your site is active and authoritative. You do not need to publish daily. Research from Orbit Media shows that 48% of marketers publish new content two to four times per month, and that is enough to maintain visibility if the quality is there.</p>
+
+    <p>More importantly, content is how you earn organic traffic over time. A well-written article that answers a question your ideal customer is searching for can drive visitors to your site for years at zero ongoing cost. That is the compounding power of content that most business owners underestimate when they think about return on investment.</p>
+
+    <h2>Step five: review and iterate</h2>
+
+    <p>Set a monthly reminder to look at your analytics. Check which pages get traffic, which have high bounce rates, and which convert. A high bounce rate on your homepage is a signal that something about the first impression is not landing. A page that gets visits but no enquiries has a conversion problem, not a traffic problem. These are two completely different fixes.</p>
+
+    <p>The website you launched is version one. The goal is to make it better every month based on real data, not guesswork.</p>
+
+    <div class="cta-box">
+      <h3>Not sure what your data is telling you?</h3>
+      <p>At Engaging UX Design, post-launch optimisation is part of how we work with clients. From setting up analytics correctly to identifying conversion blockers, we help you read the data and act on it. Based in Eindhoven, working with businesses across the Netherlands and beyond.</p>
+      <a class="cta-btn" href="https://quickestimate.engaginguxdesign.com/">Get a free estimate →</a>
+    </div>
+
+    <div class="sources">
+      <span class="section-label">Sources</span>
+      <ol>
+        <li><strong>SE Ranking (2025).</strong> 120+ Fresh &amp; Fact-Checked SEO Stats for 2026. <a href="https://seranking.com/blog/seo-statistics/" target="_blank">seranking.com</a></li>
+        <li><strong>Backlinko (2025).</strong> Google SERP CTR study — only 0.63% of users click on page two results. Via <a href="https://searchatlas.com/blog/seo-statistics/" target="_blank">Search Atlas</a></li>
+        <li><strong>Portent (2024).</strong> Site speed and conversion rate correlation study. Via <a href="https://www.designrush.com/agency/ui-ux-design/trends/ui-ux-statistics" target="_blank">DesignRush</a></li>
+        <li><strong>Orbit Media (2025).</strong> Content marketing frequency benchmarks — 48% publish 2–4 times per month. Via <a href="https://seranking.com/blog/seo-statistics/" target="_blank">SE Ranking</a></li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+<div class="art-nav"><a class="art-nav-link next" href="article-2-why-you-need-a-ux-designer.html">Why you still need a UX designer →</a></div>
+
+<!-- FOOTER -->
+<footer>
+  <img src="https://engaginguxdesign.com/image-assets/Logo-for-darkbg.png" alt="Engaging UX Design"/>
+  <p>Data-driven UX design creating engaging, conversion-focused websites that help businesses grow.</p>
+  <p style="margin-top:.4rem;">Eindhoven, NL &nbsp;·&nbsp; <a href="mailto:info@engaginguxdesign.com">info@engaginguxdesign.com</a> &nbsp;·&nbsp; <a href="https://engaginguxdesign.com">engaginguxdesign.com</a></p>
+</footer>
+
+</body>
+</html>

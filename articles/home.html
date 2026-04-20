@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!-- Favicons -->
+  <link rel="icon" href="https://articles.engaginguxdesign.com/assets/favicon/favicon.svg" type="image/svg+xml"/>
+  <link rel="icon" href="https://engaginguxdesign.com/assets/favicon/favicon-32x32.png" sizes="32x32" type="image/png"/>
+  <link rel="icon" href="https://engaginguxdesign.com/assets/favicon/favicon-192x192.png" sizes="192x192" type="image/png"/>
+  <link rel="apple-touch-icon" href="https://engaginguxdesign.com/assets/favicon/apple-touch-icon.png"/>
+
+  <!-- SEO -->
+  <title>UX Design Articles, Project Showcases &amp; Research | Engaging UX Design</title>
+  <meta name="description" content="Practical UX design articles, real project breakdowns, and original research from a conversion-focused UX designer in the Netherlands. Learn about UX strategy, color psychology, web design costs, and more."/>
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1"/>
+  <meta name="author" content="Cess Garcia — Engaging UX Design"/>
+  <link rel="canonical" href="https://articles.engaginguxdesign.com/"/>
+
+  <!-- Hreflang: EN ↔ NL -->
+  <link rel="alternate" hreflang="en" href="https://articles.engaginguxdesign.com/"/>
+  <link rel="alternate" hreflang="nl" href="https://articles.engaginguxdesign.com/nl/"/>
+  <link rel="alternate" hreflang="x-default" href="https://articles.engaginguxdesign.com/"/>
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="UX Design Articles, Project Showcases &amp; Research | Engaging UX Design"/>
+  <meta property="og:description" content="Practical UX design articles, real project breakdowns, and original research from a conversion-focused UX designer in the Netherlands."/>
+  <meta property="og:url" content="https://articles.engaginguxdesign.com/"/>
+  <meta property="og:image" content="https://engaginguxdesign.com/assets/og-image.png"/>
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+  <meta property="og:image:alt" content="Engaging UX Design — Articles &amp; Research"/>
+  <meta property="og:site_name" content="Engaging UX Design — Articles"/>
+  <meta property="og:locale" content="en_GB"/>
+  <meta property="og:locale:alternate" content="nl_NL"/>
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="UX Design Articles, Project Showcases &amp; Research | Engaging UX Design"/>
+  <meta name="twitter:description" content="Practical UX design articles, real project breakdowns, and original research from a conversion-focused UX designer in the Netherlands."/>
+  <meta name="twitter:image" content="https://engaginguxdesign.com/assets/og-image.png"/>
+
+  <!-- Structured Data: Blog -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "Engaging UX Design — Articles",
+    "url": "https://articles.engaginguxdesign.com",
+    "description": "Practical UX design articles, real project breakdowns, and original research from a conversion-focused UX designer in the Netherlands.",
+    "inLanguage": ["en", "nl"],
+    "publisher": {
+      "@type": "Organization",
+      "name": "Engaging UX Design",
+      "url": "https://engaginguxdesign.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://engaginguxdesign.com/image-assets/Logo-for-darkbg.png"
+      }
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Cess Garcia",
+      "jobTitle": "Freelance UX Designer and Developer",
+      "url": "https://engaginguxdesign.com"
+    }
+  }
+  </script>
+
+  <!-- Structured Data: WebSite (enables sitelinks search box in Google) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Engaging UX Design — Articles",
+    "url": "https://articles.engaginguxdesign.com",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://articles.engaginguxdesign.com/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;600;700;800;900&family=Gabarito:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --cream:      #FDF6EE;
+      --brown-dark: #2b1206;
+      --brown-text: #2e1a0e;
+      --brown-mid:  #6b3820;
+      --brown-muted:#AA918C;
+      --orange:     #c0471a;
+      --gold:       #d4952a;
+      --gold-hover: #e8a832;
+      --border:     rgba(46,26,14,.1);
+      --card:       #fff9f3;
+      --raised:     #f5ede2;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { -webkit-font-smoothing: antialiased; }
+
+    body {
+      background: var(--cream);
+      color: var(--brown-text);
+      font-family: 'Gabarito', sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    /* ── BACK BANNER ── */
+    .back-banner {
+      background: var(--brown-dark);
+      padding: .65rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .back-banner p {
+      font-size: .75rem;
+      color: rgba(255,255,255,.55);
+      letter-spacing: .04em;
+    }
+    .back-banner p strong { color: rgba(255,255,255,.85); font-weight: 600; }
+    .back-banner a {
+      font-size: .72rem;
+      font-weight: 700;
+      color: var(--brown-dark);
+      background: var(--gold);
+      padding: .4rem 1.1rem;
+      border-radius: 999px;
+      text-decoration: none;
+      white-space: nowrap;
+      letter-spacing: -.01em;
+      transition: background .2s;
+      flex-shrink: 0;
+    }
+    .back-banner a:hover { background: var(--gold-hover); }
+
+    /* ── NAV ── */
+    nav {
+      background: var(--brown-dark);
+      border-bottom: 1px solid rgba(255,255,255,.06);
+      padding: 0 2rem;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav-brand {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+      text-decoration: none;
+    }
+    .nav-brand .site-parent {
+      font-size: .62rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.38);
+      font-weight: 600;
+    }
+    .nav-brand .site-name {
+      font-family: 'Alexandria', sans-serif;
+      font-size: 1rem;
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: -.02em;
+    }
+    .nav-brand .site-name span { color: var(--orange); }
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 1.8rem;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.8rem;
+      list-style: none;
+    }
+    .nav-links a {
+      font-size: .72rem;
+      font-weight: 600;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.65);
+      text-decoration: none;
+      transition: color .2s;
+    }
+    .nav-links a:hover, .nav-links a.active { color: #fff; }
+    .nav-links a.active { color: var(--gold); }
+    .nav-search {
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.1);
+      border-radius: 999px;
+      padding: .4rem 1rem;
+      font-size: .75rem;
+      color: rgba(255,255,255,.5);
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+    }
+    .nav-search input {
+      background: transparent;
+      border: none;
+      outline: none;
+      color: #fff;
+      font-family: 'Gabarito', sans-serif;
+      font-size: .75rem;
+      width: 120px;
+      transition: width .3s;
+    }
+    .nav-search input::placeholder { color: rgba(255,255,255,.4); }
+    .nav-search:focus-within { border-color: rgba(255,255,255,.25); }
+    .nav-search:focus-within input { width: 180px; }
+    .lang-switch {
+      display: flex; align-items: center; gap: .35rem;
+      font-size: .7rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase;
+    }
+    .lang-switch a {
+      color: rgba(255,255,255,.4); text-decoration: none; transition: color .2s;
+    }
+    .lang-switch a:hover { color: rgba(255,255,255,.7); }
+    .lang-switch a.active { color: #fff; }
+    .lang-switch .sep { color: rgba(255,255,255,.15); }
+
+    /* ── HERO ── */
+    .hero {
+      background: var(--brown-dark);
+      padding: 5rem 2rem 4.5rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 60% 0%, rgba(192,71,26,.18) 0%, transparent 65%),
+                  radial-gradient(ellipse at 20% 100%, rgba(212,149,42,.1) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .hero-label {
+      display: inline-block;
+      font-size: .65rem;
+      font-weight: 700;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      border: 1px solid rgba(212,149,42,.35);
+      padding: .28rem .85rem;
+      border-radius: 999px;
+      margin-bottom: 1.6rem;
+    }
+    .hero h1 {
+      font-family: 'Alexandria', sans-serif;
+      font-size: clamp(2.2rem, 5vw, 3.6rem);
+      font-weight: 900;
+      color: #fff;
+      letter-spacing: -.03em;
+      line-height: 1.08;
+      margin-bottom: 1.2rem;
+      max-width: 680px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .hero h1 em { font-style: normal; color: var(--gold); }
+    .hero p {
+      font-size: 1rem;
+      color: rgba(255,255,255,.55);
+      max-width: 480px;
+      margin: 0 auto 2.5rem;
+      line-height: 1.7;
+    }
+    .hero-cats {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: .55rem;
+    }
+    .cat-pill {
+      font-size: .7rem;
+      font-weight: 600;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      padding: .35rem .9rem;
+      border-radius: 999px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background .2s, color .2s;
+    }
+    .cat-pill.active {
+      background: var(--orange);
+      color: #fff;
+    }
+    .cat-pill:not(.active) {
+      background: rgba(255,255,255,.07);
+      color: rgba(255,255,255,.6);
+      border: 1px solid rgba(255,255,255,.1);
+    }
+    .cat-pill:not(.active):hover {
+      background: rgba(255,255,255,.13);
+      color: #fff;
+    }
+
+    /* ── FEATURED ── */
+    .section { max-width: 1200px; margin: 0 auto; padding: 4rem 2rem; }
+    .section-title {
+      font-family: 'Alexandria', sans-serif;
+      font-size: .65rem;
+      font-weight: 700;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 1.8rem;
+      display: flex;
+      align-items: center;
+      gap: .7rem;
+    }
+    .section-title::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    .featured-grid {
+      display: grid;
+      grid-template-columns: 1.6fr 1fr;
+      gap: 1.2rem;
+      margin-bottom: 1.2rem;
+    }
+    .featured-main {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+      transition: transform .2s, box-shadow .2s;
+    }
+    .featured-main:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(46,26,14,.1); }
+    .featured-img {
+      height: 240px;
+      background: linear-gradient(135deg, #3b1208 0%, #6b2a14 50%, #c0471a 100%);
+      display: flex;
+      align-items: flex-end;
+      padding: 1.5rem;
+      position: relative;
+    }
+    .featured-img .img-label {
+      font-size: .65rem;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.7);
+      background: rgba(0,0,0,.3);
+      padding: .25rem .7rem;
+      border-radius: 999px;
+    }
+    .featured-body { padding: 1.6rem; flex: 1; }
+    .featured-body .tag {
+      font-size: .65rem;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: .6rem;
+      display: block;
+    }
+    .featured-body h2 {
+      font-family: 'Alexandria', sans-serif;
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: var(--brown-dark);
+      letter-spacing: -.02em;
+      line-height: 1.2;
+      margin-bottom: .7rem;
+    }
+    .featured-body p { font-size: .88rem; color: var(--brown-mid); margin: 0; }
+    .featured-meta {
+      padding: 1rem 1.6rem;
+      border-top: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: .72rem;
+      color: var(--brown-muted);
+    }
+    .featured-meta .read-time { color: var(--orange); font-weight: 600; }
+
+    .featured-side { display: flex; flex-direction: column; gap: 1.2rem; }
+    .side-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.3rem;
+      text-decoration: none;
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+      transition: transform .2s, box-shadow .2s;
+      flex: 1;
+    }
+    .side-card:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(46,26,14,.08); }
+    .side-thumb {
+      width: 56px;
+      height: 56px;
+      border-radius: 8px;
+      flex-shrink: 0;
+    }
+    .side-card .tag {
+      font-size: .62rem;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--orange);
+      display: block;
+      margin-bottom: .3rem;
+    }
+    .side-card h3 {
+      font-family: 'Alexandria', sans-serif;
+      font-size: .95rem;
+      font-weight: 700;
+      color: var(--brown-dark);
+      letter-spacing: -.01em;
+      line-height: 1.25;
+      margin-bottom: .25rem;
+    }
+    .side-card p { font-size: .78rem; color: var(--brown-mid); margin: 0; }
+
+    /* ── ARTICLE GRID ── */
+    .article-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.2rem;
+    }
+    .article-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      transition: transform .2s, box-shadow .2s;
+    }
+    .article-card:hover { transform: translateY(-3px); box-shadow: 0 10px 32px rgba(46,26,14,.1); }
+    .article-thumb {
+      height: 160px;
+      display: flex;
+      align-items: flex-end;
+      padding: 1rem;
+    }
+    .article-body { padding: 1.3rem; flex: 1; display: flex; flex-direction: column; }
+    .article-body .tag {
+      font-size: .62rem;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: .5rem;
+      display: block;
+    }
+    .article-body h3 {
+      font-family: 'Alexandria', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: var(--brown-dark);
+      letter-spacing: -.02em;
+      line-height: 1.22;
+      margin-bottom: .6rem;
+    }
+    .article-body p { font-size: .83rem; color: var(--brown-mid); flex: 1; margin: 0 0 1rem; }
+    .article-footer {
+      padding: .9rem 1.3rem;
+      border-top: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: .7rem;
+      color: var(--brown-muted);
+    }
+    .article-footer .read-time { color: var(--orange); font-weight: 600; }
+
+    /* ── RESEARCH BANNER ── */
+    .research-banner {
+      background: var(--raised);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2.5rem 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+      margin: 0 2rem;
+      max-width: 1160px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 4rem;
+    }
+    .research-banner-text .eyebrow {
+      font-size: .65rem;
+      font-weight: 700;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: .5rem;
+      display: block;
+    }
+    .research-banner-text h3 {
+      font-family: 'Alexandria', sans-serif;
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: var(--brown-dark);
+      letter-spacing: -.02em;
+      margin-bottom: .5rem;
+    }
+    .research-banner-text p { font-size: .88rem; color: var(--brown-mid); margin: 0; max-width: 480px; }
+    .research-btn {
+      background: var(--brown-dark);
+      color: #fff;
+      padding: .85rem 1.8rem;
+      border-radius: 999px;
+      font-size: .78rem;
+      font-weight: 700;
+      text-decoration: none;
+      white-space: nowrap;
+      flex-shrink: 0;
+      transition: background .2s;
+    }
+    .research-btn:hover { background: var(--orange); }
+
+    /* ── NEWSLETTER ── */
+    .newsletter {
+      background: var(--brown-dark);
+      padding: 4rem 2rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .newsletter::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 50% 100%, rgba(192,71,26,.15) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .newsletter h2 {
+      font-family: 'Alexandria', sans-serif;
+      font-size: 1.8rem;
+      font-weight: 900;
+      color: #fff;
+      letter-spacing: -.03em;
+      margin-bottom: .7rem;
+    }
+    .newsletter p { font-size: .9rem; color: rgba(255,255,255,.5); margin-bottom: 1.8rem; }
+    .newsletter-form {
+      display: flex;
+      gap: .6rem;
+      max-width: 420px;
+      margin: 0 auto;
+    }
+    .newsletter-form input {
+      flex: 1;
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 999px;
+      padding: .75rem 1.3rem;
+      font-size: .85rem;
+      color: #fff;
+      font-family: 'Gabarito', sans-serif;
+      outline: none;
+    }
+    .newsletter-form input::placeholder { color: rgba(255,255,255,.35); }
+    .newsletter-form button {
+      background: var(--gold);
+      color: var(--brown-dark);
+      border: none;
+      border-radius: 999px;
+      padding: .75rem 1.5rem;
+      font-size: .8rem;
+      font-weight: 700;
+      font-family: 'Gabarito', sans-serif;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: background .2s;
+    }
+    .newsletter-form button:hover { background: var(--gold-hover); }
+    .newsletter-feedback {
+      font-size: .85rem; margin-top: 1rem; text-align: center;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #1a0a04;
+      border-top: 1px solid rgba(255,255,255,.05);
+      padding: 2.5rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .footer-brand {
+      font-family: 'Alexandria', sans-serif;
+      font-size: .85rem;
+      font-weight: 800;
+      color: rgba(255,255,255,.4);
+      text-decoration: none;
+      letter-spacing: -.01em;
+    }
+    .footer-brand span { color: var(--orange); }
+    .footer-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+      flex-wrap: wrap;
+    }
+    .footer-links a {
+      font-size: .72rem;
+      font-weight: 600;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.3);
+      text-decoration: none;
+      transition: color .2s;
+    }
+    .footer-links a:hover { color: rgba(255,255,255,.7); }
+    .footer-back {
+      font-size: .72rem;
+      font-weight: 700;
+      color: var(--gold);
+      text-decoration: none;
+      letter-spacing: .05em;
+    }
+    .footer-back:hover { color: var(--gold-hover); }
+
+    @media (max-width: 860px) {
+      .featured-grid { grid-template-columns: 1fr; }
+      .research-banner { flex-direction: column; text-align: center; }
+      .research-banner-text p { max-width: 100%; }
+      footer { flex-direction: column; align-items: flex-start; gap: 1.2rem; }
+      .nav-links { display: none; }
+      .nav-right { gap: .8rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- BACK BANNER -->
+<div class="back-banner">
+  <p>Part of <strong>Engaging UX Design</strong> &nbsp;·&nbsp; Freelance UX designer & developer based in the Netherlands</p>
+  <a href="https://engaginguxdesign.com" target="_blank">← Back to main site</a>
+</div>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-brand" href="home.html">
+    <span class="site-parent">engaginguxdesign.com /</span>
+    <span class="site-name">articles <span>·</span></span>
+  </a>
+  <div class="nav-right">
+    <ul class="nav-links">
+      <li><a href="home.html" class="active">All</a></li>
+      <li><a href="home.html">UX Design</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="research.html">Research</a></li>
+    </ul>
+    <div class="nav-search">
+      <span>🔍</span>
+      <input type="text" id="searchInput" placeholder="Search articles" />
+    </div>
+    <div class="lang-switch">
+      <a href="home.html" class="active">EN</a>
+      <span class="sep">|</span>
+      <a href="../articles-nl/home-nl.html">NL</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <span class="hero-label">UX · Projects · Research</span>
+  <h1>Insights from <em>real</em> UX practice</h1>
+  <p>Articles, project breakdowns, and original research from a conversion-focused UX designer based in the Netherlands.</p>
+  <div class="hero-cats">
+    <a class="cat-pill active" href="home.html">All articles</a>
+    <a class="cat-pill" href="home.html">UX Design</a>
+    <a class="cat-pill" href="projects.html">Project Showcases</a>
+    <a class="cat-pill" href="research.html">Research</a>
+    <a class="cat-pill" href="home.html">Color Psychology</a>
+    <a class="cat-pill" href="home.html">Conversion</a>
+  </div>
+</div>
+
+<!-- FEATURED -->
+<div class="section">
+  <div class="section-title">Featured</div>
+
+  <div class="featured-grid">
+    <a class="featured-main" href="article-2-why-you-need-a-ux-designer_1.html">
+      <div class="featured-img" style="background:url('image-assets/why-you-still-need-a-ux-designer.svg') center/cover;">
+        <span class="img-label">Featured Article</span>
+      </div>
+      <div class="featured-body">
+        <span class="tag">UX Design · Business Value</span>
+        <h2>Why you still need a UX designer even after your website is live</h2>
+        <p>Most business owners think UX design is a one-time project. Research shows it delivers 9,900% ROI when done continuously. Here's why ongoing UX work is your highest-return investment.</p>
+      </div>
+      <div class="featured-meta">
+        <span>Cess Garcia · April 2026</span>
+        <span class="read-time">6 min read</span>
+      </div>
+    </a>
+    <div class="featured-side">
+      <a class="side-card" href="article-1-whats-next-after-launch_1.html">
+        <div class="side-thumb" style="background:url('image-assets/what-to-do-next.svg') center/cover;"></div>
+        <div>
+          <span class="tag">Post-Launch · Growth</span>
+          <h3>You've published your website. What's next?</h3>
+          <p>Going live is just the beginning. Learn the 5 essential post-launch steps.</p>
+        </div>
+      </a>
+      <a class="side-card" href="article-3-five-ux-mistakes_1.html">
+        <div class="side-thumb" style="background:url('image-assets/5-ux-mistakes.svg') center/cover;"></div>
+        <div>
+          <span class="tag">UX Mistakes · Small Business</span>
+          <h3>The 5 UX mistakes most small business websites are still making</h3>
+          <p>84.6% of sites have crowded design. 70% lack a proper CTA.</p>
+        </div>
+      </a>
+      <a class="side-card" href="color-psychology-article-engagingux.html">
+        <div class="side-thumb" style="background:url('image-assets/why-color-is-the-invisible-force.svg') center/cover;"></div>
+        <div>
+          <span class="tag">Color Psychology</span>
+          <h3>Why color is the invisible force behind every website decision</h3>
+          <p>Your visitors judge your brand in 90 seconds. Color drives up to 90% of that verdict.</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ARTICLE GRID -->
+<div class="section" style="padding-top:0">
+  <div class="section-title">Latest Articles</div>
+  <div class="article-grid">
+    <a class="article-card" href="color-psychology-article-engagingux.html">
+      <div class="article-thumb" style="background:url('image-assets/why-color-is-the-invisible-force.svg') center/cover;"></div>
+      <div class="article-body">
+        <span class="tag">Color Psychology</span>
+        <h3>Why color is the invisible force behind every website decision</h3>
+        <p>Your visitors judge your brand in 90 seconds. Color drives up to 90% of that verdict.</p>
+      </div>
+      <div class="article-footer">
+        <span>April 2026</span>
+        <span class="read-time">6 min</span>
+      </div>
+    </a>
+
+    <a class="article-card" href="article-1-whats-next-after-launch_1.html">
+      <div class="article-thumb" style="background:url('image-assets/what-to-do-next.svg') center/cover;"></div>
+      <div class="article-body">
+        <span class="tag">Post-Launch · Growth</span>
+        <h3>You've published your website. What's next?</h3>
+        <p>Going live is just the beginning. Here are the 5 essential post-launch steps every website owner should take.</p>
+      </div>
+      <div class="article-footer">
+        <span>April 2026</span>
+        <span class="read-time">6 min</span>
+      </div>
+    </a>
+
+    <a class="article-card" href="article-2-why-you-need-a-ux-designer_1.html">
+      <div class="article-thumb" style="background:url('image-assets/why-you-still-need-a-ux-designer.svg') center/cover;"></div>
+      <div class="article-body">
+        <span class="tag">UX Design · Business Value</span>
+        <h3>Why you still need a UX designer even after your website is live</h3>
+        <p>Most business owners think UX is a one-time project. The research says otherwise.</p>
+      </div>
+      <div class="article-footer">
+        <span>April 2026</span>
+        <span class="read-time">6 min</span>
+      </div>
+    </a>
+
+    <a class="article-card" href="article-3-five-ux-mistakes_1.html">
+      <div class="article-thumb" style="background:url('image-assets/5-ux-mistakes.svg') center/cover;"></div>
+      <div class="article-body">
+        <span class="tag">UX Mistakes · Small Business</span>
+        <h3>The 5 UX mistakes most small business websites are still making</h3>
+        <p>84.6% of sites have crowded design. 70% lack a proper CTA. Here are the five patterns costing you leads.</p>
+      </div>
+      <div class="article-footer">
+        <span>April 2026</span>
+        <span class="read-time">7 min</span>
+      </div>
+    </a>
+
+    <a class="article-card" href="article-4-do-you-still-need-human-designer.html">
+      <div class="article-thumb" style="background:url('image-assets/do-you-still-need-a-human-web-designer.svg') center/cover;"></div>
+      <div class="article-body">
+        <span class="tag">AI · Human Design</span>
+        <h3>Do you still need a human web designer in the age of AI?</h3>
+        <p>AI can build a website in three minutes. So why would you still pay a human? The answer is more nuanced than most AI tools want you to believe.</p>
+      </div>
+      <div class="article-footer">
+        <span>March 2026</span>
+        <span class="read-time">6 min</span>
+      </div>
+    </a>
+
+    <a class="article-card" href="article-5-web-designer-vs-ux-designer.html">
+      <div class="article-thumb" style="background:url('image-assets/web-designer-vs-ux-designer.svg') center/cover;"></div>
+      <div class="article-body">
+        <span class="tag">UX Design · Web Design</span>
+        <h3>Web designer vs UX designer: what is the actual difference?</h3>
+        <p>They both work on websites. They both use design tools. But they are solving fundamentally different problems.</p>
+      </div>
+      <div class="article-footer">
+        <span>March 2026</span>
+        <span class="read-time">6 min</span>
+      </div>
+    </a>
+
+    <a class="article-card" href="article-6-how-much-should-website-cost.html">
+      <div class="article-thumb" style="background:url('image-assets/how-much-should-a-designer-cost.svg') center/cover;"></div>
+      <div class="article-body">
+        <span class="tag">Pricing · Website Cost</span>
+        <h3>How much should a website actually cost? A UX designer explains.</h3>
+        <p>Website prices in the Netherlands range from €499 to €25,000. Here is what actually determines the cost.</p>
+      </div>
+      <div class="article-footer">
+        <span>March 2026</span>
+        <span class="read-time">7 min</span>
+      </div>
+    </a>
+
+    <a class="article-card" href="article-7-wix-squarespace-canva.html">
+      <div class="article-thumb" style="background:url('image-assets/what-wix-and-squarespace-not-telling-you.svg') center/cover;"></div>
+      <div class="article-body">
+        <span class="tag">DIY Tools · Reality Check</span>
+        <h3>What Wix, Squarespace and Canva won't tell you about building your own website</h3>
+        <p>These tools are genuinely good at what they do. But their marketing leaves out a few things that will matter to your business.</p>
+      </div>
+      <div class="article-footer">
+        <span>April 2026</span>
+        <span class="read-time">7 min</span>
+      </div>
+    </a>
+  </div>
+</div>
+
+<!-- RESEARCH BANNER -->
+<div class="research-banner">
+  <div class="research-banner-text">
+    <span class="eyebrow">Coming soon · Original Research</span>
+    <h3>UX benchmarks for Dutch SME websites</h3>
+    <p>Original research on user expectations, conversion patterns, and design quality across small business websites in the Netherlands. Be the first to receive it.</p>
+  </div>
+  <a class="research-btn" href="#">Notify me</a>
+</div>
+
+<!-- NEWSLETTER -->
+<div class="newsletter">
+  <h2>Stay sharp on UX</h2>
+  <p>New articles, project breakdowns, and research findings. No noise, no spam.</p>
+  <form class="newsletter-form" id="newsletterForm" method="post">
+    <input type="email" name="email" placeholder="your@email.com" required aria-label="Email address"/>
+    <button type="submit">Subscribe</button>
+  </form>
+  <p class="newsletter-feedback" id="newsletterFeedback" style="display:none;"></p>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <a class="footer-brand" href="home.html">articles<span>.</span>engaginguxdesign.com</a>
+  <ul class="footer-links">
+    <li><a href="home.html">UX Design</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="research.html">Research</a></li>
+    <li><a href="https://engaginguxdesign.com/about/">About</a></li>
+  </ul>
+  <a class="footer-back" href="https://engaginguxdesign.com" target="_blank">↗ engaginguxdesign.com</a>
+</footer>
+
+<script>
+(function() {
+  var input = document.getElementById('searchInput');
+  var featuredGrid = document.querySelector('.featured-grid');
+  var articleCards = document.querySelectorAll('.article-grid .article-card');
+  var featuredMain = document.querySelector('.featured-grid .main-card');
+  var sideCards = document.querySelectorAll('.featured-grid .side-card');
+  var noResults = document.createElement('p');
+  noResults.textContent = 'No articles match your search.';
+  noResults.style.cssText = 'text-align:center;color:var(--brown-muted);font-size:.92rem;padding:2rem 0;display:none;';
+  var articleGrid = document.querySelector('.article-grid');
+  if (articleGrid) articleGrid.parentNode.insertBefore(noResults, articleGrid.nextSibling);
+
+  function getText(el) {
+    var h3 = el.querySelector('h3');
+    var tag = el.querySelector('.tag');
+    var p = el.querySelector('p');
+    return ((h3 ? h3.textContent : '') + ' ' + (tag ? tag.textContent : '') + ' ' + (p ? p.textContent : '')).toLowerCase();
+  }
+
+  input.addEventListener('input', function() {
+    var q = this.value.trim().toLowerCase();
+    var visibleCount = 0;
+
+    // Filter article grid cards
+    articleCards.forEach(function(card) {
+      var match = !q || getText(card).indexOf(q) !== -1;
+      card.style.display = match ? '' : 'none';
+      if (match) visibleCount++;
+    });
+
+    // Filter featured section
+    var featuredVisible = 0;
+    if (featuredMain) {
+      var mainMatch = !q || getText(featuredMain).indexOf(q) !== -1;
+      featuredMain.style.display = mainMatch ? '' : 'none';
+      if (mainMatch) featuredVisible++;
+    }
+    sideCards.forEach(function(card) {
+      var match = !q || getText(card).indexOf(q) !== -1;
+      card.style.display = match ? '' : 'none';
+      if (match) featuredVisible++;
+    });
+    if (featuredGrid) featuredGrid.style.display = featuredVisible ? '' : 'none';
+
+    noResults.style.display = (q && visibleCount === 0 && featuredVisible === 0) ? 'block' : 'none';
+  });
+})();
+</script>
+
+<script>
+document.getElementById('newsletterForm').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const form = this;
+  const btn = form.querySelector('button');
+  const feedback = document.getElementById('newsletterFeedback');
+  const email = form.querySelector('input[name="email"]').value.trim();
+
+  btn.disabled = true;
+  btn.textContent = 'Subscribing…';
+  feedback.style.display = 'none';
+
+  try {
+    const res = await fetch('/subscribe.php', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email })
+    });
+    const data = await res.json();
+
+    feedback.style.display = 'block';
+    if (res.ok) {
+      feedback.textContent = data.message || "You're subscribed!";
+      feedback.style.color = '#4ade80';
+      form.reset();
+    } else {
+      feedback.textContent = data.error || 'Something went wrong.';
+      feedback.style.color = '#f87171';
+    }
+  } catch (err) {
+    feedback.style.display = 'block';
+    feedback.textContent = 'Network error. Please try again.';
+    feedback.style.color = '#f87171';
+  }
+
+  btn.disabled = false;
+  btn.textContent = 'Subscribe';
+});
+</script>
+
+</body>
+</html>

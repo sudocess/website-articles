@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>De 5 UX-fouten die de meeste kleine ondernemerswebsites nog steeds maken | Engaging UX Design</title>
+  <meta name="description" content="84,6% van de websites heeft een rommelige opmaak. 70% mist een goede CTA. Dit zijn de vijf UX-fouten die je leads kosten."/>
+  <meta name="keywords" content="UX fouten kleine ondernemers, website design fouten, CTA beste praktijken, mobiele UX, website conversie, UX audit Nederland"/>
+  <meta name="author" content="Engaging UX Design"/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://articles.engaginguxdesign.com/nl/vijf-ux-fouten-kleine-ondernemers"/>
+  <meta property="og:type" content="article"/>
+  <meta property="og:title" content="De 5 UX-fouten die de meeste kleine ondernemerswebsites nog steeds maken | Engaging UX Design"/>
+  <meta property="og:description" content="84,6% van de websites heeft een rommelige opmaak. 70% mist een goede CTA. Dit zijn de vijf UX-fouten die je leads kosten."/>
+  <meta property="og:url" content="https://articles.engaginguxdesign.com/nl/vijf-ux-fouten-kleine-ondernemers"/>
+  <meta property="og:site_name" content="Engaging UX Design Articles"/>
+  <meta property="og:image" content="https://engaginguxdesign.com/image-assets/Logo-for-darkbg.png"/>
+  <meta property="article:author" content="Cess Garcia"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="De 5 UX-fouten die de meeste kleine ondernemerswebsites nog steeds maken | Engaging UX Design"/>
+  <meta name="twitter:description" content="84,6% van de websites heeft een rommelige opmaak. 70% mist een goede CTA. Dit zijn de vijf UX-fouten die je leads kosten."/>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "De 5 UX-fouten die de meeste kleine ondernemerswebsites nog steeds maken | Engaging UX Design",
+    "description": "84,6% van de websites heeft een rommelige opmaak. 70% mist een goede CTA. Dit zijn de vijf UX-fouten die je leads kosten.",
+    "inLanguage": "nl",
+    "author": {"@type": "Person", "name": "Cess Garcia", "url": "https://engaginguxdesign.com/about/"},
+    "publisher": {"@type": "Organization", "name": "Engaging UX Design", "url": "https://engaginguxdesign.com",
+      "logo": {"@type": "ImageObject", "url": "https://engaginguxdesign.com/image-assets/Logo-for-darkbg.png"}},
+    "mainEntityOfPage": {"@type": "WebPage", "@id": "https://articles.engaginguxdesign.com/nl/vijf-ux-fouten-kleine-ondernemers"}
+  }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;600;700;800;900&family=Gabarito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --cream:       #FDF6EE;
+      --brown-dark:  #2b1206;
+      --brown-text:  #2e1a0e;
+      --brown-mid:   #6b3820;
+      --brown-light: #AA918C;
+      --orange:      #c0471a;
+      --gold:        #d4952a;
+      --gold-hover:  #e8a832;
+      --border:      rgba(46,26,14,.1);
+      --card-bg:     #fff9f3;
+      --raised:      #f5ede2;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { -webkit-font-smoothing: antialiased; scroll-behavior: smooth; }
+
+    body {
+      background: var(--cream);
+      color: var(--brown-text);
+      font-family: 'Gabarito', sans-serif;
+      font-size: 17px;
+      line-height: 1.78;
+    }
+
+    /* ── BACK BANNER ── */
+    .back-banner {
+      background: var(--brown-dark);
+      padding: .6rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .back-banner p { font-size: .73rem; color: rgba(255,255,255,.5); }
+    .back-banner p strong { color: rgba(255,255,255,.8); font-weight: 600; }
+    .back-banner a {
+      font-size: .7rem;
+      font-weight: 700;
+      color: var(--brown-dark);
+      background: var(--gold);
+      padding: .38rem 1rem;
+      border-radius: 999px;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: background .2s;
+      flex-shrink: 0;
+    }
+    .back-banner a:hover { background: var(--gold-hover); }
+
+    /* ── NAV ── */
+    nav {
+      background: var(--brown-dark);
+      border-bottom: 1px solid rgba(255,255,255,.06);
+      padding: 0 2rem;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav-logo img { height: 36px; width: auto; }
+    .nav-cta {
+      font-family: 'Gabarito', sans-serif;
+      font-size: 13px;
+      font-weight: 400;
+      color: var(--brown-dark);
+      background: var(--gold);
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 100px;
+      transition: background .2s;
+    }
+    .nav-cta:hover { background: var(--gold-hover); }
+    .nav-right { display: flex; align-items: center; gap: 1.5rem; }
+    .nav-links { display: flex; align-items: center; gap: 1.5rem; list-style: none; }
+    .nav-links a {
+      font-size: .7rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase;
+      color: rgba(255,255,255,.55); text-decoration: none; transition: color .2s;
+    }
+    .nav-links a:hover { color: #fff; }
+    .nav-links a.nav-back { color: var(--gold); font-weight: 700; }
+    .nav-links a.nav-back:hover { color: var(--gold-hover); }
+    .nav-divider { width: 1px; height: 20px; background: rgba(255,255,255,.12); }
+    .lang-switch {
+      display: flex; align-items: center; gap: .35rem;
+      font-size: .7rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase;
+    }
+    .lang-switch a { color: rgba(255,255,255,.4); text-decoration: none; transition: color .2s; }
+    .lang-switch a:hover { color: rgba(255,255,255,.7); }
+    .lang-switch a.active { color: #fff; }
+    .lang-switch .sep { color: rgba(255,255,255,.15); }
+
+    /* ── ARTICLE INDEX ── */
+    .article-index {
+      max-width: 900px;
+      margin: 4rem auto 0;
+      padding: 0 2rem 2rem;
+    }
+    .article-index h2 {
+      font-family: 'Alexandria', sans-serif;
+      font-size: .65rem;
+      font-weight: 700;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 1.2rem;
+    }
+    .index-list { display: flex; flex-direction: column; gap: .6rem; }
+    .index-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      text-decoration: none;
+      padding: .9rem 1.2rem;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      transition: border-color .2s;
+    }
+    .index-item:hover { border-color: var(--orange); }
+    .index-num {
+      font-family: 'Alexandria', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 900;
+      color: var(--orange);
+      flex-shrink: 0;
+      width: 28px;
+    }
+    .index-item span {
+      font-family: 'Alexandria', sans-serif;
+      font-size: .95rem;
+      font-weight: 700;
+      color: var(--brown-dark);
+      letter-spacing: -.01em;
+    }
+    .index-arrow { margin-left: auto; color: var(--brown-light); font-size: .85rem; }
+
+    /* ── ARTICLE WRAPPER ── */
+    .article-wrap {
+      max-width: 900px;
+      margin: 5rem auto 0;
+      padding: 0 2rem;
+    }
+    .article-divider {
+      border: none;
+      border-top: 2px solid var(--border);
+      margin: 6rem 0 0;
+    }
+
+    /* ── HERO ── */
+    .art-hero { padding: 3.5rem 0 3rem; border-bottom: 1px solid var(--border); }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: .4rem;
+      font-size: .65rem;
+      font-weight: 700;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      color: var(--orange);
+      border: 1px solid rgba(192,71,26,.28);
+      background: rgba(192,71,26,.06);
+      padding: .28rem .85rem;
+      border-radius: 999px;
+      margin-bottom: 1.6rem;
+    }
+    .art-hero h1 {
+      font-family: 'Alexandria', sans-serif;
+      font-size: clamp(1.9rem, 4.5vw, 3rem);
+      font-weight: 900;
+      line-height: 1.1;
+      letter-spacing: -.03em;
+      color: var(--brown-dark);
+      margin-bottom: 1.2rem;
+      max-width: 740px;
+    }
+    .art-hero h1 em { font-style: italic; color: var(--orange); }
+    .art-deck {
+      font-size: 1.05rem;
+      color: var(--brown-mid);
+      max-width: 600px;
+      line-height: 1.7;
+      margin-bottom: 1.6rem;
+    }
+    .byline {
+      font-size: .7rem;
+      font-weight: 600;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--brown-light);
+    }
+    .byline strong { color: var(--orange); }
+
+    /* ── BODY ── */
+    .art-body { padding: 2.8rem 0; max-width: 740px; }
+    .art-body p { margin-bottom: 1.55rem; color: #4a2a18; }
+    .art-body h2 {
+      font-family: 'Alexandria', sans-serif;
+      font-size: 1.55rem;
+      font-weight: 800;
+      letter-spacing: -.025em;
+      color: var(--brown-dark);
+      margin: 3.5rem 0 1rem;
+      line-height: 1.18;
+    }
+    .section-label {
+      display: block;
+      font-size: .65rem;
+      font-weight: 700;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin: 3rem 0 .7rem;
+    }
+    strong { color: var(--brown-dark); font-weight: 700; }
+    em.hi  { font-style: normal; color: var(--orange); font-weight: 600; }
+
+    /* ── STAT CARDS ── */
+    .stat-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(165px, 1fr));
+      gap: .9rem;
+      margin: 2.4rem 0;
+    }
+    .stat-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-top: 3px solid var(--orange);
+      padding: 1.4rem 1.2rem;
+      border-radius: 8px;
+    }
+    .stat-num {
+      font-family: 'Alexandria', sans-serif;
+      font-size: 2.3rem;
+      font-weight: 900;
+      color: var(--orange);
+      line-height: 1;
+      margin-bottom: .35rem;
+    }
+    .stat-desc { font-size: .8rem; color: var(--brown-mid); line-height: 1.5; }
+    .stat-source {
+      font-size: .62rem;
+      font-weight: 600;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+      color: var(--brown-light);
+      margin-top: .5rem;
+    }
+
+    /* ── BLOCKQUOTE ── */
+    blockquote {
+      margin: 2.5rem 0;
+      padding: 1.8rem 2rem;
+      background: var(--raised);
+      border-left: 4px solid var(--orange);
+      border-radius: 0 8px 8px 0;
+      font-family: 'Alexandria', sans-serif;
+      font-size: 1.05rem;
+      font-style: italic;
+      line-height: 1.6;
+      color: var(--brown-dark);
+    }
+    blockquote cite {
+      display: block;
+      margin-top: .65rem;
+      font-size: .68rem;
+      font-style: normal;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--orange);
+    }
+
+    /* ── STEP LIST ── */
+    .step-list { list-style: none; margin: 1.8rem 0; display: flex; flex-direction: column; gap: 1rem; }
+    .step-list li {
+      display: flex;
+      gap: 1rem;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.2rem 1.3rem;
+      align-items: flex-start;
+    }
+    .step-num {
+      font-family: 'Alexandria', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 900;
+      color: var(--orange);
+      flex-shrink: 0;
+      width: 26px;
+      line-height: 1.4;
+    }
+    .step-list li p { margin: 0; font-size: .9rem; color: #4a2a18; }
+    .step-list li strong { display: block; margin-bottom: .2rem; font-size: .95rem; }
+
+    /* ── MISTAKE LIST ── */
+    .mistake-list { list-style: none; margin: 1.8rem 0; display: flex; flex-direction: column; gap: 1.2rem; }
+    .mistake-list li {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--orange);
+      border-radius: 0 8px 8px 0;
+      padding: 1.3rem 1.4rem;
+    }
+    .mistake-list li .mistake-title {
+      font-family: 'Alexandria', sans-serif;
+      font-size: 1rem;
+      font-weight: 800;
+      color: var(--brown-dark);
+      letter-spacing: -.01em;
+      margin-bottom: .4rem;
+      display: flex;
+      align-items: center;
+      gap: .6rem;
+    }
+    .mistake-num {
+      background: var(--orange);
+      color: white;
+      font-size: .65rem;
+      font-weight: 900;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .mistake-list li p { font-size: .88rem; color: #4a2a18; margin: 0; }
+
+    /* ── CTA BOX ── */
+    .cta-box {
+      background: var(--brown-dark);
+      border-radius: 12px;
+      padding: 3rem 2.5rem;
+      margin: 3.5rem 0 1rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-box::after {
+      content: '';
+      position: absolute;
+      bottom: -50px; right: -50px;
+      width: 180px; height: 180px;
+      border-radius: 50%;
+      background: rgba(212,149,42,.07);
+      pointer-events: none;
+    }
+    .cta-box h3 {
+      font-family: 'Alexandria', sans-serif;
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: -.02em;
+      margin-bottom: .6rem;
+    }
+    .cta-box p { color: rgba(255,255,255,.6); font-size: .9rem; margin-bottom: 1.5rem; }
+    .cta-btn {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--brown-dark);
+      padding: 12px 28px;
+      border-radius: 100px;
+      font-size: .78rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: background .2s;
+    }
+    .cta-btn:hover { background: var(--gold-hover); }
+
+    /* ── SOURCES ── */
+    .sources {
+      margin-top: 3.5rem;
+      padding-top: 1.8rem;
+      border-top: 1px solid var(--border);
+    }
+    .sources ol { padding-left: 1.2rem; font-size: .78rem; color: var(--brown-mid); line-height: 1.8; }
+    .sources li { margin-bottom: .4rem; }
+    .sources a { color: var(--orange); text-decoration: none; }
+    .sources a:hover { text-decoration: underline; }
+
+    hr.divider { border: none; border-top: 1px solid var(--border); margin: 3rem 0; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--brown-dark);
+      padding: 2.8rem 2rem;
+      text-align: center;
+      margin-top: 6rem;
+    }
+    footer img { height: 34px; margin-bottom: .7rem; }
+    footer p { font-size: .78rem; color: rgba(255,255,255,.4); margin: 0; line-height: 1.7; }
+    footer a { color: var(--gold); text-decoration: none; }
+
+    @media (max-width: 640px) {
+      nav { padding: 0 1.2rem; }
+      .article-wrap { padding: 0 1.4rem; }
+      .back-banner { padding: .6rem 1.2rem; }
+      .art-hero h1 { font-size: 1.8rem; }
+      .stat-row { grid-template-columns: 1fr 1fr; }
+      .cta-box { padding: 2rem 1.5rem; }
+    }
+  
+    .art-nav {
+      max-width: 900px;
+      margin: 3rem auto 0;
+      padding: 1.5rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      border-top: 1px solid var(--border);
+    }
+    .art-nav-link {
+      font-size: .78rem;
+      font-weight: 700;
+      color: var(--orange);
+      text-decoration: none;
+      transition: color .2s;
+    }
+    .art-nav-link:hover { color: var(--brown-dark); }
+    .art-nav-link.next { margin-left: auto; }
+
+  
+    .art-nav {
+      max-width: 900px; margin: 3rem auto 0; padding: 1.5rem 2rem;
+      display: flex; justify-content: space-between; gap: 1rem;
+      border-top: 1px solid var(--border);
+    }
+    .art-nav-link { font-size: .78rem; font-weight: 700; color: var(--orange); text-decoration: none; transition: color .2s; }
+    .art-nav-link:hover { color: var(--brown-dark); }
+    .art-nav-link.next { margin-left: auto; }
+    .compare-table { width: 100%; border-collapse: collapse; margin: 2rem 0; font-size: .88rem; }
+    .compare-table th { background: var(--brown-dark); color: #fff; padding: .9rem 1rem; text-align: left; font-family: 'Alexandria', sans-serif; font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; }
+    .compare-table th:first-child { border-radius: 8px 0 0 0; } .compare-table th:last-child { border-radius: 0 8px 0 0; }
+    .compare-table td { padding: .85rem 1rem; border-bottom: 1px solid var(--border); color: #4a2a18; vertical-align: top; }
+    .compare-table tr:last-child td { border-bottom: none; }
+    .compare-table tr:nth-child(even) td { background: var(--card-bg); }
+    .compare-table td:first-child { font-weight: 700; color: var(--brown-dark); }
+    .price-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(195px, 1fr)); gap: 1rem; margin: 2rem 0; }
+    .price-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 10px; padding: 1.5rem 1.3rem; display: flex; flex-direction: column; }
+    .price-card.featured { border-color: var(--orange); border-width: 2px; }
+    .price-card .tier { font-size: .65rem; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; color: var(--orange); margin-bottom: .5rem; }
+    .price-card .amount { font-family: 'Alexandria', sans-serif; font-size: 1.7rem; font-weight: 900; color: var(--brown-dark); letter-spacing: -.03em; line-height: 1; margin-bottom: .3rem; }
+    .price-card .amount span { font-size: 1rem; font-weight: 500; color: var(--brown-mid); }
+    .price-card .price-desc { font-size: .82rem; color: var(--brown-mid); margin-bottom: 1rem; flex: 1; }
+    .price-card .price-includes { font-size: .75rem; color: var(--brown-mid); line-height: 1.7; padding-top: .8rem; border-top: 1px solid var(--border); }
+    .price-card .price-includes li { list-style: none; padding-left: 1.1rem; position: relative; }
+    .price-card .price-includes li::before { content: '✓'; position: absolute; left: 0; color: var(--orange); font-weight: 700; font-size: .75rem; }
+  </style>
+</head>
+<body>
+<div class="back-banner">
+  <p>Onderdeel van <strong>Engaging UX Design</strong> &nbsp;·&nbsp; Freelance UX designer gevestigd in Nederland</p>
+  <a href="https://engaginguxdesign.com" target="_blank">← Terug naar de website</a>
+</div>
+<nav>
+  <a href="https://engaginguxdesign.com">
+    <img class="nav-logo" src="https://engaginguxdesign.com/image-assets/Logo-for-darkbg.png" alt="Engaging UX Design"/>
+  </a>
+  <div class="nav-right">
+    <ul class="nav-links">
+      <li><a class="nav-back" href="home-nl.html">← Terug naar artikelen</a></li>
+      <li><a href="home-nl.html">UX Design</a></li>
+      <li><a href="../articles/projects.html">Projecten</a></li>
+      <li><a href="../articles/research.html">Onderzoek</a></li>
+    </ul>
+    <span class="nav-divider"></span>
+    <a class="nav-cta" href="https://quickestimate.engaginguxdesign.com/">Gratis schatting aanvragen</a>
+    <div class="lang-switch">
+      <a href="../articles/article-3-five-ux-mistakes_1.html">EN</a>
+      <span class="sep">|</span>
+      <a href="nl-artikel-3-vijf-ux-fouten.html" class="active">NL</a>
+    </div>
+  </div>
+</nav>
+
+<div class="article-wrap">
+  <div class="art-hero">
+    <span class="pill">UX-fouten · Kleine Bedrijven</span>
+    <h1>De 5 UX-fouten die de meeste kleine ondernemerswebsites <em>nog steeds maken</em></h1>
+    <p class="art-deck">De meeste websites van kleine ondernemers verliezen bezoekers nog voordat er iets betekenisvols is gebeurd. Deze vijf patronen komen keer op keer terug — en ze zijn allemaal oplosbaar.</p>
+    <p class="byline">Door <strong>Engaging UX Design</strong> &nbsp;·&nbsp; UX Strategie &amp; Conversie</p>
+  </div>
+  <div class="art-body">
+    <p>Het feit dat een website online staat, betekent niet dat hij werkt. Onderzoek van GoodFirms laat zien dat 84,6 procent van de webdesigners rommelige opmaak identificeert als de meest voorkomende fout op websites van kleine ondernemers, gevolgd door ontbrekende call-to-actions (38,5%) en verborgen navigatie (30,8%). Dit zijn geen zeldzame problemen. Het is de norm.</p>
+    <p>Wat deze fouten zo kostbaar maakt, is niet dat ze dramatisch zijn. Bezoekers sluiten doorgaans niet gefrustreerd het tabblad en sturen een boze e-mail. Ze vertrekken gewoon, stilletjes, en zoeken iemand anders. Dit zijn de vijf patronen die dat het vaakst veroorzaken.</p>
+    <div class="stat-row">
+      <div class="stat-card">
+        <div class="stat-num">75%</div>
+        <div class="stat-desc">Van de consumenten beoordeelt de geloofwaardigheid van een bedrijf op basis van het websiteontwerp</div>
+        <div class="stat-source">Marketing LTB, 2025</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">94%</div>
+        <div class="stat-desc">Van de eerste indrukken van een website zijn ontwerggerelateerd</div>
+        <div class="stat-source">GoodFirms Research</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">88%</div>
+        <div class="stat-desc">Van online kopers keert niet terug na een slechte gebruikerservaring</div>
+        <div class="stat-source">UXCam, 2025</div>
+      </div>
+    </div>
+    <h2>De vijf fouten</h2>
+    <ul class="mistake-list">
+      <li>
+        <div class="mistake-title"><span class="mistake-num">1</span>Geen duidelijke call-to-action op de homepage</div>
+        <p>Onderzoek laat zien dat circa 70 procent van de websites van kleine ondernemers geen passende call-to-action op de homepage heeft. Dit is de meest schadelijke conversiefout die een site kan maken. Een bezoeker die niet weet wat hij moet doen, doet niets. De oplossing is niet simpelweg een knop toevoegen. Het gaat erom te beslissen welke actie het belangrijkst is voor jouw bedrijf, die visueel prominent te maken en de tekst specifiek te formuleren. "Boek een gratis gesprek" scoort altijd beter dan "Neem contact op".</p>
+      </li>
+      <li>
+        <div class="mistake-title"><span class="mistake-num">2</span>Niet geoptimaliseerd voor mobiel</div>
+        <p>Meer dan 62 procent van het wereldwijde webverkeer komt inmiddels van mobiele apparaten. Toch presteert 81 procent van de websites nog steeds slecht op mobiele UX, en Statista-data laat zien dat 53 procent van de bezoekers vertrekt als een mobiele pagina meer dan drie seconden nodig heeft om te laden. Als je site primair voor desktop is ontworpen en als nagedachte is aangepast voor mobiel, ervaren de meeste van je bezoekers een fundamenteel slechtere versie van je bedrijf.</p>
+      </li>
+      <li>
+        <div class="mistake-title"><span class="mistake-num">3</span>Rommelige opmaak zonder visuele hiërarchie</div>
+        <p>GoodFirms-onderzoek identificeert drukke webopmaak als de meest voorkomende ontwerpfout, gemeld door 84,6 procent van professionele webdesigners. Overvolle lay-outs overweldigen bezoekers en maken het moeilijker om te zien wat er toe doet. Visuele hiërarchie, de bewuste rangschikking van elementen op grootte, gewicht, contrast en positie, is wat het oog van een bezoeker leidt van bewustzijn naar actie. Zonder haar concurreert elk element gelijkwaardig om aandacht, en besteedt de bezoeker uiteindelijk aan geen van hen aandacht.</p>
+      </li>
+      <li>
+        <div class="mistake-title"><span class="mistake-num">4</span>Formulieren die te veel te vroeg vragen</div>
+        <p>Onderzoek van Nielsen Norman Group laat zien dat het verminderen van een formulier met zelfs één veld de conversies met enkele procentpunten kan verhogen. Toch vragen de meeste contactformulieren van kleine ondernemers nog steeds naar naam, e-mail, telefoon, bedrijf, budget, projectomschrijving en voorkeursbelmoment — allemaal bij het eerste contactpunt. Elke extra vraag is een kleine drempel die een deel van de bezoekers niet neemt. Een eenvoudiger formulier converteert meer aanvragen.</p>
+      </li>
+      <li>
+        <div class="mistake-title"><span class="mistake-num">5</span>Trage laadtijden behandeld als technisch probleem in plaats van bedrijfsprobleem</div>
+        <p>Een seconde vertraging in de laadtijd leidt tot een daling van 7 procent in conversies, aldus meerdere branchestudies. Bij een bedrijf dat 50 aanvragen per maand genereert, verdwijnen er zo stilletjes 3,5 aanvragen per maand, elke maand, structureel. Paginasnelheid wordt vaak afgedaan als iets wat een ontwikkelaar ooit eens moet aanpakken. Maar het is een direct omzetprobleem — en het is in de meeste gevallen oplosbaar in één sessie via beeldoptimalisatie, scriptbeheer en caching.</p>
+      </li>
+    </ul>
+    <h2>De rode draad</h2>
+    <p>Al deze fouten hebben dezelfde oorzaak: de website is van binnenuit gebouwd, gericht op wat de ondernemer wilde zeggen, in plaats van van buitenaf, ontworpen rond hoe een bezoeker daadwerkelijk denkt en beweegt. UX-design is het vakgebied dat die kloof dicht. Het gaat niet om mooier maken. Het gaat om het wegnemen van elke onnodige drempel tussen een bezoeker en de actie die jouw bedrijf laat groeien.</p>
+    <blockquote>
+      "De meest voorkomende websitefouten zijn een rommelige opmaak (84,6%), geen call-to-action (38,5%) en verborgen navigatie (30,8%)."
+      <cite>GoodFirms Research, via emailvendorselection.com</cite>
+    </blockquote>
+    <p>Het goede nieuws: geen van deze fouten vereist een volledige herbouw. In de meeste gevallen leveren gerichte verbeteringen aan een bestaande site, aangebracht in volgorde van impact, meetbare resultaten binnen enkele weken.</p>
+    <div class="cta-box">
+      <h3>Herken je dit op je eigen website?</h3>
+      <p>Engaging UX Design voert conversie-audits uit voor bestaande websites: precies identificeren welke knelpunten je leads kosten en wat je eraan kunt doen. Geen jargon. Geen onnodige herbouwen. Alleen duidelijke, geprioriteerde aanbevelingen op basis van data.</p>
+      <a class="cta-btn" href="https://quickestimate.engaginguxdesign.com/">Gratis schatting aanvragen →</a>
+    </div>
+    <div class="sources">
+      <span class="section-label">Bronnen</span>
+      <ol>
+        <li><strong>GoodFirms Research.</strong> Meest voorkomende websitefouten: rommelige opmaak (84,6%), geen CTA (38,5%), verborgen navigatie (30,8%). Via <a href="https://www.emailvendorselection.com/website-statistics/" target="_blank">emailvendorselection.com</a></li>
+        <li><strong>Marketing LTB (2025).</strong> 75% beoordeelt betrouwbaarheid via websiteontwerp. 70% van kleine ondernemerswebsites mist passende CTAs. <a href="https://marketingltb.com/blog/statistics/small-business-website-statistics/" target="_blank">marketingltb.com</a></li>
+        <li><strong>Statista / DesignRush (2024/2026).</strong> 62,54% van het verkeer via mobiel. 53% verlaat site bij laadtijd boven 3 seconden. <a href="https://www.designrush.com/agency/ui-ux-design/trends/ui-ux-statistics" target="_blank">designrush.com</a></li>
+        <li><strong>Nielsen Norman Group.</strong> Één veld minder in een formulier kan conversies met meerdere procentpunten verhogen. Via <a href="https://www.infinity-group.pl/blog/en/2025/08/20/ux-mistakes-that-could-cost-your-business-more-than-you-think/" target="_blank">Infinity Group</a></li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+<div class="art-nav"><a class="art-nav-link prev" href="nl-artikel-2-waarom-ux-designer.html">← Waarom je een UX-designer nodig hebt</a><a class="art-nav-link next" href="nl-artikel-4-ai-menselijke-designer.html">Heb je in het AI-tijdperk nog een menselijke designer nodig? →</a></div>
+<!-- FOOTER -->
+<footer>
+  <img src="https://engaginguxdesign.com/image-assets/Logo-for-darkbg.png" alt="Engaging UX Design"/>
+  <p>Data-driven UX design creating engaging, conversion-focused websites that help businesses grow.</p>
+  <p style="margin-top:.4rem;">Eindhoven, NL &nbsp;·&nbsp; <a href="mailto:info@engaginguxdesign.com">info@engaginguxdesign.com</a> &nbsp;·&nbsp; <a href="https://engaginguxdesign.com">engaginguxdesign.com</a></p>
+</footer>
+</body>
+</html>
