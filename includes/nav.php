@@ -13,10 +13,12 @@
       <li><a href="/research/"<?php if (isset($navActive) && $navActive === 'research') echo ' class="active"'; ?>>Research</a></li>
     </ul>
 
+    <?php if (!empty($showSearch)): ?>
     <div class="nav-search" id="navSearchToggle">
       <span>🔍</span>
       <input type="text" id="searchInput" placeholder="Search articles" />
     </div>
+    <?php endif; ?>
 
     <div class="lang-switch">
       <a href="/" class="<?php echo (!isset($pageLang) || $pageLang === 'en') ? 'active' : ''; ?>">EN</a>

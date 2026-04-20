@@ -94,7 +94,7 @@
 <body>
 
 <?php include __DIR__ . '/includes/back-banner.php'; ?>
-<?php $navActive = 'all'; include __DIR__ . '/includes/nav.php'; ?>
+<?php $navActive = 'all'; $showSearch = true; include __DIR__ . '/includes/nav.php'; ?>
 
 <!-- HERO -->
 <div class="hero">
