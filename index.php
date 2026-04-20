@@ -277,5 +277,55 @@
 <!-- COOKIE CONSENT -->
 <?php include __DIR__ . '/includes/cookie-consent.php'; ?>
 
+<!-- Search filter -->
+<script>
+(function() {
+  var input = document.getElementById('searchInput');
+  if (!input) return;
+  var featuredGrid = document.querySelector('.featured-grid');
+  var articleCards = document.querySelectorAll('.article-grid .article-card');
+  var featuredMain = document.querySelector('.featured-grid .main-card');
+  var sideCards = document.querySelectorAll('.featured-grid .side-card');
+  var noResults = document.createElement('p');
+  noResults.textContent = 'No articles match your search.';
+  noResults.style.cssText = 'text-align:center;color:var(--brown-muted);font-size:.92rem;padding:2rem 0;display:none;';
+  var articleGrid = document.querySelector('.article-grid');
+  if (articleGrid) articleGrid.parentNode.insertBefore(noResults, articleGrid.nextSibling);
+
+  function getText(el) {
+    var h3 = el.querySelector('h3');
+    var tag = el.querySelector('.tag');
+    var p = el.querySelector('p');
+    return ((h3 ? h3.textContent : '') + ' ' + (tag ? tag.textContent : '') + ' ' + (p ? p.textContent : '')).toLowerCase();
+  }
+
+  input.addEventListener('input', function() {
+    var q = this.value.trim().toLowerCase();
+    var visibleCount = 0;
+
+    articleCards.forEach(function(card) {
+      var match = !q || getText(card).indexOf(q) !== -1;
+      card.style.display = match ? '' : 'none';
+      if (match) visibleCount++;
+    });
+
+    var featuredVisible = 0;
+    if (featuredMain) {
+      var mainMatch = !q || getText(featuredMain).indexOf(q) !== -1;
+      featuredMain.style.display = mainMatch ? '' : 'none';
+      if (mainMatch) featuredVisible++;
+    }
+    sideCards.forEach(function(card) {
+      var match = !q || getText(card).indexOf(q) !== -1;
+      card.style.display = match ? '' : 'none';
+      if (match) featuredVisible++;
+    });
+    if (featuredGrid) featuredGrid.style.display = featuredVisible ? '' : 'none';
+
+    noResults.style.display = (q && visibleCount === 0 && featuredVisible === 0) ? 'block' : 'none';
+  });
+})();
+</script>
+
 </body>
 </html>

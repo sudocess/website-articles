@@ -95,6 +95,12 @@ img { max-width: 100%; height: auto; display: block; }
 }
 .nav-brand .site-name span { color: var(--orange); }
 
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
 .nav-links {
   display: flex;
   align-items: center;
@@ -1286,9 +1292,9 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 4rem 0; 
   .research-banner { flex-direction: column; text-align: center; }
   .research-banner-text p { max-width: 100%; }
   .site-footer { flex-direction: column; align-items: flex-start; gap: 1.2rem; }
-  .nav-links { display: none; }
+  .nav-right { display: none; }
   .nav-hamburger { display: flex; }
-  .nav-links.open {
+  .nav-right.open {
     display: flex;
     flex-direction: column;
     position: absolute;
@@ -1300,6 +1306,11 @@ hr.divider { border: none; border-top: 1px solid var(--border); margin: 4rem 0; 
     gap: 1rem;
     border-bottom: 1px solid rgba(255,255,255,.08);
   }
+  .nav-right.open .nav-links {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .nav-right.open .nav-search { width: 100%; }
   .showcase-grid { grid-template-columns: 1fr; }
 }
 
