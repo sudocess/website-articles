@@ -131,6 +131,26 @@ img { max-width: 100%; height: auto; display: block; }
   background: rgba(255,255,255,.13);
 }
 
+/* Language switcher */
+.lang-switch {
+  display: flex;
+  align-items: center;
+  gap: .45rem;
+  margin-left: .5rem;
+}
+.lang-switch a {
+  font-size: .7rem;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.35);
+  text-decoration: none;
+  transition: color .2s;
+}
+.lang-switch a:hover { color: rgba(255,255,255,.7); }
+.lang-switch a.active { color: #fff; }
+.lang-switch .sep { color: rgba(255,255,255,.15); }
+
 /* Mobile hamburger */
 .nav-hamburger {
   display: none;

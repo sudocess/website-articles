@@ -12,6 +12,12 @@
     <li><a href="/research/"<?php if (isset($navActive) && $navActive === 'research') echo ' class="active"'; ?>>Research</a></li>
   </ul>
 
+  <div class="lang-switch">
+    <a href="/" class="<?php echo (!isset($pageLang) || $pageLang === 'en') ? 'active' : ''; ?>">EN</a>
+    <span class="sep">|</span>
+    <a href="/nl/" class="<?php echo (isset($pageLang) && $pageLang === 'nl') ? 'active' : ''; ?>">NL</a>
+  </div>
+
   <button class="nav-hamburger" id="navHamburger" aria-label="Toggle menu" aria-expanded="false">
     <span></span>
     <span></span>
