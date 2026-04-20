@@ -218,7 +218,7 @@
     </a>
 
     <a class="article-card" href="/do-you-still-need-human-web-designer/">
-      <div class="article-thumb" style="background:url('/assets/images/overwhelmed.svg') center/cover;"></div>
+      <div class="article-thumb" style="background:url('/assets/images/do-you-still-need-a-human-web-designer.svg') center/cover;"></div>
       <div class="article-body">
         <span class="tag">AI · Human Design</span>
         <h3>Do you still need a human web designer in the age of AI?</h3>
