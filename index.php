@@ -165,6 +165,32 @@
   <div class="section-title">Latest Articles</div>
 
   <div class="article-grid">
+    <a class="article-card" href="/joey-de-laat-portfolio-case/">
+      <div class="article-thumb" style="background: linear-gradient(135deg, #0a0a12 0%, #1a1a2e 50%, #2a2a4a 100%);"></div>
+      <div class="article-body">
+        <span class="tag">Project Showcase · Executive Portfolio</span>
+        <h3>Inside the build: Joey de Laat's executive portfolio</h3>
+        <p>How a 15-year CX career was turned into a credibility surface that converts into 30-minute consultation bookings.</p>
+      </div>
+      <div class="article-footer">
+        <span>May 2026</span>
+        <span class="read-time">5 min</span>
+      </div>
+    </a>
+
+    <a class="article-card" href="/lhr-photography-platform-case/">
+      <div class="article-thumb" style="background: linear-gradient(135deg, #1a0e08 0%, #3a2218 50%, #6b4030 100%);"></div>
+      <div class="article-body">
+        <span class="tag">Project Showcase · Photography Platform</span>
+        <h3>A photographer's site, and the private admin app that runs the business</h3>
+        <p>Bilingual public portfolio plus a Next.js + Supabase admin dashboard for bookings, contracts, invoices, and Mollie payments.</p>
+      </div>
+      <div class="article-footer">
+        <span>May 2026</span>
+        <span class="read-time">6 min</span>
+      </div>
+    </a>
+
     <a class="article-card" href="/color-psychology/">
       <div class="article-thumb" style="background:url('/assets/images/why-color-is-the-invisible-force.svg') center/cover;"></div>
       <div class="article-body">

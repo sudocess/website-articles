@@ -62,8 +62,20 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://articles.engaginguxdesign.com/joey-de-laat-portfolio-case/</loc>
+    <lastmod>2026-05-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://articles.engaginguxdesign.com/lhr-photography-platform-case/</loc>
+    <lastmod>2026-05-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://articles.engaginguxdesign.com/projects/</loc>
-    <lastmod>2026-04-20</lastmod>
+    <lastmod>2026-05-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

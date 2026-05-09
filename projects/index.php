@@ -58,10 +58,12 @@
   <div class="showcase-grid">
 
     <!-- Joey de Laat -->
-    <a class="showcase-card" href="https://joeydelaat.nl/" target="_blank" rel="noopener noreferrer">
-      <div class="showcase-preview" style="background: linear-gradient(135deg, #0a0a12 0%, #1a1a2e 50%, #2a2a4a 100%);">
-        <span class="live-badge live">Live</span>
-      </div>
+    <div class="showcase-card">
+      <a href="https://joeydelaat.nl/" target="_blank" rel="noopener noreferrer" style="display:block">
+        <div class="showcase-preview" style="background: linear-gradient(135deg, #0a0a12 0%, #1a1a2e 50%, #2a2a4a 100%);">
+          <span class="live-badge live">Live</span>
+        </div>
+      </a>
       <div class="showcase-body">
         <span class="tag">Personal Brand · Portfolio</span>
         <h3>joeydelaat.nl</h3>
@@ -74,16 +76,42 @@
         </div>
       </div>
       <div class="showcase-footer">
-        <span>Designed &amp; developed by Engaging UX Design</span>
-        <span class="visit-link">Visit site →</span>
+        <a href="https://joeydelaat.nl/" target="_blank" rel="noopener noreferrer" class="visit-link">Visit site →</a>
+        <a href="/joey-de-laat-portfolio-case/" class="visit-link">Read case study →</a>
       </div>
-    </a>
+    </div>
+
+    <!-- LHR Photography -->
+    <div class="showcase-card">
+      <a href="https://www.lhrphotography.nl" target="_blank" rel="noopener noreferrer" style="display:block">
+        <div class="showcase-preview" style="background: linear-gradient(135deg, #1a0a08 0%, #3a1a10 50%, #5a2a1a 100%);">
+          <span class="live-badge live">Live</span>
+        </div>
+      </a>
+      <div class="showcase-body">
+        <span class="tag">Photography · Admin Platform</span>
+        <h3>lhrphotography.nl</h3>
+        <p>Bilingual public portfolio and a private admin dashboard for a Dutch wedding photographer. Handles bookings, contracts, invoices, Mollie payments, and reviews — all from one dashboard so the photographer can focus on the work.</p>
+        <div class="showcase-meta">
+          <span class="meta-pill">UX Design</span>
+          <span class="meta-pill">Next.js · Supabase</span>
+          <span class="meta-pill">EN / NL</span>
+          <span class="meta-pill">Admin App</span>
+        </div>
+      </div>
+      <div class="showcase-footer">
+        <a href="https://www.lhrphotography.nl" target="_blank" rel="noopener noreferrer" class="visit-link">Visit site →</a>
+        <a href="/lhr-photography-platform-case/" class="visit-link">Read case study →</a>
+      </div>
+    </div>
 
     <!-- MyChildhoodBook -->
-    <a class="showcase-card" href="https://mychildhoodbook.com/en/" target="_blank" rel="noopener noreferrer">
-      <div class="showcase-preview" style="background: linear-gradient(135deg, #1a0e08 0%, #3a2218 50%, #6b4030 100%);">
-        <span class="live-badge pre-launch">Pre-Launch</span>
-      </div>
+    <div class="showcase-card">
+      <a href="https://mychildhoodbook.com/en/" target="_blank" rel="noopener noreferrer" style="display:block">
+        <div class="showcase-preview" style="background: linear-gradient(135deg, #1a0e08 0%, #3a2218 50%, #6b4030 100%);">
+          <span class="live-badge pre-launch">Pre-Launch</span>
+        </div>
+      </a>
       <div class="showcase-body">
         <span class="tag">Digital Product · Web App</span>
         <h3>mychildhoodbook.com</h3>
@@ -97,9 +125,9 @@
       </div>
       <div class="showcase-footer">
         <span>Developed by Engaging UX Design</span>
-        <span class="visit-link">Visit site →</span>
+        <a href="https://mychildhoodbook.com/en/" target="_blank" rel="noopener noreferrer" class="visit-link">Visit site →</a>
       </div>
-    </a>
+    </div>
 
   </div>
 

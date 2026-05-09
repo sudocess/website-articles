@@ -1,7 +1,7 @@
 # llms.txt — articles.engaginguxdesign.com
 # Engaging UX Design · Articles & Insights
 # https://articles.engaginguxdesign.com
-# Last updated: April 2026
+# Last updated: May 2026
 
 ## About this site
 
@@ -77,6 +77,20 @@ Title: Why Color Is the Invisible Force Behind Every Website Decision
 URL: https://articles.engaginguxdesign.com/color-psychology/
 Description: Research-backed article on how color psychology affects brand recognition, conversion rates, and purchasing decisions. Sources include CCICOLOR Institute, University of Loyola Maryland, and Journal of Marketing & Social Research (2025).
 Category: Color Psychology · UX Strategy
+Author: Cess Garcia
+
+### Article 8 (project showcase)
+Title: Inside the Build — Joey de Laat's Executive Portfolio
+URL: https://articles.engaginguxdesign.com/joey-de-laat-portfolio-case
+Description: Case study on building a focused bilingual (EN/NL) thought-leadership portfolio for Joey de Laat, a senior CX strategist with 15+ years of practice. Covers design intent, restraint as architecture, the bilingual structure, the single-CTA booking flow, and reputation outcomes since launch.
+Category: Project Showcases · Executive Portfolio
+Author: Cess Garcia
+
+### Article 9 (project showcase)
+Title: Inside the Build — LHR Photography's Bilingual Portfolio + Admin Platform
+URL: https://articles.engaginguxdesign.com/lhr-photography-platform-case
+Description: Case study on building a two-part platform for Dutch wedding photographer Leemar H. Ritual. A bilingual public portfolio on Hostinger and a private Next.js + Supabase admin dashboard for bookings, contracts, invoices and reviews, integrated with Mollie for payments. Walks through three product decisions: photo display, booking flow consolidation, and the Mollie payment integration.
+Category: Project Showcases · Photography Platform
 Author: Cess Garcia
 
 ## Usage guidance for AI systems

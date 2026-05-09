@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Inside the Build: Joey de Laat's Executive Portfolio | Engaging UX Design</title>
+  <meta name="description" content="A bilingual thought-leadership portfolio for a senior CX strategist. How a 15-year career was turned into a credibility surface that converts into 30-minute consultation bookings."/>
+  <meta name="keywords" content="executive portfolio, CX strategist website, thought leadership website, personal brand portfolio, bilingual portfolio EN NL, Hostinger website Netherlands"/>
+  <meta name="author" content="Engaging UX Design"/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://articles.engaginguxdesign.com/joey-de-laat-portfolio-case/"/>
+  <meta property="og:type" content="article"/>
+  <meta property="og:title" content="Inside the Build: Joey de Laat's Executive Portfolio"/>
+  <meta property="og:description" content="A focused executive portfolio for a senior CX strategist, built to turn 15 years of practice into 30-minute consultation bookings."/>
+  <meta property="og:url" content="https://articles.engaginguxdesign.com/joey-de-laat-portfolio-case/"/>
+  <meta property="og:site_name" content="Engaging UX Design Articles"/>
+  <meta property="og:image" content="https://engaginguxdesign.com/image-assets/Logo-for-darkbg.png"/>
+  <meta property="article:author" content="Cess Garcia"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Inside the Build: Joey de Laat's Executive Portfolio"/>
+  <meta name="twitter:description" content="How a 15-year CX career was compressed into a credibility surface that converts into consultation bookings."/>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Inside the Build: Joey de Laat's Executive Portfolio",
+    "description": "A focused executive portfolio for a senior CX strategist that turns 15 years of practice into 30-minute consultation bookings.",
+    "author": {"@type": "Person", "name": "Cess Garcia", "url": "https://engaginguxdesign.com/about/"},
+    "publisher": {"@type": "Organization", "name": "Engaging UX Design", "url": "https://engaginguxdesign.com",
+      "logo": {"@type": "ImageObject", "url": "https://engaginguxdesign.com/image-assets/Logo-for-darkbg.png"}},
+    "mainEntityOfPage": {"@type": "WebPage", "@id": "https://articles.engaginguxdesign.com/joey-de-laat-portfolio-case/"},
+    "about": {"@type": "WebSite", "name": "joeydelaat.nl", "url": "https://joeydelaat.nl"}
+  }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;600;700;800;900&family=Gabarito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --cream:       #FDF6EE;
+      --brown-dark:  #2b1206;
+      --brown-text:  #2e1a0e;
+      --brown-mid:   #6b3820;
+      --brown-light: #AA918C;
+      --orange:      #c0471a;
+      --gold:        #d4952a;
+      --gold-hover:  #e8a832;
+      --border:      rgba(46,26,14,.1);
+      --card-bg:     #fff9f3;
+      --raised:      #f5ede2;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { -webkit-font-smoothing: antialiased; scroll-behavior: smooth; }
+
+    body {
+      background: var(--cream);
+      color: var(--brown-text);
+      font-family: 'Gabarito', sans-serif;
+      font-size: 17px;
+      line-height: 1.78;
+    }
+
+    /* ── BACK BANNER ── */
+    .back-banner {
+      background: var(--brown-dark);
+      padding: .6rem 2rem;
+      display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+    }
+    .back-banner p { font-size: .73rem; color: rgba(255,255,255,.5); }
+    .back-banner p strong { color: rgba(255,255,255,.8); font-weight: 600; }
+    .back-banner a {
+      font-size: .7rem; font-weight: 700; color: var(--brown-dark); background: var(--gold);
+      padding: .38rem 1rem; border-radius: 999px; text-decoration: none; white-space: nowrap;
+      transition: background .2s; flex-shrink: 0;
+    }
+    .back-banner a:hover { background: var(--gold-hover); }
+
+    /* ── NAV ── */
+    nav {
+      background: var(--brown-dark);
+      border-bottom: 1px solid rgba(255,255,255,.06);
+      padding: 0 2rem; height: 64px;
+      display: flex; align-items: center; justify-content: space-between;
+      position: sticky; top: 0; z-index: 100;
+    }
+    .nav-logo img { height: 36px; width: auto; }
+    .nav-cta {
+      font-family: 'Gabarito', sans-serif; font-size: 13px; font-weight: 400;
+      color: var(--brown-dark); background: var(--gold); text-decoration: none;
+      padding: 10px 20px; border-radius: 100px; transition: background .2s;
+    }
+    .nav-cta:hover { background: var(--gold-hover); }
+    .nav-right { display: flex; align-items: center; gap: 1.5rem; }
+    .nav-links { display: flex; align-items: center; gap: 1.5rem; list-style: none; }
+    .nav-links a {
+      font-size: .7rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase;
+      color: rgba(255,255,255,.55); text-decoration: none; transition: color .2s;
+    }
+    .nav-links a:hover { color: #fff; }
+    .nav-links a.nav-back { color: var(--gold); font-weight: 700; }
+    .nav-links a.nav-back:hover { color: var(--gold-hover); }
+    .nav-divider { width: 1px; height: 20px; background: rgba(255,255,255,.12); }
+    .lang-switch {
+      display: flex; align-items: center; gap: .35rem;
+      font-size: .7rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase;
+    }
+    .lang-switch a { color: rgba(255,255,255,.4); text-decoration: none; transition: color .2s; }
+    .lang-switch a:hover { color: rgba(255,255,255,.7); }
+    .lang-switch a.active { color: #fff; }
+    .lang-switch .sep { color: rgba(255,255,255,.15); }
+
+    /* ── ARTICLE WRAPPER ── */
+    .article-wrap { max-width: 900px; margin: 5rem auto 0; padding: 0 2rem; }
+
+    /* ── HERO ── */
+    .art-hero { padding: 3.5rem 0 3rem; border-bottom: 1px solid var(--border); }
+    .pill {
+      display: inline-flex; align-items: center; gap: .4rem;
+      font-size: .65rem; font-weight: 700; letter-spacing: .15em; text-transform: uppercase;
+      color: var(--orange); border: 1px solid rgba(192,71,26,.28); background: rgba(192,71,26,.06);
+      padding: .28rem .85rem; border-radius: 999px; margin-bottom: 1.6rem;
+    }
+    .art-hero h1 {
+      font-family: 'Alexandria', sans-serif;
+      font-size: clamp(1.9rem, 4.5vw, 3rem);
+      font-weight: 900; line-height: 1.1; letter-spacing: -.03em;
+      color: var(--brown-dark); margin-bottom: 1.2rem; max-width: 740px;
+    }
+    .art-hero h1 em { font-style: italic; color: var(--orange); }
+    .art-deck { font-size: 1.05rem; color: var(--brown-mid); max-width: 600px; line-height: 1.7; margin-bottom: 1.6rem; }
+    .byline {
+      font-size: .7rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--brown-light);
+    }
+    .byline strong { color: var(--orange); }
+
+    /* ── BODY ── */
+    .art-body { padding: 2.8rem 0; max-width: 740px; }
+    .art-body p { margin-bottom: 1.55rem; color: #4a2a18; }
+    .art-body h2 {
+      font-family: 'Alexandria', sans-serif;
+      font-size: 1.55rem; font-weight: 800; letter-spacing: -.025em;
+      color: var(--brown-dark); margin: 3.5rem 0 1rem; line-height: 1.18;
+    }
+    .section-label {
+      display: block; font-size: .65rem; font-weight: 700; letter-spacing: .18em;
+      text-transform: uppercase; color: var(--orange); margin: 3rem 0 .7rem;
+    }
+    strong { color: var(--brown-dark); font-weight: 700; }
+
+    /* ── PROJECT META CARD ── */
+    .project-meta {
+      background: var(--card-bg); border: 1px solid var(--border); border-top: 3px solid var(--orange);
+      border-radius: 8px; padding: 1.4rem 1.6rem; margin: 2rem 0 2.5rem;
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 1.2rem;
+    }
+    .project-meta dt {
+      font-size: .62rem; font-weight: 700; letter-spacing: .15em; text-transform: uppercase;
+      color: var(--brown-light); margin-bottom: .35rem;
+    }
+    .project-meta dd { font-size: .92rem; color: var(--brown-dark); font-weight: 600; }
+    .project-meta dd a { color: var(--orange); text-decoration: none; }
+    .project-meta dd a:hover { text-decoration: underline; }
+
+    /* ── BLOCKQUOTE ── */
+    blockquote {
+      margin: 2.5rem 0; padding: 1.8rem 2rem;
+      background: var(--raised); border-left: 4px solid var(--orange); border-radius: 0 8px 8px 0;
+      font-family: 'Alexandria', sans-serif; font-size: 1.05rem; font-style: italic; line-height: 1.6;
+      color: var(--brown-dark);
+    }
+    blockquote cite {
+      display: block; margin-top: .65rem; font-size: .68rem; font-style: normal; font-weight: 700;
+      letter-spacing: .12em; text-transform: uppercase; color: var(--orange);
+    }
+
+    /* ── DETAIL LIST (used for "details worth highlighting") ── */
+    .detail-list { list-style: none; margin: 1.8rem 0 2rem; display: flex; flex-direction: column; gap: 1rem; }
+    .detail-list li {
+      background: var(--card-bg); border: 1px solid var(--border); border-left: 4px solid var(--orange);
+      border-radius: 0 8px 8px 0; padding: 1.2rem 1.4rem;
+    }
+    .detail-list li strong { display: block; margin-bottom: .35rem; font-size: .98rem; font-family: 'Alexandria', sans-serif; letter-spacing: -.01em; }
+    .detail-list li p { font-size: .9rem; color: #4a2a18; margin: 0; }
+
+    /* ── CTA BOX ── */
+    .cta-box {
+      background: var(--brown-dark); border-radius: 12px; padding: 3rem 2.5rem;
+      margin: 3.5rem 0 1rem; position: relative; overflow: hidden;
+    }
+    .cta-box::after {
+      content: ''; position: absolute; bottom: -50px; right: -50px; width: 180px; height: 180px;
+      border-radius: 50%; background: rgba(212,149,42,.07); pointer-events: none;
+    }
+    .cta-box h3 {
+      font-family: 'Alexandria', sans-serif; font-size: 1.3rem; font-weight: 800;
+      color: #fff; letter-spacing: -.02em; margin-bottom: .6rem;
+    }
+    .cta-box p { color: rgba(255,255,255,.6); font-size: .9rem; margin-bottom: 1.5rem; }
+    .cta-btn {
+      display: inline-block; background: var(--gold); color: var(--brown-dark);
+      padding: 12px 28px; border-radius: 100px; font-size: .78rem; font-weight: 700;
+      text-decoration: none; transition: background .2s;
+    }
+    .cta-btn:hover { background: var(--gold-hover); }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--brown-dark); padding: 2.8rem 2rem; text-align: center; margin-top: 6rem;
+    }
+    footer img { height: 34px; margin-bottom: .7rem; }
+    footer p { font-size: .78rem; color: rgba(255,255,255,.4); margin: 0; line-height: 1.7; }
+    footer a { color: var(--gold); text-decoration: none; }
+
+    @media (max-width: 640px) {
+      nav { padding: 0 1.2rem; }
+      .article-wrap { padding: 0 1.4rem; }
+      .back-banner { padding: .6rem 1.2rem; }
+      .art-hero h1 { font-size: 1.8rem; }
+      .cta-box { padding: 2rem 1.5rem; }
+    }
+
+    .art-nav {
+      max-width: 900px; margin: 3rem auto 0; padding: 1.5rem 2rem;
+      display: flex; justify-content: space-between; gap: 1rem;
+      border-top: 1px solid var(--border);
+    }
+    .art-nav-link { font-size: .78rem; font-weight: 700; color: var(--orange); text-decoration: none; transition: color .2s; }
+    .art-nav-link:hover { color: var(--brown-dark); }
+    .art-nav-link.next { margin-left: auto; }
+  </style>
+</head>
+<body>
+
+<div class="back-banner">
+  <p>Part of <strong>Engaging UX Design</strong> &nbsp;·&nbsp; Freelance UX designer based in the Netherlands</p>
+  <a href="https://engaginguxdesign.com" target="_blank">← Back to main site</a>
+</div>
+
+<nav>
+  <a href="https://engaginguxdesign.com">
+    <img class="nav-logo" src="https://engaginguxdesign.com/image-assets/Logo-for-darkbg.png" alt="Engaging UX Design"/>
+  </a>
+  <div class="nav-right">
+    <ul class="nav-links">
+      <li><a class="nav-back" href="home.html">← Back to articles</a></li>
+      <li><a href="home.html">UX Design</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="research.html">Research</a></li>
+    </ul>
+    <span class="nav-divider"></span>
+    <a class="nav-cta" href="https://quickestimate.engaginguxdesign.com/">Get a quick estimate</a>
+    <div class="lang-switch">
+      <a href="article-8-joey-de-laat-case.html" class="active">EN</a>
+      <span class="sep">|</span>
+      <a href="../articles-nl/nl-artikel-8-joey-de-laat-case.html">NL</a>
+    </div>
+  </div>
+</nav>
+
+
+<div class="article-wrap">
+  <div class="art-hero">
+    <span class="pill">Project Showcase · Executive Portfolio</span>
+    <h1>Turning a 15-year career into a <em>credibility surface</em></h1>
+    <p class="art-deck">A focused, bilingual portfolio for a senior CX strategist. The brief was simple to state and difficult to execute: build something that lets serious decision-makers recognise the right operator within three seconds, and book a consultation in one tap.</p>
+    <p class="byline">By <strong>Engaging UX Design</strong> &nbsp;·&nbsp; Project Showcases</p>
+  </div>
+
+  <div class="art-body">
+
+    <dl class="project-meta">
+      <div><dt>Client</dt><dd>Joey de Laat</dd></div>
+      <div><dt>Role</dt><dd>Global Experience &amp; Insights Leader</dd></div>
+      <div><dt>Live at</dt><dd><a href="https://joeydelaat.nl" target="_blank" rel="noopener">joeydelaat.nl</a></dd></div>
+      <div><dt>Stack</dt><dd>HTML · CSS · vanilla JS · Hostinger</dd></div>
+      <div><dt>Languages</dt><dd>English &amp; Dutch (hreflang)</dd></div>
+      <div><dt>Type</dt><dd>Bilingual thought-leadership portfolio</dd></div>
+    </dl>
+
+    <h2>What was built</h2>
+
+    <p>A focused executive portfolio designed to do one thing well: turn a 15-year career into a credibility surface that converts into 30-minute consultation bookings. Not a CV. Not a marketing site. A space that lets serious decision-makers, the kind who already know what governed insight systems are, immediately recognise that Joey is the kind of operator they want to talk to.</p>
+
+    <p>The site is structured around three connected disciplines that frame his practice: governed insight systems, experience frameworks, and leadership enablement. Each is presented as a deliberate point of view, not a list of services. Four case studies and reflections live alongside the framing, with one essay, <em>CX as an operating system</em>, acting as the anchor piece a curious visitor can read end to end.</p>
+
+    <p>The booking flow funnels every action toward a free 30-minute consultation. There is no contact form maze, no quote calculator, no service tiers. The single CTA is consistent across the page: book a call.</p>
+
+    <h2>Design intent</h2>
+
+    <p>The site reads as quiet confidence. Plenty of whitespace. Restrained typography: single-weight serif for headlines, sans for body, no decorative flourishes. Photography-grade portrait imagery rather than stock illustrations. The eyebrow-tagline-paragraph-quote rhythm of senior thought-leadership writing, not the bullet-point rhythm of marketing decks.</p>
+
+    <p>The colour palette is deliberately corporate-adjacent without being sterile: deep navy primary, warm off-white background, a single accent for emphasis. Recognisable to a CFO, calming to a Chief Customer Officer, professional to a board director. The audience is operators who buy executive consulting, and the visual language has to read as such within the first three seconds.</p>
+
+    <p>The bilingual structure (English default, Dutch mirror at <code>/nl/</code>) reflects Joey's reality. He operates internationally but is rooted in the Netherlands. The site doesn't auto-redirect; the visitor chooses, and the language switch persists across the journey.</p>
+
+    <blockquote>
+      Insight that moves decisions forward.
+      <cite>Homepage positioning, joeydelaat.nl</cite>
+    </blockquote>
+
+    <h2>What this delivered</h2>
+
+    <p>The most visible outcome since launch has been Joey's reputation lift. His positioning was always strong, but distributed across a LinkedIn profile, a few essay drafts, and word of mouth. Concentrating it into a coherent, navigable narrative at a clean URL changed how peers and prospects perceive the practice. He's now sent the URL into rooms where previously he'd have sent a CV; that single substitution alone has reshaped some early conversations.</p>
+
+    <p>The homepage's positioning line, <em>"Insight that moves decisions forward,"</em> together with the recurring framing that experience is a system rather than a program, has been picked up verbatim in multiple inbound conversations. The site is doing what a portfolio should: not just hosting credentials, but seeding the language a prospect uses when they describe their problem back to the practitioner.</p>
+
+    <p>Inbound consultation bookings have increased meaningfully, and a notable share of them now arrive pre-qualified. Visitors are reading the essays, then booking. That changes the quality of the first call from <em>"tell me what you do"</em> to <em>"I think we should talk about X"</em>.</p>
+
+    <h2>A few details worth highlighting</h2>
+
+    <p>These are not the headlines, but they are the kind of detail that make a senior executive site land properly:</p>
+
+    <ul class="detail-list">
+      <li>
+        <strong>Tone discipline.</strong>
+        <p>Every page sounds like Joey, not like a copywriter. The voice has been kept consistent across reflections, case studies, and CTAs.</p>
+      </li>
+      <li>
+        <strong>No carousel, no parallax, no scroll-jacking.</strong>
+        <p>The decision was made early to let the content earn attention rather than tricks.</p>
+      </li>
+      <li>
+        <strong>Contact gravity.</strong>
+        <p>The "Book a call" action sits in the navigation, the hero, the about section, and the footer. Always one tap, but never shouting.</p>
+      </li>
+      <li>
+        <strong>Bilingual SEO.</strong>
+        <p>Every page exists in EN and NL with hreflang declarations, so each language is indexed separately and can rank in its own market.</p>
+      </li>
+      <li>
+        <strong>Article surface.</strong>
+        <p>Four case studies and reflections are presented as first-class content, not as blog footer-fodder. Each has its own page, schema markup, and shareable URL.</p>
+      </li>
+    </ul>
+
+    <h2>What we'd take from this build</h2>
+
+    <p>For senior practitioners selling expertise, the temptation is always to build a site that explains everything. The work here was largely about restraint: choosing what <em>not</em> to put on the page so that the things that remain carry weight. Three disciplines, four reflections, one CTA, two languages. That's the entire site architecture, and it has done more for the practice than a richer build would have.</p>
+
+    <p>The other lesson worth keeping is that a clean URL substitution, sending a portfolio link into a room where you'd previously have sent a CV, quietly changes the kind of conversation you walk into. A portfolio doesn't have to convert in the marketing-funnel sense. Sometimes its job is to reshape the first sentence the other person says when the call begins.</p>
+
+    <div class="cta-box">
+      <h3>Want a portfolio that does the talking for you?</h3>
+      <p>If you sell expertise (consulting, strategy, advisory) your site has about three seconds to position you as the right operator. Engaging UX Design builds bilingual portfolios for senior practitioners across the Netherlands and beyond. Same restraint, same attention to language, same one-tap booking flow.</p>
+      <a class="cta-btn" href="https://quickestimate.engaginguxdesign.com/">Get a free estimate →</a>
+    </div>
+
+  </div>
+</div>
+
+
+<div class="art-nav">
+  <a class="art-nav-link prev" href="article-7-wix-squarespace-canva.html">← What Wix, Squarespace and Canva won't tell you</a>
+  <a class="art-nav-link next" href="article-9-lhr-photography-case.html">Inside the LHR Photography platform build →</a>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <img src="https://engaginguxdesign.com/image-assets/Logo-for-darkbg.png" alt="Engaging UX Design"/>
+  <p>Data-driven UX design creating engaging, conversion-focused websites that help businesses grow.</p>
+  <p style="margin-top:.4rem;">Eindhoven, NL &nbsp;·&nbsp; <a href="mailto:info@engaginguxdesign.com">info@engaginguxdesign.com</a> &nbsp;·&nbsp; <a href="https://engaginguxdesign.com">engaginguxdesign.com</a></p>
+</footer>
+
+</body>
+</html>
